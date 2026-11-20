@@ -4,10 +4,11 @@ Fecha del análisis: 20-nov-2026. Investigación hecha solo con búsqueda web: n
 
 ## 0. Lo que debes saber antes de leer
 
-1. **Contexto que me diste:** voz de IA, comparar español e inglés, $0–30 USD/mes, 5–7 Shorts/semana. En "cómo ganar dinero" escribiste "videos que generen ingresos", así que no elegiste una vía concreta. Asumo anuncios + afiliados + producto propio.
-2. **Lo que me falta** y que cambia el resultado: países objetivo, temas que dominas y temas que no quieres. Estos datos afectan sobre todo al desempate del Top 3 (sección 3).
+1. **Contexto que me diste:** vives en Panamá; dominas ventas y desarrollo de negocios, reportes de ventas y KPIs en Excel, marketing digital, y comunicación y oratoria; $0–30 USD/mes, 5–7 Shorts/semana; tienes una tienda de perfumes (Nova Parfum). En "cómo ganar dinero" escribiste "videos que generen ingresos", así que no elegiste una vía concreta. Asumo anuncios + afiliados + producto propio.
+2. **Sigue sin definir:** los campos de idioma, voz y países objetivo llegaron con las opciones sin elegir (`[español / inglés]`, `[mi propia voz / voz de IA]`). Antes elegiste voz de IA y comparar idiomas, así que mantengo ambos abiertos. También falta saber **en qué país vende Nova Parfum**, porque decide si el nicho de perfumes tiene sentido (sección 3 bis).
 3. **Los puntajes son juicio mío**, apoyado en los datos citados. Ningún dato público mide "competencia" o "viralidad potencial" por nicho. Todo puntaje de esas dos columnas es **estimado**.
-4. **No encontré canales de ejemplo verificados.** Las búsquedas web devolvieron blogs de herramientas de IA, no canales con cifras comprobables. No te pongo enlaces inventados. En la sección 3 hay búsquedas para abrir y el script `buscar_canales.py` para hacerlo con datos reales cuando exista la clave.
+4. **Sigo sin canales de ejemplo que cumplan todos los criterios** (Shorts + sin cara + menos de 50 mil suscriptores + crecimiento rápido). La sección 3 bis lista los candidatos parciales que sí pude comprobar, con sus límites.
+5. **Los datos reales de la API de YouTube siguen pendientes.** Configuraste `YOUTUBE_API_KEY`, pero esta sesión no la recibió (comprobado dos veces, incluso tras el reinicio del proceso). Los puntajes ajustados de la sección 3 bis salen de investigación web verificada, **no** de la API. Cómo resolverlo: sección 3 bis, "Pendiente: la API".
 
 ---
 
@@ -96,13 +97,27 @@ El único dato de un canal de prueba que encontré dice lo siguiente. Es [Budget
 | CPM/RPM | Más alto. Dato concreto: ninguno verificable para Shorts | Una guía en español estima CPM de $5–18 (finanzas); es una estimación de terceros sin comprobar |
 | Competencia | Más alta (estimado; sin dato) | Más baja (estimado; sin dato) |
 | Afiliados y productos | Más programas y mayor poder de compra (estimado) | Menos programas; el cobro y el IVA complican (estimado) |
-| YouTube Shopping afiliado | Disponible en EE. UU. según la ayuda de Google | Depende del país; ver nota abajo |
+| YouTube Shopping afiliado | **No disponible para ti**: exige que el creador esté basado en uno de 18 países y Panamá no figura (ver sección 3 bis). El idioma del contenido no cambia esto | Ídem |
 | Advertencia | — | Un experto citado por un resumen de video afirma que en LatAm el formato largo rinde más que el corto. No lo pude contrastar |
+
+**Datos medidos de RPM y CPM por país** (fuente: [AIR Media-Tech](https://air.io/en/air-data-findings/youtube-monetization-statistics-2026), estudios de 2026; un verificador independiente comprobó las cifras contra la página):
+
+| Mercado | RPM de Shorts | CPM de formato largo |
+|---|---|---|
+| EE. UU. | $0,328 | $14,67 |
+| Reino Unido y Canadá | ≈ $0,165 | sin dato en mi extracto |
+| España | sin dato | $2,81 |
+| México | $0,040 | $0,91 |
+| Colombia | sin dato | $0,62 |
+
+No hallé RPM de Shorts desglosado por idioma, ni para España, Colombia, Argentina, Chile o Panamá. Estas cifras confirman que el inglés paga varias veces más por vista de Shorts. **Pero** los anuncios de Shorts quedan lejos por los umbrales de la sección 1, así que esa ventaja solo pesaría a largo plazo.
 
 Notas:
 
-- **Shopping afiliado:** requiere estar en el YPP y tener ≥500 suscriptores ([YouTube Blog, 25-mar-2026](https://blog.youtube/creator-and-artist-stories/youtube-shopping-expansion-500-subscribers/)). Permite etiquetar productos en Shorts. La lista de países no la pude confirmar: la ayuda menciona EE. UU., India y Japón, y hay lanzamientos recientes en el Reino Unido, Australia y Medio Oriente. Falta confirmar México, Colombia, España y los demás.
-- **Mi lectura:** como los anuncios no son el motor, el RPM importa menos y el poder de compra de la audiencia importa más. Eso inclina a **inglés** si el objetivo es afiliados o producto. El **español** conviene si tu dominio del idioma, tu mercado o tu producto son hispanos.
+- **Audiencia hispana:** Cervantes cuenta 635,7 M de hablantes potenciales de español, 65,5 M de ellos en EE. UU. En EE. UU., el 85 % de los adultos hispanos usa YouTube (Pew). El alcance publicitario de YouTube (DataReportal, no son usuarios únicos) suma ≈ 188 M entre México, España, Argentina y Colombia a finales de 2025, frente a 254 M en EE. UU. con la misma base de fecha.
+- **Poder adquisitivo:** el PIB per cápita en paridad de poder adquisitivo de EE. UU. es unas 3,3–3,5 veces el de México (fuente primaria no abierta; cifra de la investigación).
+- **Qué falta:** no encontré datos de compra de plantillas o afiliados por mercado ni de conversión por idioma. Para tu caso (ingresos por plantillas y servicios), ese es el dato que decidiría y no existe.
+- **Mi lectura:** el inglés gana si el criterio es el RPM. El español gana si el criterio es tu experiencia y tu voz propia. Con los anuncios fuera de alcance al inicio, no hay base de datos para decretar un ganador. Es decisión tuya (sección 4).
 
 ---
 
@@ -196,16 +211,139 @@ Pesos: Demanda y potencial viral 20 % · Poca competencia 15 % · Ingresos fuera
 
 ---
 
+## 3 bis. Actualización del 20-nov-2026: Panamá, dos nichos nuevos y datos verificados
+
+Esta sección salió de ocho investigaciones web, cada una revisada por un verificador independiente que intentó refutarla. Donde el verificador corrigió algo, uso la corrección. Cada verificador abrió las páginas oficiales de Google/YouTube por su cuenta.
+
+### Qué cambia por vivir en Panamá
+
+| Tema | Resultado | Confianza |
+|---|---|---|
+| **Programa de afiliados de YouTube Shopping** | **No eres elegible hoy.** La página oficial exige que el canal esté *basado* en uno de estos 18 países: Argentina, Brasil, Alemania, India, Indonesia, Japón, Corea, Malasia, México, Países Bajos, Filipinas, Polonia, Singapur, Taiwán, Tailandia, Reino Unido, EE. UU. y Vietnam. Panamá no está, ni en inglés ni en español. Apuntar a audiencias de otros países **no** da elegibilidad. Ver [la página oficial](https://support.google.com/youtube/answer/13376398) | Verificado (dos lecturas) |
+| Cambios futuros | YouTube dijo el [23-sep-2026](https://blog.youtube/intl/es-419/news-and-events/made-on-youtube-26-juntamos-a-marcas-y-creadores/) que ampliaría el programa a 35 países antes de fin de año, **sin publicar la lista**. La página de elegibilidad parece ir rezagada respecto a los anuncios, así que revisa YouTube Studio → Ingresos cada mes | Verificado el anuncio; el resultado es incierto |
+| Etiquetado de Amazon en Shorts | Disponible solo en 11 países (Australia, Brasil, Egipto, Francia, Alemania, India, Arabia Saudita, España, Reino Unido, EE. UU. y EAU). Panamá no está ([ayuda](https://support.google.com/youtube/answer/17105501)) | Verificado |
+| **Programa de Socios (anuncios) y fan funding** | **Sí disponible en Panamá**, incluido el nivel ampliado de 500 suscriptores (membresías, Super Chat/Stickers, Super Thanks) ([lista oficial](https://support.google.com/youtube/answer/13429240?hl=en)) | Verificado |
+| Nivel de 500 suscriptores después del 1-feb-2027 | Sigue vigente: 500 subs + 3 subidas públicas en 90 días + 3.000 horas de formato largo **o** 3 M de vistas de Shorts en 90 días. El blog oficial dice que los umbrales de fan funding y Shopping "permanecen sin cambios". La cifra de 500 la respaldan la página de ayuda del YPP ampliado y los anuncios de Shopping, no el blog del YPP | Verificado, con la salvedad indicada |
+| Solicitudes pendientes el 1-feb-2027 | **Ninguna fuente oficial lo aclara.** Terceros se contradicen. No lo des por hecho | No resuelto |
+| Canal "activo" desde el 1-feb-2027 | Para seguir en el YPP: 1.000 horas, **o** 1 M de vistas de Shorts en 90 días, **o** subir 2 videos largos o 5 Shorts cada 90 días. Tu ritmo de 5–7 por semana lo cumple ([ayuda](https://support.google.com/youtube/answer/12843009?hl=en)) | Verificado |
+| **Cobro de AdSense desde Panamá** | Cheque, transferencia bancaria (wire) o PayPal Hyperwallet. EFT figura como "No". Western Union ya no se ofrece. Umbral de pago: USD 100 | Verificado |
+| **Impuestos de EE. UU.** | Todo creador monetizado envía información fiscal (W-8BEN si no eres de EE. UU.) antes del 10 de diciembre de cada año. Sin ella, Google puede retener hasta 24 % de los ingresos mundiales. Con ella, la retención es 0–30 % **solo sobre lo ganado con espectadores de EE. UU.** Panamá no figura en la lista de tratados del IRS, así que **probablemente aplique 30 %** sobre esa parte. Eso es **inferencia**: Google no publica la tasa por país. Consúltalo con un contador. No investigué el tratamiento fiscal en Panamá | Verificado el marco; inferencia en la tasa |
+
+### Cómo llevar clientes y cobrar desde Panamá
+
+**Enlaces (reglas oficiales vigentes, verificadas en 12 páginas de ayuda):**
+
+- Los enlaces en la descripción y en los comentarios de un Short **no son clicables**.
+- **Sí son clicables:** los enlaces de perfil del canal (hasta 14), los de acuerdos de marca, "Related Video" en Shorts (apunta solo a contenido propio y exige acceso a funciones avanzadas) y los del programa de afiliados de Shopping (que no tienes). También las menciones y hashtags de Shorts.
+- No pude confirmar oficialmente enlaces superpuestos en el banner, ni un mínimo de suscriptores para los enlaces de perfil. La página oficial tampoco exige uno.
+- Las políticas permiten contenido de afiliados, pero advierten que publicar afiliados en exceso en cuentas dedicadas puede considerarse spam, y prohíben el contenido creado *únicamente* para sacar tráfico de YouTube.
+- **Consecuencia práctica:** todo el embudo pasa por **el enlace de perfil**. Cada Short debe decir "enlace en mi perfil" y esa página debe ser clara.
+
+**Dónde vender plantillas desde Panamá** (la investigación leyó las páginas oficiales; lo que no pudo abrir va marcado):
+
+| Opción | Estado para residentes de Panamá | Nota |
+|---|---|---|
+| **Gumroad** | Utilizable: pago a cuenta bancaria en USD | Un verificador corrigió un detalle: PayPal solo es la alternativa en países **sin** depósito bancario. Panamá sí tiene depósito, así que no cuentes con PayPal en Gumroad |
+| **Payhip** | Utilizable con **PayPal Business** | Panamá no está en la lista corta de PayPal personal; hace falta cuenta Business |
+| **PayPal en Panamá** | Recibir y retirar | Comisión de **5,40 % + USD 0,30** por venta comercial y **1 % (mínimo USD 15)** por retirar a banco local. Los límites de retiro no se pudieron confirmar |
+| Stripe propio | **No disponible** | Verificado |
+| Etsy | **No abre tiendas en Panamá** | Verificado en dos páginas oficiales |
+| Lemon Squeezy | La investigación reporta que **cerró registros nuevos el 16-nov-2026** y dejará de procesar pagos el 31-mar-2027. Panamá figuraba en su lista de pagos por banco | **Compruébalo tú**; el verificador no contradijo el cierre, pero tampoco lo reabrió |
+| Hotmart | No pude confirmarlo | Su centro de ayuda es dinámico y solo devolvió títulos |
+
+**Afiliados externos desde Panamá:**
+
+- **No aceptan afiliados nuevos:** Shopify Collabs y Notion. Canva reemplazó su programa por "Canvassador", que según resúmenes de búsqueda está cerrado a solicitudes (**secundario**; Canva dio 403).
+- **Amazon Associates:** ninguna página oficial que se pudo leer dice si se aprueba a residentes de Panamá. **Sin confirmar.**
+- **Skillshare, Domestika, Udemy y Microsoft** (vía Impact, PayPal o transferencia): sus páginas oficiales no excluyen a Panamá, pero ninguna publica lista de países. Udemy dio 403 y Microsoft 503, así que son lecturas de resúmenes. **Sin confirmar:** pruébalo solicitando el alta.
+- Mi conclusión: **no construyas el plan sobre afiliados externos de software hasta confirmar la aceptación de tu cuenta.** Tu mejor activo es el producto propio (plantillas y servicios).
+
+### Evaluación de los dos nichos nuevos (misma tabla y mismos pesos)
+
+| # | Nicho | Demanda | Competencia | Ingr. ext. | Facilidad IA | Riesgo | Perenne | **Total** |
+|---|---|---|---|---|---|---|---|---|
+| I | **Excel para ventas y negocios** (versión enfocada de A) | 5 | 7 | 8 | 8 | 8 | 9 | **7,35** |
+| J | **Perfumes de diseñador y árabes** (hacia Nova Parfum) | 8 | 3 | 8 | 6 | 4 | 7 | **6,05** |
+
+**Por qué estos puntajes** (todos son estimaciones mías; la fuente respalda solo lo indicado):
+
+- **I, Excel para ventas:**
+  - *Demanda 5:* menor que la del Excel genérico, porque la audiencia es más estrecha. No obtuve volumen de búsqueda.
+  - *Competencia 7:* los canales grandes de Excel son de formato largo ([vidIQ](https://vidiq.com/youtube-stats/channel/@leilagharani/), 20-nov-2026: Kevin Stratvert 4,5 M, Leila Gharani 3,1 M). Un canal grande como Leila Gharani tiene una mediana de unas 78 mil vistas por Short. No encontré competidores pequeños de "Excel para ventas" en Shorts con cifras.
+  - *Ingresos 8:* encaja con plantillas de KPIs y servicios de reportes. **No pude verificar precios** de plantillas en Etsy ni Gumroad (listados con 403 o sin precio visible).
+  - *Facilidad 8:* tu experiencia da sello propio, que es lo que YouTube pide. La voz de IA no se menciona como causa de rechazo en la política oficial.
+  - *Riesgo 8:* hay un riesgo documentado por los **términos de Microsoft sobre capturas de pantalla** (revisa su página de permisos antes de publicar) y el riesgo de plantilla repetida.
+- **J, Perfumes:**
+  - *Demanda 8 (secundario):* Euromonitor (14-sep-2026) reporta que las fragancias árabes pasaron de USD 2.800 M en 2023 a USD 4.900 M en 2025. El blog de YouTube dijo que hubo más de 770 M de vistas relacionadas con fragancias en 90 días (1-mar a 27-may-2024, global; sin dato de Shorts). **No hay datos de Shorts ni de Panamá.** Otras cifras de TikTok Shop y Amazon salieron de prensa y de Spate sin atribución completa; no las uses como firmes.
+  - *Competencia 3:* Jeremy Fragrance tiene ≈ 2,5 M de suscriptores (varios rastreadores coinciden). Feedspot lista decenas de canales de perfume con menos de 50 mil, **sin datos de Shorts, de cara ni de crecimiento**.
+  - *Riesgo 4:* YouTube prohíbe vender o promover falsificaciones (marca o logo idéntico o casi indistinguible). Su página **no menciona** "réplica", "clone" ni "inspirado en". Google Ads y Merchant Center sí prohíben "replica", "knock off", "clone" y "fake" junto a una marca, y suspenden la cuenta **sin aviso previo**. No investigué el derecho de marcas de Panamá. Las reseñas con plantilla repetida son el riesgo central del YPP, aunque YouTube dice que un canal de reseñas es aceptable si cada video tiene un enfoque distinto.
+  - *Ingresos 8 pero con fricción:* una tienda propia deja margen directo, pero ya vimos que **no hay enlaces clicables en Shorts** salvo el perfil. Tampoco pude confirmar que puedas conectar tu tienda a YouTube Shopping desde Panamá: la tabla oficial de países de Merchant Center **no incluye a Panamá** según dos lecturas independientes (esa lista cubre anuncios de Shopping y fichas gratuitas; no cubre expresamente las etiquetas de YouTube). Confírmalo en YouTube Studio.
+  - *Facilidad 6:* el stock sirve poco; lo natural es filmar tus propios frascos (manos y producto, sin cara).
+- **Objetivo distinto:** J no es un canal para el YPP. Es publicidad para tu tienda y se mide en visitas y ventas a Nova Parfum. **Antes de puntuar bien o mal este nicho necesito saber en qué país vende y envía tu tienda.** Si vende en Panamá o Centroamérica, el Short debe ganar clientes locales, y eso cambia el contenido.
+
+### Tabla ajustada con la nueva evidencia (top 5)
+
+Solo ajusté un puntaje por evidencia: **A, competencia 7 → 6**, porque los canales grandes de Excel ya publican Shorts con mediana de unos 78 mil. Los demás se mantienen.
+
+| Nicho | Total |
+|---|---|
+| B. Inglés para hispanohablantes | **7,55** |
+| A. Excel/Sheets/productividad (ajustado; antes 7,60) | **7,45** |
+| C. Carrera/entrevistas/CV | **7,40** |
+| I. Excel para ventas y negocios | **7,35** |
+| J. Perfumes (Nova Parfum) | **6,05** |
+
+**Lectura honesta:** A, B, C e I quedan dentro de 0,2 puntos. **La tabla no decide.** Lo que desempata es lo que declaraste: dominas reportes de ventas y KPIs en Excel (I y A), ventas y marketing (I) y comunicación y oratoria (C). **B no coincide con nada de lo que dijiste dominar.** Ese desempate es un criterio ajeno a la tabla; lo digo para que lo valores tú.
+
+### Canales de ejemplo: lo que sí se pudo comprobar
+
+No encontré **ningún** canal que cumpla Shorts + sin cara + menos de 50 mil + crecimiento rápido. Es preferible 0 reales que uno inventado. Candidatos parciales:
+
+| Canal | Datos comprobados | Límites |
+|---|---|---|
+| [Ms Excel (@msexcels)](https://vidiq.com/youtube-stats/channel/@msexcels/) | Creado el 7-oct-2024 (India); 37,4 mil suscriptores en unos 13 meses. De sus 48 subidas recientes (25-abr a 16-nov-2026), **42 son Shorts** de 12–29 s. Un verificador corrigió la lectura inicial que lo daba por canal de video largo | **No pude confirmar que no muestre la cara.** Hay que abrir sus videos. Los datos vienen de vidIQ y developereducators, no de la fuente primaria |
+| [Analytics with Adam](https://vidiq.com/youtube-stats/channel/@analyticswithadam/) | 46 mil suscriptores; 24 Shorts de sus 48 subidas recientes, con 57 a 2.112 vistas | Crece despacio (fuentes contradictorias). Cara sin confirmar. Peor referencia |
+| In the Now (de Kapwing), [caso documentado](https://kapwing.com/resources/we-grew-a-faceless-youtube-channel-to-1000-subscribers) | Sin cara, voz de IA, casi todo Shorts y menos de 50 mil. **≈ 1,2 mil suscriptores en 157 días, con 1,1 M de vistas totales** | Está **fuera de tus nichos**. Sirve como referencia realista del ritmo, no como modelo de nicho |
+
+Referencia útil, **de un solo canal**: los 3 M de vistas de Shorts en 90 días del nivel ampliado quedan muy lejos de 1,1 M de vistas **totales** en 157 días. No generalices a partir de un caso.
+
+### Pendiente: la API de YouTube
+
+`YOUTUBE_API_KEY` no llegó a esta sesión (comprobado dos veces). Según la documentación del entorno, **una variable nueva solo la recibe una sesión nueva**. Qué hacer:
+
+1. Confirma que la guardaste en la configuración del entorno (menú del entorno en la barra del título → Edit), con ese nombre exacto, como variable de entorno.
+2. **Abre una sesión nueva** sobre este repositorio. No me pegues la clave en el chat.
+3. En la sesión nueva ejecutaré estas búsquedas y ajustaré los puntajes con datos reales:
+
+```
+python3 buscar_canales.py "reporte de ventas excel" es
+python3 buscar_canales.py "excel kpi dashboard sales" en
+python3 buscar_canales.py "excel para ventas" es
+python3 buscar_canales.py "perfumes árabes reseña" es
+python3 buscar_canales.py "arabic perfume review" en
+```
+
+Cada consulta usa 200 unidades de la cuota diaria (el script hace dos páginas de resultados). El script sigue **sin probarse** contra la API real.
+
+---
+
 ## 4. Recomendación final
 
-**Excel / Google Sheets / productividad, en inglés**, con producto propio (plantillas) y afiliados de software como vía de ingresos. Esto sale de la tabla, pero con **condiciones** porque el empate con B y C es técnico:
+**Versión del 20-nov-2026, que reemplaza a la anterior** (antes recomendé Excel genérico en inglés, antes de saber que vives en Panamá y qué dominas).
 
-- **Por qué A:** es el que mejor cumple lo que YouTube premia: demostración propia (grabación de pantalla), útil y variada. Encaja con tu presupuesto (herramientas gratuitas) y es perenne. La política de contenido no auténtico es el riesgo que más pesa en tu contexto, y aquí es el menor.
-- **Por qué inglés:** los anuncios no serán tu motor. El poder de compra de la audiencia para afiliados y plantillas sí importa. Es una inferencia mía, sin datos de Shorts que la prueben.
-- **Cuándo elegir otro:**
-  - Si tu mercado, tu producto o tu voz son hispanos, haz A en español.
-  - Si no quieres grabar pantalla cada vez, B es la alternativa. Exige disciplina para evitar el "texto en pantalla sin narrativa".
-- **Esto no es una promesa de resultados.** No encontré ningún caso verificado de un canal de Shorts sin cara que alcance los umbrales con AI y cuota de $0–30.
+**Recomiendo el nicho I: "Excel para ventas y negocios"**, con plantillas propias de KPIs y reportes de ventas, y servicios de reportes como ingreso principal. **La tabla no lo hace ganador** (está a 0,2 puntos de otros tres); lo elijo por tres razones que **no** salen de la tabla:
+
+1. **Coincide con lo que dominas** (reportes de ventas, KPIs en Excel, ventas, marketing). Tu experiencia es el "sello propio" que pide la política de contenido no auténtico.
+2. **No depende de lo que no tienes.** Shopping afiliado no está disponible en Panamá y los afiliados externos de software están sin confirmar. Las plantillas y los servicios sí se pueden cobrar desde Panamá (Gumroad, Payhip con PayPal Business).
+3. **Es el embudo natural**: el Short muestra un reporte real y el enlace de perfil vende la plantilla.
+
+Lo que **no** sé y condiciona la recomendación:
+
+- **Idioma:** el inglés paga unas 4–8 veces más por vista de Shorts (AIR: $0,328 en EE. UU. y $0,040 en México), pero los anuncios de Shorts están lejos y no existen datos de venta de plantillas por idioma. Mi inclinación, que es **opinión y no dato**: **español**, porque dominas ese idioma y el nicho, y porque puedes juzgar la calidad de lo que publicas. Si prefieres apostar por el poder de compra de EE. UU., Reino Unido y Canadá, el inglés es defendible. Decídelo tú.
+- **Voz:** me dijiste antes "voz de IA" y ahora dejaste las dos opciones. Dominas la **oratoria**, y una voz propia es difícil de confundir con producción en masa. Con voz de IA ahorras tiempo, pero pierdes ese diferenciador. Es otra decisión tuya.
+- **Perfumes (J):** no lo recomiendo como canal principal (6,05). Es otro objetivo: vender en Nova Parfum. Si decides hacerlo, mejor como **segundo canal** y con ajustes de política que expliqué arriba. Antes necesito saber dónde vende la tienda.
+- **Alternativa:** si prefieres que el canal gire en torno a tu oratoria y comunicación, C ("Carrera/entrevistas/CV") también encaja con lo que dominas (7,40).
+- **Esto no es una promesa de resultados.** No encontré ningún canal verificado que cumpla todos los criterios y los únicos datos de crecimiento son de un canal de otro nicho (≈ 1,2 mil suscriptores en 157 días).
 
 ---
 
@@ -214,13 +352,14 @@ Pesos: Demanda y potencial viral 20 % · Poca competencia 15 % · Ingresos fuera
 **No esperes al YPP para ganar dinero.** Mientras tanto:
 
 1. **Producto propio (la vía más controlable):**
-   - plantillas de Excel/Sheets (presupuesto, seguimiento de hábitos, facturas), vendidas en una tienda externa;
-   - un servicio puntual (limpiar o automatizar una hoja de cálculo).
-2. **Afiliados externos:** recomienda software de pago recurrente con tu enlace. Revisa las condiciones de cada programa (hay restricciones sobre dónde poner el enlace).
-3. **Dónde poner los enlaces:** en la descripción del canal (sección Acerca de), en el comentario fijado y en videos largos. Verifica en vivo si los enlaces de la descripción de un Short son clicables. No lo pude confirmar y YouTube ha restringido enlaces en Shorts antes.
+   - plantillas de Excel/Sheets de ventas y KPIs (dashboard de ventas, seguimiento de pipeline, reporte mensual), vendidas en Gumroad o Payhip (sección 3 bis, tabla de plataformas);
+   - un servicio puntual (construir o automatizar un reporte de ventas para una pyme).
+2. **Afiliados externos:** **no los des por seguros desde Panamá.** Shopify Collabs y Notion no aceptan afiliados nuevos, y Amazon Associates, Skillshare, Domestika, Udemy y Microsoft están sin confirmar para residentes de Panamá (sección 3 bis). Prueba solicitando el alta y no pongas esta vía en tus cuentas hasta que te aprueben. Las políticas de YouTube avisan de que un exceso de enlaces de afiliados en cuentas dedicadas puede considerarse spam.
+3. **Dónde poner los enlaces:** los enlaces en la descripción y en los comentarios de un Short **no son clicables** (regla oficial vigente). Usa el **enlace de perfil del canal** (hasta 14), el enlace "Related Video" a tus propios videos si tu canal tiene acceso a funciones avanzadas, y los videos largos. Cada Short debe terminar diciendo "enlace en mi perfil".
 4. **Captación de contactos:** una hoja de cálculo gratuita a cambio de un correo. Útil para vender después.
-5. **YouTube Shopping:** exige estar en el YPP con ≥500 suscriptores. Entra solo cuando llegues al nivel ampliado (si sigue vigente después del 1-feb-2027).
-6. **Patrocinios:** con <50k suscriptores serán pocos y poco rentables (estimado). YouTube anuncia incentivos para acuerdos de marca, sin detalles todavía.
+5. **YouTube Shopping afiliado:** **no está disponible para creadores basados en Panamá** (sección 3 bis). Revisa YouTube Studio → Ingresos cada mes por si Panamá entra en la ampliación a 35 países. Mientras tanto, no cuentes con esta vía.
+6. **Fan funding** (membresías, Super Chat, Super Thanks): sí disponible en Panamá desde el nivel ampliado de 500 suscriptores, que sigue vigente después del 1-feb-2027.
+7. **Patrocinios:** con <50k suscriptores serán pocos y poco rentables (estimado). YouTube anuncia incentivos para acuerdos de marca, sin detalles todavía.
 
 ### Cuánto tardarías en cumplir los requisitos (estimado)
 
@@ -234,7 +373,9 @@ No hay datos confiables de tiempo para canales nuevos. Lo único que se puede af
 
 ---
 
-## 6. 20 ideas de Shorts para el nicho ganador (Excel / Google Sheets)
+## 6. 20 ideas de Shorts (Excel / Google Sheets) y 8 ideas de ventas y negocios
+
+Las 20 primeras son de Excel genérico (nicho A). Para el nicho recomendado (**I, Excel para ventas y negocios**) hay 8 ideas específicas en la tabla de después. Úsalas primero y completa con las genéricas.
 
 Los ganchos van en inglés (idioma recomendado) y el guion en español. Si eliges español, traduce el gancho. Cada Short debe mostrar una **demostración real en pantalla** con datos distintos, para no caer en la plantilla repetida.
 
@@ -262,6 +403,24 @@ Los ganchos van en inglés (idioma recomendado) y el guion en español. Si elige
 | 20 | "Let AI write your formula — then check it." | 1) Describe lo que quieres a una IA. 2) Copia la fórmula. 3) Pruébala con 3 casos antes de usarla. | Chat de IA y hoja de cálculo en pantalla dividida |
 
 Ideas 2, 4, 6, 7 y 15 son muy básicas y las cubren muchos canales. Úsalas para entrar y aporta casos de uso reales en cada una.
+
+
+### 8 ideas específicas de ventas y negocios (nicho I)
+
+Los ganchos van en español. Si eliges inglés, tradúcelos. Usa **datos de ejemplo inventados por ti** (nunca datos reales de clientes ni de tu tienda).
+
+| # | Gancho (primer segundo) | Guion en 3 líneas | Qué se ve |
+|---|---|---|---|
+| V1 | "Tu reporte de ventas miente si no haces esto." | 1) Los totales mensuales ocultan quién vende de verdad. 2) Una tabla dinámica por vendedor lo muestra. 3) Compara el top 3 con el resto. | Ventas por vendedor ordenadas, con el top 3 resaltado |
+| V2 | "Calcula tu tasa de cierre en 10 segundos." | 1) Oportunidades ganadas ÷ oportunidades totales. 2) Escribe la fórmula con CONTAR.SI. 3) Formato de porcentaje y una alerta. | Hoja de pipeline con la tasa calculada |
+| V3 | "Cuánto vale de verdad un cliente." | 1) Ticket promedio × compras por año. 2) Dos fórmulas con PROMEDIO y CONTAR.SI. 3) Resultado y qué decisión tomar. | Tabla de clientes con la columna de valor anual |
+| V4 | "El forecast de ventas más simple que sí sirve." | 1) Toma los últimos 6 meses. 2) Usa PRONOSTICO.LINEAL. 3) Dibuja la línea y marca que es una estimación. | Gráfico de ventas con la línea de tendencia |
+| V5 | "Un KPI que cambia de color solo." | 1) Meta mensual en una celda. 2) Formato condicional: verde, ámbar y rojo. 3) Cambia una cifra y mira el color. | Tablero con tres KPIs en semáforo |
+| V6 | "Tu pipeline en una sola hoja." | 1) Etapa, monto y probabilidad. 2) Multiplica monto por probabilidad. 3) Suma el pipeline ponderado. | Columnas del pipeline con el total ponderado |
+| V7 | "Resta esto antes de celebrar tu margen." | 1) Margen = (precio − costo) ÷ precio. 2) Hazlo en una columna y copia hacia abajo. 3) Ordena y mira los productos que pierden. | Lista de productos con el margen en rojo |
+| V8 | "Tu reporte mensual en 3 pasos." | 1) Importa el CSV. 2) Una tabla dinámica y un gráfico. 3) Guárdalo como plantilla para el mes siguiente. | Flujo desde el archivo hasta el tablero listo |
+
+Para evitar el riesgo de "plantilla repetida", cada Short debe cambiar el caso, los datos y la decisión que se toma con el resultado, no solo la fórmula.
 
 ---
 
@@ -326,3 +485,17 @@ Estos criterios son **propuestos por mí, no datos de mercado**. El único punto
 - BudgetPixel, canal de prueba (autoinformado): https://budgetpixel.com/learn/how-to-start-a-faceless-youtube-channel
 - Guías de nichos (blogs comerciales): https://www.opus.pro/blog/faceless-youtube-niches-2026 · https://yoola.com/blog/best-faceless-youtube-niches-that-still-work-in-2026
 - Análisis de terceros sobre los cambios de 2027: https://vidiq.com/blog/post/youtube-partner-program-changes-2027/ · https://www.searchenginejournal.com/youtube-updates-partner-program-terms-shorts-payout-rules/585331/
+- **Actualización del 20-nov-2026 (Panamá, nichos nuevos):**
+  - Elegibilidad de afiliados de YouTube Shopping (18 países): https://support.google.com/youtube/answer/13376398
+  - Etiquetado de Amazon en YouTube Shopping (11 países): https://support.google.com/youtube/answer/17105501
+  - Ampliación a 35 países, Made on YouTube 2026: https://blog.youtube/intl/es-419/news-and-events/made-on-youtube-26-juntamos-a-marcas-y-creadores/
+  - Programa ampliado del YPP (lista de países, incluye Panamá): https://support.google.com/youtube/answer/13429240?hl=en
+  - Definición de canal activo desde el 1-feb-2027: https://support.google.com/youtube/answer/12843009?hl=en
+  - Enlaces clicables y no clicables en Shorts: https://support.google.com/youtube/answer/13748639
+  - Políticas de spam y prácticas engañosas: https://support.google.com/youtube/answer/2801973
+  - Merchant Center, políticas de falsificación: https://support.google.com/merchants/answer/6149993?hl=en
+  - AIR Media-Tech, RPM y CPM por país: https://air.io/en/air-data-findings/youtube-monetization-statistics-2026
+  - Estadísticas de canales (terceros): https://vidiq.com/youtube-stats/channel/@msexcels/ · https://vidiq.com/youtube-stats/channel/@analyticswithadam/ · https://vidiq.com/youtube-stats/channel/@leilagharani/
+  - Kapwing, canal sin cara con voz de IA: https://kapwing.com/resources/we-grew-a-faceless-youtube-channel-to-1000-subscribers
+  - Spate sobre fragancias (secundario): https://www.spate.nyc/blog/fragrance-trends-2026-on-google-tiktok-and-instagram
+  - Documentación de cobro y tarifas de PayPal, Gumroad, Payhip, Lemon Squeezy y Etsy: páginas oficiales de cada plataforma, leídas por la investigación; revisa las vigentes antes de abrir cuenta.
