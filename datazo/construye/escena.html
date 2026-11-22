@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Datazo · Así se construye</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #091830; overflow: hidden; }
+  #wrap { position: relative; width: 1080px; height: 1920px; }
+  canvas { display: block; }
+  /* subtítulos palabra por palabra, al centro: blancos con borde negro; el término técnico, amarillo y en mayúsculas */
+  #sub { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); text-align: center;
+         font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 900; font-size: 150px; line-height: 1;
+         color: #fff; -webkit-text-stroke: 14px #000; paint-order: stroke fill; letter-spacing: -2px; padding: 0 40px;
+         white-space: nowrap; }
+  #sub.term { color: #FFD21F; text-transform: uppercase; }
+  #logo { position: absolute; left: 44px; top: 132px; width: 96px; height: 96px; }
+  #logoName { position: absolute; left: 152px; top: 154px; font-family: 'Inter', Arial, sans-serif; font-weight: 900;
+              font-size: 46px; color: #fff; -webkit-text-stroke: 8px #091830; paint-order: stroke fill; }
+  .lbl { position: absolute; font-family: 'Inter', Arial, sans-serif; font-weight: 900; font-size: 64px; color: #FFD21F;
+         -webkit-text-stroke: 10px #000; paint-order: stroke fill; transform: translate(-50%, -50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="c" width="1080" height="1920"></canvas>
+  <svg id="logo" viewBox="0 0 100 100"><polygon points="50,2 98,50 50,98 2,50" fill="#FFD21F"/>
+    <text x="50" y="68" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="58" fill="#091830">D</text></svg>
+  <div id="logoName">DATAZO</div>
+  <div id="lbl26" class="lbl" style="display:none">26 m</div>
+  <div id="sub"></div>
+</div>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js" } }</script>
+<script type="module" src="./escena.js"></script>
+</body>
+</html>

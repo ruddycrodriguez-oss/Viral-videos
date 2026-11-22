@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+datazo/construye/node_modules/
+datazo/construye/salida/prueba_*/
+datazo/construye/fotogramas/
+datazo/construye/timeline.json

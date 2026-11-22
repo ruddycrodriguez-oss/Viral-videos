@@ -1,0 +1,1 @@
+{ "name": "datazo-construye", "private": true, "version": "1.0.0", "description": "Render 3D low-poly de «Así se construye» (Three.js en Chromium sin pantalla)", "dependencies": { "three": "0.170.0" } }
