@@ -1,3 +1,5 @@
+> **ARCHIVO HISTÓRICO (22-nov-2026).** Este análisis se hizo para lanzar un canal nuevo de Excel para ventas y negocios. Ese plan quedó **descartado**: el dueño ya tiene un canal, Datazo (@Datazo123go), y solo quiere producir videos para él. No se usa para decidir nada del canal actual. Las reglas vigentes están en `CLAUDE.md`. Se conserva por si sirve de referencia (datos de Panamá, reglas del Programa de Socios y de enlaces en Shorts, cobros desde Panamá), que **pueden haber cambiado**.
+
 # Selección de nicho para canal de YouTube Shorts sin cara
 
 Fecha del análisis: 20-nov-2026 (decisión aprobada el 22-nov-2026, ver sección 4). Investigación hecha solo con búsqueda web: no había `YOUTUBE_API_KEY`, así que **no hay estadísticas de la API de YouTube**.
