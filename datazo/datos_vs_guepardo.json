@@ -1,0 +1,171 @@
+{
+ "guepardo_s": 5.95,
+ "bolt_s": 9.58,
+ "bolt_parciales": [
+  [
+   20,
+   2.89
+  ],
+  [
+   40,
+   4.64
+  ],
+  [
+   60,
+   6.31
+  ],
+  [
+   80,
+   7.92
+  ],
+  [
+   100,
+   9.58
+  ]
+ ],
+ "bolt_kmh": 37.6,
+ "guepardo_kmh_texto": "60,5",
+ "guepardo_kmh_barra": 60.5,
+ "bolt_metros_cuando_llega_guepardo": 55,
+ "duracion_total_s": 42.0,
+ "fin_presentacion_s": 3.4,
+ "tarjeta_guepardo_s": 7.0,
+ "cuenta_atras_s": 11.0,
+ "inicio_carrera_s": 12.8,
+ "fin_resultados_s": 31.4,
+ "barras_ini_s": 26.0,
+ "barras_fin_s": 31.4,
+ "tarjeta_final_s": 39.8,
+ "subtitulos_y": 1500,
+ "frase_final": "¿Quién enfrenta al guepardo?",
+ "subtitulos": [
+  {
+   "ini": 0.0,
+   "fin": 2.9,
+   "texto": "¿Puede Usain Bolt ganarle a un guepardo?",
+   "resalta": [
+    "Bolt",
+    "guepardo"
+   ]
+  },
+  {
+   "ini": 3.4,
+   "fin": 5.0,
+   "texto": "Usain Bolt: récord mundial",
+   "resalta": [
+    "Bolt"
+   ]
+  },
+  {
+   "ini": 5.0,
+   "fin": 7.0,
+   "texto": "en 100 metros: 9,58 segundos.",
+   "resalta": [
+    "9,58"
+   ]
+  },
+  {
+   "ini": 7.0,
+   "fin": 8.9,
+   "texto": "Sarah, una guepardo: récord Guinness",
+   "resalta": [
+    "Sarah",
+    "Guinness"
+   ]
+  },
+  {
+   "ini": 8.9,
+   "fin": 10.8,
+   "texto": "5,95 segundos en 2012.",
+   "resalta": [
+    "5,95"
+   ]
+  },
+  {
+   "ini": 11.0,
+   "fin": 12.8,
+   "texto": "Tres, dos, uno…",
+   "resalta": []
+  },
+  {
+   "ini": 12.8,
+   "fin": 15.0,
+   "texto": "Mira la carrera en tiempo real.",
+   "resalta": [
+    "tiempo",
+    "real."
+   ]
+  },
+  {
+   "ini": 18.8,
+   "fin": 21.0,
+   "texto": "Cuando el guepardo cruza la meta,",
+   "resalta": [
+    "guepardo"
+   ]
+  },
+  {
+   "ini": 21.0,
+   "fin": 23.2,
+   "texto": "Bolt va por unos 55 metros.",
+   "resalta": [
+    "55"
+   ]
+  },
+  {
+   "ini": 23.3,
+   "fin": 26.0,
+   "texto": "Ganó el guepardo por 3,63 segundos.",
+   "resalta": [
+    "guepardo",
+    "3,63"
+   ]
+  },
+  {
+   "ini": 26.0,
+   "fin": 28.6,
+   "texto": "En promedio, Sarah corrió a 60 km/h.",
+   "resalta": [
+    "60"
+   ]
+  },
+  {
+   "ini": 28.6,
+   "fin": 31.4,
+   "texto": "Bolt, a unos 38 km/h.",
+   "resalta": [
+    "38"
+   ]
+  },
+  {
+   "ini": 31.4,
+   "fin": 33.4,
+   "texto": "Son récords de carreras distintas,",
+   "resalta": []
+  },
+  {
+   "ini": 33.4,
+   "fin": 35.0,
+   "texto": "pero la diferencia es enorme.",
+   "resalta": [
+    "enorme."
+   ]
+  },
+  {
+   "ini": 35.0,
+   "fin": 37.4,
+   "texto": "¿Quién quieres que enfrente al guepardo",
+   "resalta": [
+    "guepardo"
+   ]
+  },
+  {
+   "ini": 37.4,
+   "fin": 39.8,
+   "texto": "la próxima vez? Dímelo en los comentarios.",
+   "resalta": [
+    "comentarios."
+   ]
+  }
+ ]
+}

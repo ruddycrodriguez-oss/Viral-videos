@@ -36,8 +36,8 @@ CAPTIONS = CFG["subtitulos"]  # lista de {ini, fin, texto, resalta[]}
 TOTAL = CFG["duracion_total_s"]
 
 # ------------------------------------------------------------------ DISEÑO
-START_X, FIN_X = 150, 930
-GROUND_C, GROUND_R = 640, 980           # suelo de cada carril
+START_X, FIN_X = 300, 960
+GROUND_C, GROUND_R = 600, 940           # suelo de cada carril
 T_RACE0 = CFG["inicio_carrera_s"]       # instante del disparo de salida
 P1_END = CFG["fin_presentacion_s"]
 
@@ -131,17 +131,18 @@ def lanes_layer():
             x = START_X + (FIN_X - START_X) * k / 100
             hh = 26 if k % 50 == 0 else 14
             d.line([(x, g + 4), (x, g + 4 + hh)], fill=m.rgba(m.BG3), width=4)
-        for k, lab in ((0, "0"), (50, "50"), (100, "100 m")):
-            x = START_X + (FIN_X - START_X) * k / 100
-            d.text((x, g + 74), lab, font=m.font("Bold", 30), fill=m.rgba(m.SOFT, 170), anchor="mm")
+        if g == GROUND_R:
+            for k, lab in ((0, "0"), (50, "50"), (100, "100 m")):
+                x = START_X + (FIN_X - START_X) * k / 100
+                d.text((x, g + 74), lab, font=m.font("Bold", 30), fill=m.rgba(m.SOFT, 170), anchor="mm")
     # meta (cuadros)
     for g in (GROUND_C, GROUND_R):
         x0 = FIN_X
         for r in range(8):
             for c in range(2):
                 col = m.WHITE if (r + c) % 2 == 0 else m.BG
-                d.rectangle([x0 + c * 14, g - 4 - 230 + r * 29, x0 + c * 14 + 13, g - 4 - 230 + r * 29 + 28], fill=m.rgba(col))
-        d.rectangle([x0, g - 4 - 230, x0 + 28, g - 4 - 230 + 232], outline=m.rgba(m.YELLOW), width=3)
+                d.rectangle([x0 + c * 14, g - 4 - 174 + r * 22, x0 + c * 14 + 13, g - 4 - 174 + r * 22 + 21], fill=m.rgba(col))
+        d.rectangle([x0, g - 4 - 174, x0 + 28, g - 4 - 174 + 176], outline=m.rgba(m.YELLOW), width=3)
     _static["lanes"] = L
     return L
 
@@ -165,10 +166,10 @@ def draw_frame(t):
     in_p1 = t < P1_END + 0.7
 
     # ---- posiciones y escalas
-    sc_c = m.lerp(0.95, 0.7, k)
-    sc_r = m.lerp(0.95, 0.7, k)
+    sc_c = m.lerp(0.95, 0.72, k)
+    sc_r = m.lerp(0.95, 0.72, k)
     g_c = GROUND_C
-    g_r = m.lerp(1060, GROUND_R, k)
+    g_r = m.lerp(1020, GROUND_R, k)
 
     # nariz del guepardo en unidades del sprite: 403; frente del velocista: 196
     NOSE_U, FRONT_U = 403, 196
@@ -222,7 +223,7 @@ def draw_frame(t):
 
     # ---- presentación: títulos y VS
     if t < P1_END + 0.7:
-        a = int(255 * (1 - k))
+        a = int(255 * (1 - m.clamp(k * 2.5)))
         if a > 0:
             m.draw_text_center(img, "GUEPARDO", 540, g_c + 82, m.font("Black", 112), m.YELLOW, alpha=a)
             m.draw_text_center(img, "BOLT", 540, g_r + 90, m.font("Black", 112), m.WHITE, alpha=a)
@@ -232,22 +233,22 @@ def draw_frame(t):
             r = 120
             vd.polygon([(130, 10), (250, 130), (130, 250), (10, 130)], fill=m.rgba(m.YELLOW))
             vd.text((130, 134), "VS", font=m.font("Black", 92), fill=m.rgba(m.BG), anchor="mm")
-            sz = max(1, int(260 * vs_s * (0.9 if a == 255 else 0.9 * (a / 255))))
+            sz = max(1, int(190 * vs_s * (1.0 if a == 255 else (a / 255))))
             vs_small = vs_layer.resize((sz, sz), Image.LANCZOS)
-            img.alpha_composite(vs_small, (540 - sz // 2, 850 - sz // 2))
+            img.alpha_composite(vs_small, (900 - sz // 2, 880 - sz // 2))
 
     # ---- etiquetas de carril y relojes
-    if k > 0.3:
-        la = int(255 * m.clamp((k - 0.3) / 0.7))
+    if k > 0.55:
+        la = int(255 * m.clamp((k - 0.55) / 0.45))
         card_r = m.ease_out((t - P1_END) / 0.5)
         card_c = m.ease_out((t - CFG["tarjeta_guepardo_s"]) / 0.5)
         # guepardo
-        y_lab = g_c - 262
-        m.draw_text_center(img, "GUEPARDO", 270, y_lab, m.font("Black", 52), m.YELLOW, alpha=la)
+        y_lab = g_c - 232 * sc_c - 58
+        m.draw_text_center(img, "GUEPARDO", 230, y_lab, m.font("Black", 52), m.YELLOW, alpha=la)
         lab_c = "RÉCORD GUINNESS" if card_c > 0.01 else ""
         # velocista
-        y_lab_r = g_r - 262
-        m.draw_text_center(img, "USAIN BOLT", 302, y_lab_r, m.font("Black", 52), m.WHITE, alpha=la)
+        y_lab_r = g_r - 322 * sc_r - 40
+        m.draw_text_center(img, "USAIN BOLT", 250, y_lab_r, m.font("Black", 52), m.WHITE, alpha=la)
 
         def clock(tt_cap, dist_t, cx_, cy_, col):
             if tr <= 0:
@@ -260,14 +261,14 @@ def draw_frame(t):
             return txt, col2, size
 
         txt, col2, size = clock(T_CHEETAH, None, 0, 0, m.YELLOW)
-        m.draw_text_center(img, txt, 900, y_lab, m.font("Black", size), col2, alpha=la)
+        m.draw_text_center(img, txt, 880, y_lab, m.font("Black", size), col2, alpha=la)
         txt, col2, size = clock(T_BOLT, None, 0, 0, m.YELLOW)
-        m.draw_text_center(img, txt, 900, y_lab_r, m.font("Black", size), col2, alpha=la)
+        m.draw_text_center(img, txt, 880, y_lab_r, m.font("Black", size), col2, alpha=la)
         # tarjetas de récord (debajo del nombre)
         if card_r > 0.01 and tr <= 0:
-            m.draw_text_center(img, "récord mundial · 100 m", 330, y_lab_r + 52, m.font("SemiBold", 34), m.SOFT, alpha=int(la * card_r))
+            m.draw_text_center(img, "récord mundial · 100 m", 262, y_lab_r + 50, m.font("SemiBold", 32), m.SOFT, alpha=int(la * card_r))
         if card_c > 0.01 and tr <= 0:
-            m.draw_text_center(img, "récord Guinness · 100 m", 330, y_lab + 52, m.font("SemiBold", 34), m.SOFT, alpha=int(la * card_c))
+            m.draw_text_center(img, "récord Guinness · 100 m", 262, y_lab + 50, m.font("SemiBold", 32), m.SOFT, alpha=int(la * card_c))
 
     # ---- cuenta atrás y salida
     c0 = CFG["cuenta_atras_s"]
@@ -276,10 +277,10 @@ def draw_frame(t):
         n = max(1, min(3, n))
         ph = ((t - c0) % ((T_RACE0 - c0) / 3)) / ((T_RACE0 - c0) / 3)
         s = 1.0 + 0.35 * (1 - m.ease_out(ph * 2))
-        m.draw_text_center(img, str(n), 540, 800, m.font("Black", int(250 * s)), m.YELLOW, stroke=8, stroke_fill=m.BG, alpha=int(255 * (1 - 0.6 * ph)))
+        m.draw_text_center(img, str(n), 540, 1230, m.font("Black", int(250 * s)), m.YELLOW, stroke=8, stroke_fill=m.BG, alpha=int(255 * (1 - 0.3 * ph)))
     if T_RACE0 <= t < T_RACE0 + 0.6:
         ph = (t - T_RACE0) / 0.6
-        m.draw_text_center(img, "¡YA!", 540, 800, m.font("Black", int(230 * (1 + 0.2 * ph))), m.YELLOW, stroke=8, stroke_fill=m.BG, alpha=int(255 * (1 - ph)))
+        m.draw_text_center(img, "¡YA!", 540, 1230, m.font("Black", int(230 * (1 + 0.2 * ph))), m.YELLOW, stroke=8, stroke_fill=m.BG, alpha=int(255 * (1 - ph)))
 
     # ---- marca de “dónde iba Bolt” cuando llega el guepardo
     if BOLT_AT_FINISH_M and T_CHEETAH <= tr < T_BOLT + 0.5:
@@ -287,7 +288,7 @@ def draw_frame(t):
         xb = nose_px(dist_bolt(T_CHEETAH))
         layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
         ld = ImageDraw.Draw(layer)
-        yb0, yb1 = g_r - 200, g_r + 4
+        yb0, yb1 = g_r - 180, g_r + 4
         for y in range(int(yb0), int(yb1), 18):
             ld.line([(xb, y), (xb, y + 9)], fill=m.rgba(m.YELLOW, a), width=5)
         ld.rounded_rectangle([xb - 76, yb0 - 62, xb + 76, yb0 - 8], radius=16, fill=m.rgba(m.YELLOW, a))
@@ -300,8 +301,8 @@ def draw_frame(t):
         diff = T_BOLT - T_CHEETAH
         layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
         ld = ImageDraw.Draw(layer)
-        ld.rounded_rectangle([190, 1090, 890, 1190], radius=30, fill=m.rgba(m.YELLOW, int(255 * a)))
-        ld.text((540, 1140), f"Ganó el guepardo por {fmt(diff)} s", font=m.font("Black", 50), fill=m.rgba(m.BG, int(255 * a)), anchor="mm")
+        ld.rounded_rectangle([170, 1100, 910, 1190], radius=30, fill=m.rgba(m.YELLOW, int(255 * a)))
+        ld.text((540, 1145), f"Ganó el guepardo por {fmt(diff)} s", font=m.font("Black", 50), fill=m.rgba(m.BG, int(255 * a)), anchor="mm")
         img.alpha_composite(layer)
 
     # ---- barras de velocidad
@@ -311,22 +312,23 @@ def draw_frame(t):
         gr = m.ease_out((t - t_b0 - 0.2) / 0.9)
         layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
         ld = ImageDraw.Draw(layer)
-        top = 1240
-        full = 560
+        top = 1278
+        full = 540
+        ld.text((540, top - 52), "Velocidad media en su récord de 100 m", font=m.font("SemiBold", 32), fill=m.rgba(m.SOFT, int(255 * a)), anchor="mm")
         rows = (("BOLT", BOLT_KMH, f"{BOLT_KMH:.1f} km/h".replace(".", ","), m.WHITE),
                 ("GUEPARDO", CHEETAH_KMH_BAR, f"{CHEETAH_KMH} km/h", m.YELLOW))
         scale = CHEETAH_KMH_BAR
         for i, (nm, val, lab, col) in enumerate(rows):
-            y = top + i * 92
-            ld.text((70, y), nm, font=m.font("Black", 34), fill=m.rgba(m.SOFT, int(255 * a)), anchor="lm")
+            y = top + i * 78
+            ld.text((50, y), nm, font=m.font("Black", 30), fill=m.rgba(m.SOFT, int(255 * a)), anchor="lm")
             L = max(20, full * val / scale * gr)
-            ld.rounded_rectangle([290, y - 26, 290 + L, y + 26], radius=18, fill=m.rgba(col, int(255 * a)))
-            ld.text((290 + L + 16, y), lab, font=m.font("Black", 38), fill=m.rgba(col, int(255 * a)), anchor="lm")
+            ld.rounded_rectangle([270, y - 26, 270 + L, y + 26], radius=18, fill=m.rgba(col, int(255 * a)))
+            ld.text((270 + L + 14, y), lab, font=m.font("Black", 38), fill=m.rgba(col, int(255 * a)), anchor="lm")
         img.alpha_composite(layer)
 
     # ---- nota de honestidad
     if t >= P1_END + 0.7 and t < CFG["fin_resultados_s"]:
-        m.draw_text_center(img, "Tiempos reales · trayecto ilustrativo", 540, g_r + 138, m.font("Medium", 30), m.SOFT, alpha=170)
+        m.draw_text_center(img, "Tiempos reales · trayecto ilustrativo", 540, g_r + 112, m.font("Medium", 30), m.SOFT, alpha=170)
 
     # ---- subtítulos
     end_card = t >= CFG["tarjeta_final_s"]
@@ -334,7 +336,7 @@ def draw_frame(t):
         for c in CAPTIONS:
             if c["ini"] <= t < c["fin"]:
                 a = int(255 * m.clamp((t - c["ini"]) / 0.12))
-                m.draw_caption(img, c["texto"], c.get("resalta", []), cy=CFG.get("subtitulos_y", 1470), alpha=a)
+                m.draw_caption(img, c["texto"], c.get("resalta", []), cy=CFG.get("subtitulos_y", 1470), size=80, alpha=a)
                 break
 
     # ---- tarjeta final

@@ -291,7 +291,7 @@ def paste_sprite(img, sprite, x, y, scale, flip=False):
 
 
 # --- Subtítulos grandes -------------------------------------------------------------------
-def draw_caption(img, text, highlight=(), cy=1330, size=92, alpha=255, max_w=900):
+def draw_caption(img, text, highlight=(), cy=1330, size=92, alpha=255, max_w=940):
     """Subtítulo centrado, blanco con contorno azul; las palabras de `highlight` van en amarillo."""
     f = font("ExtraBold", size)
     d = ImageDraw.Draw(img)
