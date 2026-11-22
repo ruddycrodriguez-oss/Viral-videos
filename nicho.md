@@ -1,14 +1,14 @@
 # Selección de nicho para canal de YouTube Shorts sin cara
 
-Fecha del análisis: 20-nov-2026. Investigación hecha solo con búsqueda web: no había `YOUTUBE_API_KEY`, así que **no hay estadísticas de la API de YouTube**.
+Fecha del análisis: 20-nov-2026 (decisión aprobada el 22-nov-2026, ver sección 4). Investigación hecha solo con búsqueda web: no había `YOUTUBE_API_KEY`, así que **no hay estadísticas de la API de YouTube**.
 
 ## 0. Lo que debes saber antes de leer
 
 1. **Contexto que me diste:** vives en Panamá; dominas ventas y desarrollo de negocios, reportes de ventas y KPIs en Excel, marketing digital, y comunicación y oratoria; $0–30 USD/mes, 5–7 Shorts/semana; tienes una tienda de perfumes (Nova Parfum). En "cómo ganar dinero" escribiste "videos que generen ingresos", así que no elegiste una vía concreta. Asumo anuncios + afiliados + producto propio.
-2. **Sigue sin definir:** los campos de idioma, voz y países objetivo llegaron con las opciones sin elegir (`[español / inglés]`, `[mi propia voz / voz de IA]`). Antes elegiste voz de IA y comparar idiomas, así que mantengo ambos abiertos. También falta saber **en qué país vende Nova Parfum**, porque decide si el nicho de perfumes tiene sentido (sección 3 bis).
+2. **Respuestas del 22-nov-2026:** idioma **español**, voz **propia**, Nova Parfum vende en **Panamá** y perfumes queda descartado como canal principal. Los temas que no quieres tratar siguen sin declarar. Las secciones anteriores se escribieron antes de estas respuestas, así que donde hablan de voz de IA o dejan el idioma abierto, manda `CLAUDE.md`.
 3. **Los puntajes son juicio mío**, apoyado en los datos citados. Ningún dato público mide "competencia" o "viralidad potencial" por nicho. Todo puntaje de esas dos columnas es **estimado**.
 4. **Sigo sin canales de ejemplo que cumplan todos los criterios** (Shorts + sin cara + menos de 50 mil suscriptores + crecimiento rápido). La sección 3 bis lista los candidatos parciales que sí pude comprobar, con sus límites.
-5. **Los datos reales de la API de YouTube siguen pendientes.** Configuraste `YOUTUBE_API_KEY`, pero esta sesión no la recibió (comprobado dos veces, incluso tras el reinicio del proceso). Los puntajes ajustados de la sección 3 bis salen de investigación web verificada, **no** de la API. Cómo resolverlo: sección 3 bis, "Pendiente: la API".
+5. **Los datos reales de la API de YouTube siguen pendientes.** El entorno "Videos Virales" no tiene ninguna variable ni secreto guardado (comprobado el 22-nov-2026) y se rechazó el formulario para guardar la clave, así que `buscar_canales.py` no se ejecutó. **Ningún puntaje de este archivo viene de la API**: son juicio mío con investigación web verificada. Cómo resolverlo: sección 3 bis, "Pendiente: la API".
 
 ---
 
@@ -329,6 +329,8 @@ Cada consulta usa 200 unidades de la cuota diaria (el script hace dos páginas d
 
 ## 4. Recomendación final
 
+**Decisión aprobada el 22-nov-2026: "Excel para ventas y negocios", en español y con voz propia.** Se aprobó **sin datos de la API** (el dueño eligió "aprobar ahora, validar después"). Si la API contradice esta recomendación, hay que revisarla antes de cambiar nada. Las reglas del canal están en `CLAUDE.md`.
+
 **Versión del 20-nov-2026, que reemplaza a la anterior** (antes recomendé Excel genérico en inglés, antes de saber que vives en Panamá y qué dominas).
 
 **Recomiendo el nicho I: "Excel para ventas y negocios"**, con plantillas propias de KPIs y reportes de ventas, y servicios de reportes como ingreso principal. **La tabla no lo hace ganador** (está a 0,2 puntos de otros tres); lo elijo por tres razones que **no** salen de la tabla:
@@ -339,9 +341,9 @@ Cada consulta usa 200 unidades de la cuota diaria (el script hace dos páginas d
 
 Lo que **no** sé y condiciona la recomendación:
 
-- **Idioma:** el inglés paga unas 4–8 veces más por vista de Shorts (AIR: $0,328 en EE. UU. y $0,040 en México), pero los anuncios de Shorts están lejos y no existen datos de venta de plantillas por idioma. Mi inclinación, que es **opinión y no dato**: **español**, porque dominas ese idioma y el nicho, y porque puedes juzgar la calidad de lo que publicas. Si prefieres apostar por el poder de compra de EE. UU., Reino Unido y Canadá, el inglés es defendible. Decídelo tú.
-- **Voz:** me dijiste antes "voz de IA" y ahora dejaste las dos opciones. Dominas la **oratoria**, y una voz propia es difícil de confundir con producción en masa. Con voz de IA ahorras tiempo, pero pierdes ese diferenciador. Es otra decisión tuya.
-- **Perfumes (J):** no lo recomiendo como canal principal (6,05). Es otro objetivo: vender en Nova Parfum. Si decides hacerlo, mejor como **segundo canal** y con ajustes de política que expliqué arriba. Antes necesito saber dónde vende la tienda.
+- **Idioma (resuelto: español):** el inglés paga unas 4–8 veces más por vista de Shorts (AIR: $0,328 en EE. UU. y $0,040 en México), pero los anuncios de Shorts están lejos y no existen datos de venta de plantillas por idioma. Se eligió español; es coherente con tu dominio del idioma y del nicho.
+- **Voz (resuelto: la tuya):** dominas la **oratoria**, y una voz propia es difícil de confundir con producción en masa.
+- **Perfumes (J) (resuelto: descartado como canal principal):** 6,05. Nova Parfum vende en Panamá. Si algún día se hace, sería un **segundo canal** y con los ajustes de política explicados arriba.
 - **Alternativa:** si prefieres que el canal gire en torno a tu oratoria y comunicación, C ("Carrera/entrevistas/CV") también encaja con lo que dominas (7,40).
 - **Esto no es una promesa de resultados.** No encontré ningún canal verificado que cumpla todos los criterios y los únicos datos de crecimiento son de un canal de otro nicho (≈ 1,2 mil suscriptores en 157 días).
 
@@ -377,7 +379,7 @@ No hay datos confiables de tiempo para canales nuevos. Lo único que se puede af
 
 Las 20 primeras son de Excel genérico (nicho A). Para el nicho recomendado (**I, Excel para ventas y negocios**) hay 8 ideas específicas en la tabla de después. Úsalas primero y completa con las genéricas.
 
-Los ganchos van en inglés (idioma recomendado) y el guion en español. Si eliges español, traduce el gancho. Cada Short debe mostrar una **demostración real en pantalla** con datos distintos, para no caer en la plantilla repetida.
+Los ganchos de estas 20 ideas están en inglés y hay que **traducirlos**: el idioma aprobado es el español. Las 8 ideas de ventas ya están en español. Cada Short debe mostrar una **demostración real en pantalla** con datos distintos, para no caer en la plantilla repetida.
 
 | # | Gancho (primer segundo) | Guion en 3 líneas | Qué se ve |
 |---|---|---|---|
@@ -431,12 +433,12 @@ Para evitar el riesgo de "plantilla repetida", cada Short debe cambiar el caso, 
 | Etapa | Herramienta | Costo mensual estimado |
 |---|---|---|
 | Guion e ideas | Claude (esta sesión) | incluido en tu plan |
-| Voz de IA | Plan gratuito de un generador de voz | $0–$22 |
+| Voz | Tu propia voz con un micrófono (el del teléfono o uno básico) | $0 (un micrófono USB básico sería un gasto único, **estimado**, sin verificar precio) |
 | Grabación de pantalla | OBS Studio o grabador del sistema | $0 |
 | Edición y subtítulos | CapCut o DaVinci Resolve (versiones gratuitas) | $0 |
 | Miniatura/gráficos | Canva (plan gratuito) | $0 |
 
-- **Costo por Short:** si usas solo herramientas gratuitas, **≈ $0**. Con una suscripción de voz de $22 y 22–30 Shorts al mes, serían **≈ $0,70–1,00 por Short** (aritmética mía). Entra en tus $0–30.
+- **Costo por Short:** con tu propia voz y herramientas gratuitas, **≈ $0**. Queda holgura dentro de tus $0–30 mensuales.
 - **Tiempo por Short:** estimo 20–45 minutos entre guion, grabación, voz y edición (**estimado**).
 
 ---
@@ -448,7 +450,7 @@ Para evitar el riesgo de "plantilla repetida", cada Short debe cambiar el caso, 
 - **22–30 Shorts** en 30 días (5–7 por semana). Un tema y una voz consistentes.
 - **Variación:** no más de 2 Shorts seguidos con la misma estructura. Cambia el caso de uso, el ejemplo y el gancho.
 - **1 video largo** (5–8 min) en la semana 3 o 4 como prueba de formato largo.
-- **Marcado de contenido:** declara el contenido sintético (voz de IA) donde YouTube lo exija. Revisa la política vigente de divulgación.
+- **Marcado de contenido:** declara el contenido sintético (por ejemplo, un fondo generado con IA) donde YouTube lo exija. Revisa la política vigente de divulgación. Con voz propia, esto aplica solo si usas material generado.
 
 ### Métricas (en YouTube Studio; ubicación y nombres pueden variar)
 
