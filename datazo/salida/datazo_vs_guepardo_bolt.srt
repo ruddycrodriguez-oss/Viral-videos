@@ -1,64 +1,68 @@
 1
-00:00:00,000 --> 00:00:02,899
+00:00:00,350 --> 00:00:03,125
 ¿Puede Usain Bolt ganarle a un guepardo?
 
 2
-00:00:03,399 --> 00:00:05,000
+00:00:03,125 --> 00:00:05,046
 Usain Bolt: récord mundial
 
 3
-00:00:05,000 --> 00:00:07,000
+00:00:05,046 --> 00:00:08,624
 en 100 metros: 9,58 segundos.
 
 4
-00:00:07,000 --> 00:00:08,900
-Sarah, una guepardo: récord Guinness
+00:00:08,624 --> 00:00:11,871
+Sarah, una guepardo: récord Guinness,
 
 5
-00:00:08,900 --> 00:00:10,800
-5,95 segundos en 2012.
+00:00:11,871 --> 00:00:14,942
+5,95 segundos, en 2012.
 
 6
-00:00:11,000 --> 00:00:12,800
-Tres, dos, uno…
+00:00:14,942 --> 00:00:16,882
+Tres, dos, uno… ¡Ya!
 
 7
-00:00:12,800 --> 00:00:15,000
-Mira la carrera en tiempo real.
-
-8
-00:00:18,800 --> 00:00:21,000
+00:00:23,082 --> 00:00:25,242
 Cuando el guepardo cruza la meta,
 
-9
-00:00:21,000 --> 00:00:23,199
+8
+00:00:25,242 --> 00:00:27,920
 Bolt va por unos 55 metros.
 
+9
+00:00:27,920 --> 00:00:28,780
+Ganó el guepardo
+
 10
-00:00:23,300 --> 00:00:26,000
-Ganó el guepardo por 3,63 segundos.
+00:00:28,780 --> 00:00:31,582
+por 3,63 segundos.
 
 11
-00:00:26,000 --> 00:00:28,600
+00:00:31,582 --> 00:00:35,281
 En promedio, Sarah corrió a 60 km/h.
 
 12
-00:00:28,600 --> 00:00:31,399
+00:00:35,281 --> 00:00:38,792
 Bolt, a unos 38 km/h.
 
 13
-00:00:31,399 --> 00:00:33,399
+00:00:38,792 --> 00:00:41,031
 Son récords de carreras distintas,
 
 14
-00:00:33,399 --> 00:00:35,000
+00:00:41,031 --> 00:00:43,597
 pero la diferencia es enorme.
 
 15
-00:00:35,000 --> 00:00:37,399
+00:00:43,597 --> 00:00:45,676
 ¿Quién quieres que enfrente al guepardo
 
 16
-00:00:37,399 --> 00:00:39,799
-la próxima vez? Dímelo en los comentarios.
+00:00:45,676 --> 00:00:47,125
+la próxima vez?
+
+17
+00:00:47,125 --> 00:00:48,765
+Dímelo en los comentarios.
 

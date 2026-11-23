@@ -204,7 +204,7 @@ La política de YouTube (revisada en `nicho.md`, de julio de 2026) castiga el co
 ### B1. Guepardo vs Usain Bolt (producido)
 
 - **Gancho del primer segundo:** «¿Puede Usain Bolt ganarle a un guepardo? Usain Bolt: récord mundial en 100 metros: 9,58 segundos. Sarah, una guepardo: récord Guinness 5,95 segundos en 2012. Mira la carrera en tiempo real. Cuando el guepardo cruza la meta, Bolt va por unos 55 metros. Ganó el guepardo por 3,63 segundos. En promedio, Sarah corrió a 60 km/h. Bolt, a unos 38 km/h. Son récords de carreras distintas, pero la diferencia es enorme. ¿Quién quieres que enfrente al guepardo la próxima vez? Dímelo en los comentarios.»
-- **Duración de la locución:** 84 palabras, unos 31 s.
+- **Duración (medida):** 82 palabras escritas (102 habladas, porque los números se dicen enteros); la voz dura 49,8 s con la carrera en silencio (5,95 s) y el MP4 final **51,6 s**, con voz de IA (`em_alex`, 170,5 palabras por minuto) y sin música.
 - **Ángulo propio:** Cada récord es de una carrera distinta y la comparación usa velocidades medias, no punta.
 - **Audiencia («para niños»):** No para niños, **con vigilancia**: el formato «VS» con animales dibujados es el que más se acerca a lo infantil. Mantener el tono adulto, sin personajes caricaturescos con cara ni voces infantiles. Si un VS se vuelve demasiado infantil, rediseñarlo o marcarlo «para niños» sabiendo lo que se pierde (comentarios, notificaciones, anuncios personalizados).
 
