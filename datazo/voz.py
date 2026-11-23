@@ -21,7 +21,11 @@ AJUSTES = {
     "wpm": 170,                  # palabras por minuto de habla
     "pausa_oracion": 0.40, "pausa_coma": 0.30, "extra_pero": 0.20,
     "inicio": 0.35, "final": 0.50,
-    "velocidad_inicial": 0.82,   # punto de partida de la calibración (resultado habitual con em_alex)
+    # Velocidad de Kokoro fija en 0,82: es la que da unas 170 palabras por minuto de habla en el guion de referencia (Canal de Panamá) y,
+    # por tanto, el mismo ritmo de articulación en todos los videos. Calibrar frase a frase engaña en guiones con muchas comas o frases
+    # cortas (daba velocidades de 1,28 y una voz atropellada), así que la calibración queda como opción: velocidad_fija = None.
+    "velocidad_fija": 0.82,
+    "velocidad_inicial": 0.82,
 }
 # Respelling solo para la voz (los subtítulos conservan la ortografía original)
 PRONUNCIACION = {"Datazo": "Da-ta-zo"}   # con «Datazo» a secas, el transcriptor oía «The Atasso» o «da atazo»; con guiones lo entienden los dos modelos
@@ -151,14 +155,26 @@ def narrar(narracion, salida, modelos, ajustes=None, whisper="medium", verbose=T
 
     # --- 1) calibrar la velocidad: palabras por minuto de habla = objetivo (la voz nunca se acelera para ganar tiempo)
     palabras_tot = sum(len(p) for _, p in frases)
-    vel = A["velocidad_inicial"]
-    for ronda in range(5):
+    vel = A["velocidad_fija"] or A["velocidad_inicial"]
+    for ronda in range(1 if A["velocidad_fija"] else 5):
         crudos = {i: sintetizar(p, vel) for i, p in frases}
         wpm = palabras_tot / sum(habla_activa(c) for c in crudos.values()) * 60
         if verbose: print(f"calibración {ronda}: velocidad {vel:.3f} -> {wpm:.1f} palabras/min de habla", flush=True)
-        if abs(wpm - A["wpm"]) <= 2.0: break
+        if A["velocidad_fija"] or abs(wpm - A["wpm"]) <= 2.0: break
         vel *= (A["wpm"] / wpm) ** 1.3
     A["velocidad_kokoro"] = round(vel, 3); A["wpm_logrado"] = round(wpm, 1)
+    # comprobación independiente de la puntuación: palabras por minuto de articulación (quitando todo hueco >= 0,12 s)
+    def articulacion(a):
+        fr = int(0.02 * SR); n = len(a) // fr
+        e = np.abs(a[: n * fr]).reshape(n, fr).mean(axis=1) > 0.004
+        quitar, run = 0.0, 0
+        for v in list(e) + [True]:
+            if not v: run += 1
+            else:
+                if run * 0.02 >= 0.12: quitar += run * 0.02
+                run = 0
+        return len(a) / SR - quitar
+    A["wpm_articulacion"] = round(palabras_tot / sum(articulacion(c) for c in crudos.values()) * 60, 1)
 
     # --- 2) alinear palabra por palabra (faster-whisper solo mide tiempos)
     from faster_whisper import WhisperModel
