@@ -4,3 +4,7 @@ datazo/construye/node_modules/
 datazo/construye/salida/prueba_*/
 datazo/construye/fotogramas/
 datazo/construye/timeline.json
+datazo/**/_seg*.wav
+datazo/construye/salida/*/voz*.wav
+datazo/salida/voz_*/voz*.wav
+datazo/construye/salida/_borrador_publicar.txt
