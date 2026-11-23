@@ -8,3 +8,5 @@ datazo/**/_seg*.wav
 datazo/construye/salida/*/voz*.wav
 datazo/salida/voz_*/voz*.wav
 datazo/construye/salida/_borrador_publicar.txt
+datazo/construye/salida/*/fotogramas/
+datazo/salida/*/fotogramas/
