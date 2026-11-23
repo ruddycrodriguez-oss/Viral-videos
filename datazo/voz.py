@@ -21,11 +21,11 @@ AJUSTES = {
     "wpm": 170,                  # palabras por minuto de habla
     "pausa_oracion": 0.40, "pausa_coma": 0.30, "extra_pero": 0.20,
     "inicio": 0.35, "final": 0.50,
-    # Velocidad de Kokoro fija en 0,82: es la que da unas 170 palabras por minuto de habla en el guion de referencia (Canal de Panamá) y,
-    # por tanto, el mismo ritmo de articulación en todos los videos. Calibrar frase a frase engaña en guiones con muchas comas o frases
-    # cortas (daba velocidades de 1,28 y una voz atropellada), así que la calibración queda como opción: velocidad_fija = None.
-    "velocidad_fija": 0.82,
-    "velocidad_inicial": 0.82,
+    # La velocidad de Kokoro se calibra por guion para que las PALABRAS HABLADAS por minuto (cuenta de la muestra: frase recortada sin
+    # pausas largas) lleguen a `wpm`. Con el guion del Canal de Panamá sale 0,82. Un intento previo fallaba por contar «9,58» como una
+    # palabra cuando la voz dice cinco: subía la velocidad a 1,28 y la voz salía atropellada. `velocidad_fija` fuerza un valor.
+    "velocidad_fija": None,
+    "velocidad_inicial": 0.85,
 }
 # Respelling solo para la voz (los subtítulos conservan la ortografía original)
 PRONUNCIACION = {"Datazo": "Da-ta-zo"}   # con «Datazo» a secas, el transcriptor oía «The Atasso» o «da atazo»; con guiones lo entienden los dos modelos
@@ -154,7 +154,7 @@ def narrar(narracion, salida, modelos, ajustes=None, whisper="medium", verbose=T
         return len(a) / SR - quitar
 
     # --- 1) calibrar la velocidad: palabras por minuto de habla = objetivo (la voz nunca se acelera para ganar tiempo)
-    palabras_tot = sum(len(p) for _, p in frases)
+    palabras_tot = sum(len(q["hab"]) for _, p in frases for q in p)   # palabras habladas: «9,58» se dice «nueve coma cincuenta y ocho»
     vel = A["velocidad_fija"] or A["velocidad_inicial"]
     for ronda in range(1 if A["velocidad_fija"] else 5):
         crudos = {i: sintetizar(p, vel) for i, p in frases}

@@ -447,7 +447,7 @@ const house = new THREE.Group();
   const pp = box(0.07, 1.8, 0.07, mat(0xdfe4ee)); pp.position.set(-0.95, 0.98, 0.0); house.add(pp);
   const tap = box(0.34, 0.07, 0.07, mat(0xdfe4ee)); tap.position.set(-0.8, 0.22, 0.0); house.add(tap);
 }
-house.position.set(-10.9, -0.95, 2.2); house.visible = false; scene.add(house);
+house.position.set(-9.3, -0.95, 2.4); house.visible = false; scene.add(house);
 const houseWater = new Pool(C.water, 90, 0.07);
 function updateHouse(t) {
   const t0 = ev('tanque'), t1 = Math.min(ev('tanque', 8.0), T_CROSS - 0.3);
@@ -467,7 +467,7 @@ function updateHouse(t) {
   }
   houseWater.end();
   const a = smooth(prog(t, t0 + 0.8, 0.6)) * (1 - smooth(prog(t, t1 - 0.3, 0.5)));
-  if (a > 0) setArrow(9, [house.position.x - 0.45, house.position.y + 2.0, house.position.z + 0.5], [house.position.x - 0.45, house.position.y + 0.9, house.position.z + 0.5], a * (0.9 + 0.1 * Math.sin(t * 6)));
+  if (a > 0) setArrow(9, [house.position.x - 0.55, house.position.y + 2.0, house.position.z + 0.5], [house.position.x - 0.55, house.position.y + 0.9, house.position.z + 0.5], a * (0.9 + 0.1 * Math.sin(t * 6)));
 }
 
 // ---------------------------------------------------------------- cámara en diagonal, lenta
