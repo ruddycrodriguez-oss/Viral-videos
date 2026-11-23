@@ -7,7 +7,7 @@ Canal de YouTube Shorts que ya existe. El trabajo en este repositorio es **produ
 - **Qué es:** «datos curiosos en menos de un minuto». Temas: ciencia, espacio, historia, animales y fútbol. Con el formato C, «Así se construye», se añaden explicaciones de ingeniería.
 - **Formato:** solo Shorts, en español, sin mostrar la cara del dueño.
 - **Estado (22-nov-2026):** 4 Shorts y 31 suscriptores. Una batalla tipo meme tuvo 140 vistas y un dato de fútbol 19. Son muestras diminutas: no sacar conclusiones de ellas.
-- **Voz: obligatoria y de IA en todos los Shorts** (ver la sección «Voz de IA»). **Ningún video se entrega sin voz.**
+- **Voz: obligatoria y de IA en todos los Shorts, de código abierto y generada aquí, sin servicios de pago** (ver la sección «Voz de IA»). **Ningún video se entrega sin voz.** Cambio de rumbo del 23-nov-2026: la voz Kokoro y el diorama Three.js quedaron **descartados** y **no se usa ElevenLabs** ni ningún otro servicio de voz de pago.
 - **Temas que no quiere tratar:** ninguno declarado. Preguntar antes de proponer temas sensibles.
 
 ## Estilo visual de Datazo (formatos A y B; no cambiar sin avisar)
@@ -25,26 +25,42 @@ Canal de YouTube Shorts que ya existe. El trabajo en este repositorio es **produ
 4. **Revisar cada Short contra la política de «contenido para niños» (COPPA).** Resumen verificado (YouTube Help 9528076, 9527654, 9684541 y la guía de la FTC de nov-2019; no es asesoría legal):
    - YouTube decide por factores: tema, audiencia prevista (por ejemplo, según los metadatos), niños como actores o modelos, personajes, celebridades o juguetes que atraen a niños, lenguaje pensado para niños, actividades de juego, canciones, cuentos o poemas infantiles. La audiencia mixta cuenta como «para niños».
    - Un canal de datos curiosos con ilustración o animación **no es «para niños» automáticamente** («animated content that appeals to everyone» figura como audiencia general; la FTC dice que los colores vivos o los personajes animados no bastan). Pero YouTube **no tiene una regla específica** sobre animación para adultos, así que se decide Short por Short.
-   - Riesgo propio del canal: la ilustración plana de animales o planetas, el lenguaje simple, los formatos de «batalla/VS» y el **diorama 3D low-poly del formato C** (parecido a un juego de bloques) se acercan a «personajes que atraen a niños». Mitigación: tono de audiencia general, sin mascotas, rimas, canciones, voces infantiles ni personajes con cara caricaturesca, y **no mencionar niños ni menores de 13 en título, etiquetas, descripción ni «Acerca de»**.
+   - Riesgo propio del canal: la ilustración plana de animales o planetas, el lenguaje simple, los formatos de «batalla/VS» y el **estilo 3D low-poly del formato C** (parecido a un juego de bloques) se acercan a «personajes que atraen a niños». Mitigación: tono de audiencia general, sin mascotas, rimas, canciones, voces infantiles ni personajes con cara caricaturesca, y **no mencionar niños ni menores de 13 en título, etiquetas, descripción ni «Acerca de»**.
    - Configuración: Studio → Configuración → Canal → Configuración avanzada → Audiencia (sí / no / revisar cada video). El ajuste de cada video anula el del canal. La opción prudente es **«revisar cada video»**. Anotar por escrito el criterio de cada Short.
    - Si se marca «para niños» se pierden comentarios, campana de notificaciones, tarjetas y pantallas finales, anuncios personalizados, y a nivel de canal membresías y Posts; YouTube admite una posible caída de ingresos. Si YouTube detecta un error, puede anular la elección (apelable una vez por video). La responsabilidad de marcar bien es del creador; la FTC puede sancionar hasta US$53.088 por infracción (cifra vigente en 2026; es un tope).
 5. **Especificaciones técnicas:** vertical **1080×1920**, H.264 yuv420p a 30 fps con `faststart`, subtítulos grandes, y la zona inferior (≈ los últimos 360 px) y la superior (≈ los primeros 130 px) libres de lo importante por la interfaz de Shorts. **Duración: formatos A y B, menos de 60 s; formato C, de 60 a 90 s.** YouTube admite Shorts verticales o cuadrados de hasta 3 minutos ([ayuda 15424877](https://support.google.com/youtube/answer/15424877?hl=en); la fecha de entrada en vigor difiere entre versiones de la página: oct-2024 o dic-2025).
-6. **Sin música.** El dueño la añade al subir. El MP4 lleva la voz de IA (pista de audio) y ninguna música ni efectos.
+6. **Sin música.** El dueño la añade al subir. El MP4 lleva la voz de IA y los **efectos de sonido propios** (ver «Efectos de sonido»); ninguna música.
+7. **Cierre fijo en todos los videos del canal (decidido el 23-nov-2026):** «Ahora ya lo sabes. Esto fue un Datazo.» Sin intro ni logo grande: **el primer segundo es la imagen más impactante**. En los formatos A y B el cierre fijo va al final, después de la pregunta o el voto.
+8. **Antes de producir un guion, verificar sus datos y avisar al dueño de lo que no se confirme** (qué dato, qué fuente falta y la redacción segura propuesta). No se produce con datos sin confirmar.
 
-## Voz de IA (obligatoria)
+## Voz de IA (obligatoria; la crea Claude, de código abierto, sin servicios de pago)
 
-- **Todos los Shorts** llevan narración con voz de IA en **español latino neutro**, natural y con energía. Si no se puede generar en el entorno, **detenerse y decir qué se necesita**.
-- **Licencia comercial obligatoria** (el canal se monetizará). Hay que guardar copia de la tarjeta de licencia con fecha en `datazo/construye/licencias/` y anotar que son declaraciones del autor, no asesoría legal.
-- **Voz elegida (23-nov-2026): la muestra 2, Kokoro-82M `em_alex`, siempre la misma en todos los Shorts.** Fonética `es-419`: la **c y la z suenan como «s»**, igual que en la muestra 2. Licencia: pesos Apache-2.0 (declaración del autor; procedencia de cada voz no documentada y algo de entrenamiento con audio sintético de TTS cerrados; copia de la tarjeta en `datazo/construye/licencias/`). **No se clona la voz de ningún video ni persona.** Descartadas: Chatterbox (MIT, marca de agua Perth), Kokoro `ef_dora`, Piper `es_MX-claude`, `es_MX-ald`, `es_AR-daniela`, Coqui XTTS-v2, F5-TTS y Kani-TTS (por licencia, origen dudoso o no ser la elegida).
-- **Ajustes de la voz (los aplica `datazo/voz.py`; no cambiarlos sin avisar):**
-  - **Velocidad:** unas **170 palabras por minuto** de habla (la muestra iba a unas 193), contando las **palabras habladas** (los números se dicen con varias: «9,58» es «nueve cincuenta y ocho») sobre la frase recortada y sin sus pausas largas (≥ 0,4 s), que es la cuenta que se hizo con la muestra. `voz.py` calibra la velocidad de Kokoro por guion: **0,82 en el Canal de Panamá (170,6) y 0,93 en el VS de guepardo y Bolt (170,5)**. Un primer intento falló por contar «9,58» como una palabra: subía la velocidad a 1,28 y la voz salía atropellada. **Si el video pasa de su límite, se recorta el guion; no se acelera la voz.**
-  - **Pausas:** **0,4 s después de cada oración** y **0,3 s después de cada coma** (también tras `;` y `:`); **+0,2 s** antes de cada «Pero» y de cada «Entonces».
-  - **Entonación:** se genera **frase por frase**, respetando ¿? y ¡!, y se unen los audios con esas pausas para que no suene plana. Las pausas de coma se insertan en el audio de la frase ya generada, por la alineación de palabras, para no romper su entonación.
-  - **Pronunciación:** tras generar, una transcripción automática comprueba que los **nombres propios y términos técnicos** se entiendan (`verificacion_voz.json`). Si alguno falla, se corrige su escritura solo para la voz (tabla `PRONUNCIACION` de `voz.py`); los subtítulos conservan la ortografía original.
-- Con API de pago como respaldo (por ejemplo ElevenLabs de pago; su plan gratuito es solo no comercial): **la clave se pide con el formulario seguro del entorno, nunca en el chat.**
-- No imitar la voz de una persona real ni presentar la voz como un experto humano.
-- **Claude no puede escuchar audio:** la naturalidad y el acento los juzga el dueño. Lo medible (claridad con transcripción automática, duración) sí se comprueba.
+- **Todos los Shorts** llevan narración con voz de IA en **español latino neutro**, de **narrador masculino**: enérgica, cálida y clara, «como un documental divertido». Si no se puede generar en el entorno, **detenerse y decir qué se necesita**.
+- **Descartadas por el dueño (23-nov-2026):** Kokoro `em_alex` (la voz de los Shorts anteriores) y todo servicio de pago (ElevenLabs incluido). Otras descartadas antes por licencia, origen dudoso o no ser la elegida: Chatterbox, Piper, Coqui XTTS-v2, F5-TTS, Kani-TTS, OmniVoice (modelo CC-BY-NC).
+- **Voz original, no clonada:** se diseña con modelos «voice design» (la voz sale de una descripción en texto). **No se clona a ninguna persona real ni la voz de otro video**, ni se presenta la voz como un experto humano.
+- **Licencia comercial obligatoria** (el canal se monetizará): solo modelos con licencia que permita uso comercial (Apache-2.0, MIT). Guardar copia de la tarjeta de licencia con fecha en `datazo/construye/licencias/` y anotar que son declaraciones del autor, no asesoría legal.
+- **Modelos probados (pesos Apache-2.0 o MIT; ver `datazo/rascacielos/voz/`):** Qwen3-TTS-12Hz-1.7B-VoiceDesign (Apache-2.0), VoxCPM2 (Apache-2.0) y un tercero (reserva: Ming-3.0-tts-0.5B, MIT, o Zonos3-Mini, Apache-2.0). Descripción base del narrador en `generar_crudos.py` (`ESTILO_BASE`).
+- **Voz elegida: PENDIENTE.** Claude entrega 3 muestras de 15 s con la escena 1 del guion y **espera la elección del dueño**; esa voz se registra aquí y se usa siempre igual en todos los Shorts.
+- **Proceso (lo aplican `datazo/voz.py` y `datazo/voz_calidad.py`):**
+  1. **Frase por frase** con pausas naturales (respetando ¿? y ¡!). Pausas: **0,4 s tras cada oración**, **0,3 s tras cada coma** (también `;` y `:`), **+0,2 s** antes de cada «Pero» y «Entonces». Se generan varias tomas por frase y se elige la mejor por las medidas.
+  2. **Velocidad y expresividad** ajustadas con el estilo descrito y la velocidad del habla. Si el video pasa de su límite, **se recorta el guion; no se acelera la voz**.
+  3. **Mejora del audio** (ffmpeg): filtro de graves, quitar ruido, ecualización cálida con presencia, de-esser, compresión, limitador y **normalización a −14 LUFS** en dos pasadas (pico real máximo −1 dBTP).
+  4. **Descartar por medidas** (Claude no puede escuchar): una voz que falle cualquiera de estas se descarta.
+- **Medidas obligatorias de aceptación (umbrales fijados por el dueño):**
+  - **Transcripción sin errores** (Whisper `medium`; los números se comparan hablados): WER = 0.
+  - **160 a 175 palabras por minuto** de habla (palabras habladas: «9,58» son «nueve cincuenta y ocho»; frase recortada y sin pausas largas).
+  - **c y z suenan como «s» (seseo)**, comprobado con un reconocedor de fonemas (`facebook/wav2vec2-lv-60-espeak-cv-ft`): **ningún «θ»** y las «s» esperadas del fonetizador es-419 presentes.
+  - **Entonación variada**, no plana: unos **12 semitonos** de rango de tono (percentiles 5 a 95 de F0 con pYIN; banda de aceptación 10 a 15). Criterio añadido por Claude (no del dueño): se registra la mediana de F0 y se prefiere un tono de narrador masculino (la mediana de F0 de un hombre adulto suele estar entre ≈100 y 180 Hz); si sale mucho más agudo, se baja en la descripción de la voz.
+  - **−14 LUFS** integrados, pico real ≤ −1 dBTP.
+- **Naturalidad:** Claude no puede escuchar; la naturalidad y el acento los juzga el dueño. **Si ninguna voz llega a sonar natural, se dice claro en vez de entregar una voz mala.**
+- **Pronunciación:** los nombres propios y términos técnicos se comprueban con la transcripción automática; si alguno falla, se corrige su escritura solo para la voz (`PRONUNCIACION` en `voz.py`) y los subtítulos conservan la ortografía original. Los números con género (p. ej. «660 toneladas» → «seiscientas sesenta») se fuerzan con `660|seiscientas_sesenta`.
+
 - **Contenido alterado o sintético (YouTube, ayuda 14328491 «Disclosing use of GenAI content»):** YouTube pide divulgar el contenido de IA que *parece realista* (persona real, evento o lugar real alterado, escena realista que no ocurrió, música como foco). No pide divulgar lo claramente animado ni la IA usada para guiones o subtítulos. **Ningún texto oficial trata una voz TTS neutra sobre una animación.** Por eso, **al subir, marcar «Sí» en «AI use»** (YouTube Studio → Atributos): es la opción prudente, no una obligación demostrada. YouTube dice que divulgar no limita el alcance ni la elegibilidad para monetizar, y que sancionará a quien decida *sistemáticamente* no divulgar (etiqueta manual, retirada de contenido o suspensión del YPP). Si se marca «Sí», el audio de IA aparece como etiqueta en la descripción ampliada (en Shorts, la etiqueta superpuesta se reserva para contenido fotorrealista o con alteración significativa). Tras la primera subida, anotar qué etiqueta aparece.
+
+## Efectos de sonido
+
+- Efectos en cada momento clave (impacto, crujido, grieta, retumbar, sacudida, ascensor, «ding», etc.), **con licencia comercial**. Para evitar licencias de terceros, **se sintetizan por código** (numpy/scipy: whoosh, golpe, crujido, grieta, retumbo, campanilla, «pop»): son obra propia y no hay nada que atribuir. Si algún día se usa una biblioteca externa, guardar la licencia con fecha en `datazo/construye/licencias/`.
+- Van mezclados bajo la voz (la voz manda), con el mismo −14 LUFS final. Ninguna música.
 
 ## Formatos fijos
 
@@ -55,48 +71,54 @@ Canal de YouTube Shorts que ya existe. El trabajo en este repositorio es **produ
 
 ### C. «Así se construye» (60 a 90 s)
 
-Se toma de una cuenta de referencia **solo la fórmula**; temas, guiones, escenas, frases y cierre son 100 % propios. **No copiar guiones, escenas ni frases de otras cuentas. No hacer el tema del puente.**
+Se toma de una cuenta de referencia **solo la fórmula**; temas, guiones, escenas, frases y cierre son 100 % propios. **No copiar guiones, escenas ni frases de otras cuentas. No hacer el tema del puente.** **Cambio de rumbo (23-nov-2026): el diorama Three.js y la voz Kokoro del primer video (Canal de Panamá) quedaron descartados.**
 
 **Fórmula:**
-1. **Gancho en el primer segundo:** una pregunta directa sobre cómo se construye algo.
-2. **Cadena de 5 a 6 pasos:** la solución más simple → aparece un problema real → se resuelve → se nombra la pieza técnica.
+1. **Gancho en el primer segundo:** una pregunta directa sobre cómo se construye algo, sobre **la imagen más impactante** (sin intro ni logo grande).
+2. **Cadena de 5 a 6 pasos:** la solución más simple → aparece un problema real → se resuelve → se nombra la pieza técnica. **Cada problema se ve fallar en pantalla** (grietas, hundimiento, balanceo) con **sacudida de cámara**.
 3. **Un momento cotidiano** que el espectador reconozca de su vida diaria.
-4. **Cierre propio de Datazo, igual en todos los videos:** «Esto fue Datazo. ¿Qué construimos mañana?»
+4. **Cierre fijo de Datazo, igual en todos los videos:** «Ahora ya lo sabes. Esto fue un Datazo.» (plano final del resultado completo, p. ej. al atardecer).
 
-**Estilo:**
-- Diorama 3D low-poly en corte transversal (capas de tierra, agua, árboles, nubes), con cámara en diagonal que se mueve despacio.
-- Cada paso agrega o cambia una pieza. **Flechas rojas** para las fuerzas; **partículas** para agua o erosión.
-- **Subtítulos palabra por palabra** al centro, blancos con borde negro; el **término técnico en amarillo y MAYÚSCULAS** al nombrarlo.
-- Logo de Datazo pequeño en una esquina.
-- Voz de IA (ver arriba), con la animación y los subtítulos **sincronizados palabra por palabra** con la voz.
-- Los dioramas son esquemáticos (no están a escala): decirlo si hace falta.
+**Estilo visual (nuevo):**
+- **Imágenes generadas con IA en estilo 3D low-poly**, con **el mismo estilo y la misma ciudad en todas las escenas** (prefijo de estilo idéntico en todos los prompts y una «biblia de la ciudad» en texto; una imagen maestra de referencia si el modelo lo admite). Se animan por código con **zooms, paneos y sacudidas**.
+- **Generación de imágenes:** primero una opción **gratuita con licencia comercial**. Si no hay ninguna que sirva, **decir cuánto cuesta cada video antes de gastar y pedir la clave con el formulario seguro del entorno (nunca en el chat)**. Opción recomendada por la investigación del 23-nov-2026 (por probar): Cloudflare Workers AI con FLUX.1 [schnell] (pesos Apache-2.0; plan gratuito de 10.000 «neuronas» al día; cuenta propia y token por formulario seguro; coste si se pasa del cupo ≈ US$0,02 por video de 30 imágenes, **cálculo propio**). Alternativa local sin servicio, FLUX.2 [klein] 4B (Apache-2.0) con stable-diffusion.cpp, pero tarda minutos por imagen en esta CPU. No usar modelos de licencia no comercial (p. ej. FLUX.2 klein 9B, SDXL-Turbo).
+- Unas 10 a 15 imágenes clave por video; el resto de planos se derivan con recortes, zooms y paneos de ellas.
+- **Cifras grandes en pantalla** cuando se mencionan; **el término técnico en amarillo y MAYÚSCULAS** al nombrarlo.
+- **Subtítulos palabra por palabra**, al centro, blancos con borde negro, **sincronizados con la voz**.
+- **Sin logo grande ni intro.** Marca de agua mínima y discreta si hace falta.
+- Las escenas son esquemáticas (no están a escala): decirlo si hace falta.
 
-**Archivos:** `datazo/construye/temas.md` (10 temas, borrador sin verificar), `datazo/construye/guion_canal_panama.md` (primer guion) y `datazo/construye/muestras_voz.md`.
+**Ritmo (para que no aburra):**
+- **Un cambio visual cada 2 a 3 segundos** (corte, zoom, paneo o cambio de pieza).
+- Cada problema se ve fallar con sacudida de cámara; **efectos de sonido** en cada momento clave; **cifras grandes** al mencionarlas.
+
+**Archivos:** `datazo/construye/temas.md` (10 temas, borrador sin verificar), `datazo/rascacielos/guion_rascacielos.json` (guion del rascacielos) y, como archivo histórico del formato descartado, `datazo/construye/` (Three.js, Kokoro, Canal de Panamá).
 
 ## Producción
 
 ### Formatos A y B (Pillow + ffmpeg)
 
-- Motor: `datazo/motor.py`. Modelo de vídeo: `datazo/render_vs_guepardo.py` y su `datos_vs_guepardo.json`. **Con voz de IA (obligatoria):** primero `MODELOS=<carpeta> python3 datazo/narrar.py datazo/narracion_vs_guepardo.json datazo/salida/voz_vs_guepardo` (genera `voz.wav`, `timeline.json` y `verificacion_voz.json`) y después `python3 -I datazo/render_vs_guepardo.py datazo/salida/<nombre>.mp4 --voz datazo/salida/voz_vs_guepardo`: los tiempos de escenas, la salida de la carrera y los subtítulos salen de la voz, y el MP4 lleva la voz normalizada a −16 LUFS, sin música. Con `--prueba 3.0 12.5` guarda fotogramas PNG. Marcas de la narración: `{evento}palabra`, `//` (corte de subtítulo), `*resaltado*`, `9,58|nueve_cincuenta_y_ocho` (lo que se ve | lo que se dice) y `[[silencio 5.95 evento]]` (la carrera animada, en tiempo real). Para un guion A o B nuevo: escribir su `narracion_*.json` con esas marcas y su render.
+- Motor: `datazo/motor.py`. Modelo de vídeo: `datazo/render_vs_guepardo.py` y su `datos_vs_guepardo.json`. El VS de guepardo y Bolt existente lleva la **voz Kokoro (descartada)**: hay que **rehacerlo con la voz nueva** cuando el dueño la elija. Marcas de la narración (las entiende `datazo/voz.py`): `{evento}palabra`, `//` (corte de subtítulo), `*resaltado*`, `9,58|nueve_cincuenta_y_ocho` (lo que se ve | lo que se dice) y `[[silencio 5.95 evento]]` (la carrera animada, en tiempo real).
 - **Formato A:** todavía no tiene motor de animación propio (solo existen sus guiones); la voz, los tiempos y los subtítulos por frases (`voz.subtitulos_por_frases`) ya están listos para cuando se construya.
 - Cada video lleva MP4, `.srt` y guía de tiempos.
 
-### Formato C (Three.js en Chromium sin pantalla + voz local)
+### Formato C (imágenes IA low-poly + animación por código + voz de código abierto)
 
-1. **Preparar el entorno** (no persiste entre sesiones): `cd datazo/construye && npm install`; `python3 -m venv v && v/bin/pip install kokoro-onnx soundfile faster-whisper` (y, para Chatterbox, `torch==2.6.0 torchaudio==2.6.0` desde el índice CPU de PyTorch y `chatterbox-tts`); modelos de Kokoro (`kokoro-v1.0.onnx` y `voices-v1.0.bin`) de las publicaciones del proyecto `kokoro-onnx` y carpeta `MODELOS`. Playwright y Chromium ya están instalados.
-2. **Voz y tiempos:** `MODELOS=<carpeta> v/bin/python generar_voz.py guion_canal_panama.json salida/<nombre>` (atajo de `datazo/narrar.py`; voz `em_alex`) genera `voz_cruda.wav` y `timeline.json` (palabras con su inicio y fin, eventos y duración). La alineación usa faster-whisper (MIT) solo para medir tiempos. Copiar `voz_cruda.wav` como `voz.wav`.
-3. **Render:** `node render.js salida/<nombre> salida/<nombre>.mp4 3` captura cada fotograma con WebGL por software (≈0,4 s por fotograma) y los une con la voz (volumen normalizado a −16 LUFS).
-4. **Revisar fotogramas** con `node fotograma.js <carpeta> t1 t2 …` antes del render final; la escena lee `timeline.json` por parámetro (`?tl=`).
-- Las marcas del guion `{evento}` disparan las animaciones en el instante exacto en que se dice la palabra siguiente; `*término*` marca el término técnico.
+1. **Voz, etapa A (entorno del modelo):** `generar_crudos.py <qwen|voxcpm> <narracion.json> <salida> [--frases 0,1,2] [--tomas N]` genera por frase las tomas crudas (`crudos/NN_tomaK.wav`) y `frases.json`. Los entornos (venv con torch CPU, `qwen-tts` o `voxcpm`) no persisten entre sesiones.
+2. **Voz, etapa B (entorno de medición: torch, transformers, librosa, faster-whisper, kokoro-onnx solo por su fonetizador):** `ensamblar_muestra.py <etapa_a> <etiqueta> <salida> [--frases N] [--toma K] [--wpm 167]` recorta, ajusta el tempo a las palabras por minuto objetivo, alinea palabras (faster-whisper), inserta las pausas, genera `timeline.json`, aplica `voz_calidad.mejorar_audio` (−14 LUFS) y `voz_calidad.medir` (WER, wpm, θ/s, rango de tono) en `medidas_<etiqueta>.json`.
+3. **Imágenes** de la escena (ver «Estilo visual»), animadas por código con las marcas de tiempo de `timeline.json`; sonidos sintetizados; render a **1080×1920, 30 fps** y mezcla final con la voz a −14 LUFS.
+4. **Revisar fotogramas** antes del render final y comprobar el MP4 (ver checklist).
+5. **Entrega:** MP4 vertical 1080×1920 y un archivo de publicación (`*_publicar.txt`) con **título (≤ 100 caracteres), descripción con fuentes y 3 hashtags**, en la rama.
 
 ## Checklist antes de publicar un Short
 
-1. ¿Cada cifra y explicación técnica tiene 2 fuentes anotadas? ¿Lo estimado o calculado está marcado?
-2. ¿El matiz propio es distinto del de los últimos Shorts? ¿Sin elementos de terceros (personaje, marca, música, mapa)?
+1. ¿Cada cifra y explicación técnica tiene 2 fuentes anotadas? ¿Lo estimado o calculado está marcado? ¿Se avisó al dueño de lo que no se confirmó **antes** de producir?
+2. ¿El matiz propio es distinto del de los últimos Shorts? ¿Sin elementos de terceros (personaje, marca, música, mapa)? ¿Las imágenes de IA tienen licencia comercial y la misma ciudad y estilo en todas las escenas?
 3. ¿Hay algún factor de «contenido para niños»? Anotar el criterio. Título, etiquetas y descripción sin menciones a menores.
 4. ¿Los récords y cifras que pueden cambiar siguen vigentes? **Ojo con el fútbol:** el Mundial de 2026 ya se jugó y los récords «actuales» pueden haber cambiado.
-5. Voz: ¿es la elegida, con licencia comercial registrada? Al subir, **«AI use» = Sí**.
-6. Revisar el MP4 final: 1080×1920, duración correcta, subtítulos legibles y sincronizados, voz presente, sin música.
+5. Voz: ¿es la elegida por el dueño, de código abierto y con licencia comercial registrada, y pasa las medidas (WER 0, 160 a 175 wpm, sin «θ», ≈12 st, −14 LUFS)? Al subir, **«AI use» = Sí**.
+6. Ritmo: ¿un cambio visual cada 2 a 3 s, problemas que se ven fallar con sacudida, efectos de sonido, cifras grandes y primer segundo impactante sin intro ni logo grande? ¿Cierre fijo «Ahora ya lo sabes. Esto fue un Datazo.»?
+7. Revisar el MP4 final: 1080×1920, duración correcta, subtítulos palabra por palabra legibles y sincronizados, voz presente, efectos de sonido, sin música.
 
 ## Cómo trabajar en este repositorio
 
@@ -106,12 +128,15 @@ Se toma de una cuenta de referencia **solo la fórmula**; temas, guiones, escena
 - Confirmar con el dueño antes de publicar, enviar o crear algo fuera de este repositorio.
 - Ramas: trabajar en `claude/youtube-shorts-niche-strategy-e9z168`. No crear pull requests sin que el dueño lo pida.
 
+
 ## Pendientes
 
-1. Subir a YouTube el Short del Canal de Panamá con `datazo/construye/salida/canal_de_panama_publicar.txt` (título, descripción con fuentes y 3 hashtags) y **«AI use» = Sí**; tras subirlo, anotar qué etiqueta aparece en YouTube.
-2. Escuchar el MP4 de Panamá y el VS de guepardo y Bolt: Claude no puede oír, solo comprobó la claridad con una transcripción automática (en el VS, «Usain» y «Sarah» salieron menos claros que el resto).
-3. Decidir el ajuste de audiencia del canal en YouTube Studio («revisar cada video» recomendado).
-4. Declarar los temas que el dueño no quiere tratar.
-5. Verificar, tema por tema, los datos de `temas.md` antes de escribir cada guion.
-6. Construir el motor de animación del formato A (la voz ya está lista).
-7. Posible limpieza del historial de la rama: un commit automático subió por error unos 718 fotogramas temporales (≈100 MB). Ya no están en el árbol, pero siguen en la historia; limpiarlo exige un push forzado y necesita permiso del dueño.
+1. **Elegir la voz del narrador** entre las 3 muestras de 15 s (escena 1 del rascacielos) y aprobar o corregir los datos de la escena 2 antes de producir el video.
+2. Decidir la generación de imágenes: probar 3 imágenes con la opción gratuita recomendada (requiere cuenta y clave por el formulario seguro) o, si no sirve, aprobar el coste por video.
+3. El Short del Canal de Panamá (voz Kokoro + Three.js) quedó **descartado** por el cambio de rumbo: no subirlo salvo que el dueño diga lo contrario. Rehacer el VS de guepardo y Bolt con la voz nueva.
+4. Escuchar los MP4 y las muestras: Claude no puede oír, solo comprueba lo medible.
+5. Decidir el ajuste de audiencia del canal en YouTube Studio («revisar cada video» recomendado).
+6. Declarar los temas que el dueño no quiere tratar.
+7. Verificar, tema por tema, los datos de `temas.md` antes de escribir cada guion.
+8. Construir el motor de animación del formato A.
+9. Posible limpieza del historial de la rama: un commit automático subió por error unos 718 fotogramas temporales (≈100 MB). Ya no están en el árbol, pero siguen en la historia; limpiarlo exige un push forzado y necesita permiso del dueño.

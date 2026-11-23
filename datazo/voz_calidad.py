@@ -80,6 +80,9 @@ def fonemas_reconocidos(x16):
     import torch
     from transformers import AutoProcessor, AutoModelForCTC
     nombre = "facebook/wav2vec2-lv-60-espeak-cv-ft"
+    import espeakng_loader   # el tokenizador de fonemas necesita la biblioteca espeak-ng (la trae este paquete)
+    os.environ.setdefault("PHONEMIZER_ESPEAK_LIBRARY", espeakng_loader.get_library_path())
+    os.environ.setdefault("ESPEAK_DATA_PATH", espeakng_loader.get_data_path())
     if "m" not in _fon:
         _fon["p"] = AutoProcessor.from_pretrained(nombre); _fon["m"] = AutoModelForCTC.from_pretrained(nombre).eval()
     with torch.no_grad():
