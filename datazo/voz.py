@@ -127,6 +127,15 @@ def _texto_voz(pal):
     return t
 
 
+def texto_seseo(t):
+    """Reescribe el texto SOLO para la voz con seseo (español latino): c ante e/i y z se escriben «s», así ningún modelo puede decir «θ».
+    «cien» -> «sien», «hacer» -> «haser», «zapato» -> «sapato», «acción» -> «acsión». La c ante a/o/u/l/r, «ch» y «qu» no cambian.
+    Los subtítulos conservan la ortografía original. Se aplica a los modelos neuronales (Qwen, VoxCPM2, ...), no a Kokoro (su fonetizador es-419 ya lo hace)."""
+    t = re.sub(r"c(?=[eiéí])", "s", t)
+    t = re.sub(r"C(?=[eiéí])", "S", t)
+    return t.replace("z", "s").replace("Z", "S")
+
+
 def _recortar(a, margen=0.03):
     nz = np.where(np.abs(a) > 0.01)[0]
     return a[max(0, nz[0] - int(margen * SR)): nz[-1] + int(margen * SR)] if len(nz) else a

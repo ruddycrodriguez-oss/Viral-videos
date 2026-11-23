@@ -11,13 +11,14 @@ import voz
 
 ap = argparse.ArgumentParser()
 ap.add_argument("modelo"); ap.add_argument("narracion"); ap.add_argument("salida")
-ap.add_argument("--frases", default=""); ap.add_argument("--tomas", type=int, default=1); ap.add_argument("--estilo", default="")
+ap.add_argument("--frases", default=""); ap.add_argument("--tomas", type=int, default=1); ap.add_argument("--estilo", default=""); ap.add_argument("--sin-seseo", action="store_true", help="no reescribir c/z como s")
+ap.add_argument("--semilla0", type=int, default=0, help="desplaza las semillas (tomas nuevas)")
 a = ap.parse_args()
 os.makedirs(os.path.join(a.salida, "crudos"), exist_ok=True)
 
-ESTILO_BASE = ("A male narrator in his mid-thirties speaking neutral Latin American Spanish with seseo (the letters c and z are pronounced as s). "
-               "Warm, energetic and very clear voice, like the host of a funny science documentary: friendly smile in the voice, lively and expressive "
-               "intonation with wide pitch variation, medium-low pitch, confident, playful, enthusiastic but never shouting, natural conversational pace.")
+ESTILO_BASE = ("A male narrator in his mid-thirties speaking neutral Latin American Spanish. Deep, warm baritone voice with a low pitch, "
+               "like the host of a funny science documentary: friendly smile in the voice, energetic, very clear and well articulated, "
+               "lively and expressive intonation with wide pitch variation, confident and playful, enthusiastic but never shouting, natural conversational pace.")
 estilo = open(a.estilo, encoding="utf-8").read().strip() if a.estilo else ESTILO_BASE
 narr = json.load(open(a.narracion, encoding="utf-8"))
 texto = narr["narracion"] if "narracion" in narr else " ".join(e["texto"] for e in narr["escenas"])
@@ -47,8 +48,9 @@ info = []
 for k in quedan:
     i, pal, orig = frases[k]
     t = voz._texto_voz(pal)
+    if not a.sin_seseo: t = voz.texto_seseo(t)   # c/z -> s solo para la voz (los subtítulos no cambian)
     for toma in range(a.tomas):
-        torch.manual_seed(1000 * k + toma)
+        torch.manual_seed(1000 * k + toma + a.semilla0)
         t0 = time.time()
         audio, sr = sintetizar(t)
         ruta = os.path.join(a.salida, "crudos", f"{k:02d}_toma{toma}.wav")
