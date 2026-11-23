@@ -134,12 +134,27 @@ def narrar(narracion, salida, modelos, ajustes=None, whisper="medium", verbose=T
         nz = np.where(np.abs(a) > 0.01)[0]
         return a[max(0, nz[0] - int(0.03 * SR)): nz[-1] + int(0.03 * SR)] if len(nz) else a
 
+    def habla_activa(a, pausa_larga=0.40):
+        """Duración de una frase para medir las palabras por minuto: la frase recortada, sin sus pausas largas (>= 0,4 s, por ejemplo
+        la de «…»). Es la misma cuenta que se hizo con la muestra elegida (una pausa de 0,5 s descontada). Las pausas cortas de
+        coma sí cuentan, porque forman parte del ritmo de habla."""
+        fr = int(0.02 * SR); n = len(a) // fr
+        if n == 0: return len(a) / SR
+        e = np.abs(a[: n * fr]).reshape(n, fr).mean(axis=1) > 0.004
+        quitar, run = 0.0, 0
+        for v in list(e) + [True]:
+            if not v: run += 1
+            else:
+                if run * 0.02 >= pausa_larga: quitar += run * 0.02
+                run = 0
+        return len(a) / SR - quitar
+
     # --- 1) calibrar la velocidad: palabras por minuto de habla = objetivo (la voz nunca se acelera para ganar tiempo)
     palabras_tot = sum(len(p) for _, p in frases)
     vel = A["velocidad_inicial"]
     for ronda in range(5):
         crudos = {i: sintetizar(p, vel) for i, p in frases}
-        wpm = palabras_tot / (sum(len(c) for c in crudos.values()) / SR) * 60
+        wpm = palabras_tot / sum(habla_activa(c) for c in crudos.values()) * 60
         if verbose: print(f"calibración {ronda}: velocidad {vel:.3f} -> {wpm:.1f} palabras/min de habla", flush=True)
         if abs(wpm - A["wpm"]) <= 2.0: break
         vel *= (A["wpm"] / wpm) ** 1.3

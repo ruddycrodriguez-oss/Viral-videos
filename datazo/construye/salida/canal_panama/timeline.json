@@ -1,0 +1,1752 @@
+{
+ "duracion": 87.19,
+ "eventos": {
+  "excavar": 6.125,
+  "barco": 9.485,
+  "derrumbe": 11.706,
+  "inunda": 18.267,
+  "plan": 23.353,
+  "presa": 28.476,
+  "lago": 31.136,
+  "m26": 34.196,
+  "esclusas": 38.078,
+  "entra": 41.861,
+  "cierra": 43.825,
+  "llena": 45.185,
+  "sube2": 50.477,
+  "sube3": 54.128,
+  "termino": 59.144,
+  "tanque": 66.387,
+  "cruza": 73.038,
+  "sale": 75.018,
+  "cierre": 82.051
+ },
+ "palabras": [
+  {
+   "w": "Cómo",
+   "ini": 0.35,
+   "fin": 0.61,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "se",
+   "ini": 0.61,
+   "fin": 0.91,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "construye",
+   "ini": 0.91,
+   "fin": 1.49,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 1.49,
+   "fin": 1.67,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Canal",
+   "ini": 1.67,
+   "fin": 1.91,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "de",
+   "ini": 1.91,
+   "fin": 2.13,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Panamá",
+   "ini": 2.13,
+   "fin": 2.71,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "que",
+   "ini": 2.71,
+   "fin": 3.31,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "sube",
+   "ini": 3.31,
+   "fin": 3.63,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "barcos",
+   "ini": 3.63,
+   "fin": 4.13,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "por",
+   "ini": 4.13,
+   "fin": 4.35,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "encima",
+   "ini": 4.35,
+   "fin": 4.75,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "de",
+   "ini": 4.75,
+   "fin": 4.95,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "una",
+   "ini": 4.95,
+   "fin": 5.09,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "montaña",
+   "ini": 5.09,
+   "fin": 5.69,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "La",
+   "ini": 6.125,
+   "fin": 6.345,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "idea",
+   "ini": 6.345,
+   "fin": 6.705,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "más",
+   "ini": 6.705,
+   "fin": 6.985,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "simple",
+   "ini": 6.985,
+   "fin": 7.485,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "abrir",
+   "ini": 7.965,
+   "fin": 8.105,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "una",
+   "ini": 8.105,
+   "fin": 8.385,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "zanja",
+   "ini": 8.385,
+   "fin": 8.705,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "de",
+   "ini": 8.705,
+   "fin": 8.925,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "mar",
+   "ini": 8.925,
+   "fin": 9.065,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "a",
+   "ini": 9.065,
+   "fin": 9.285,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "mar",
+   "ini": 9.285,
+   "fin": 9.485,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "y",
+   "ini": 9.485,
+   "fin": 10.045,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "que",
+   "ini": 10.045,
+   "fin": 10.165,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 10.165,
+   "fin": 10.345,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "barco",
+   "ini": 10.345,
+   "fin": 10.685,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "pase",
+   "ini": 10.685,
+   "fin": 11.025,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Pero",
+   "ini": 11.706,
+   "fin": 11.966,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "hay",
+   "ini": 11.966,
+   "fin": 12.206,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "un",
+   "ini": 12.206,
+   "fin": 12.446,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "problema",
+   "ini": 12.446,
+   "fin": 12.866,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "real",
+   "ini": 12.866,
+   "fin": 13.326,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "en",
+   "ini": 13.706,
+   "fin": 13.866,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 13.866,
+   "fin": 14.046,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Corte",
+   "ini": 14.046,
+   "fin": 14.406,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Culebra",
+   "ini": 14.406,
+   "fin": 14.946,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "los",
+   "ini": 15.246,
+   "fin": 15.366,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "deslizamientos",
+   "ini": 15.366,
+   "fin": 16.126,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "de",
+   "ini": 16.126,
+   "fin": 16.366,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "tierra",
+   "ini": 16.366,
+   "fin": 16.666,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "eran",
+   "ini": 16.666,
+   "fin": 17.026,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "constantes",
+   "ini": 17.026,
+   "fin": 17.846,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Y",
+   "ini": 18.267,
+   "fin": 18.487,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 18.487,
+   "fin": 18.627,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "río",
+   "ini": 18.627,
+   "fin": 18.907,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Chagres",
+   "ini": 18.907,
+   "fin": 19.467,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "que",
+   "ini": 19.767,
+   "fin": 19.887,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "se",
+   "ini": 19.847,
+   "fin": 20.047,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "desbordaba",
+   "ini": 20.047,
+   "fin": 20.607,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "con",
+   "ini": 20.607,
+   "fin": 20.847,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "las",
+   "ini": 20.847,
+   "fin": 21.067,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "lluvias",
+   "ini": 21.067,
+   "fin": 21.607,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "inundaría",
+   "ini": 21.907,
+   "fin": 22.367,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "la",
+   "ini": 22.367,
+   "fin": 22.627,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "zanja",
+   "ini": 22.627,
+   "fin": 22.927,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Así",
+   "ini": 23.353,
+   "fin": 23.713,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "que",
+   "ini": 23.713,
+   "fin": 24.033,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "cambiaron",
+   "ini": 24.033,
+   "fin": 24.413,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 24.413,
+   "fin": 24.693,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "plan",
+   "ini": 24.693,
+   "fin": 24.953,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "en",
+   "ini": 25.373,
+   "fin": 25.533,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "vez",
+   "ini": 25.533,
+   "fin": 25.693,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "de",
+   "ini": 25.693,
+   "fin": 25.853,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "bajar",
+   "ini": 25.853,
+   "fin": 26.173,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "la",
+   "ini": 26.173,
+   "fin": 26.293,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "montaña",
+   "ini": 26.273,
+   "fin": 27.013,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "subir",
+   "ini": 27.313,
+   "fin": 27.513,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 27.513,
+   "fin": 27.833,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "agua",
+   "ini": 27.833,
+   "fin": 28.013,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Represaron",
+   "ini": 28.476,
+   "fin": 29.176,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 29.176,
+   "fin": 29.376,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "río",
+   "ini": 29.376,
+   "fin": 29.616,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Chagres",
+   "ini": 29.616,
+   "fin": 30.036,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "con",
+   "ini": 30.036,
+   "fin": 30.256,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "una",
+   "ini": 30.256,
+   "fin": 30.556,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "presa",
+   "ini": 30.556,
+   "fin": 31.136,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "y",
+   "ini": 31.136,
+   "fin": 31.796,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 31.796,
+   "fin": 31.996,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "valle",
+   "ini": 31.996,
+   "fin": 32.276,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "se",
+   "ini": 32.276,
+   "fin": 32.616,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "convirtió",
+   "ini": 32.616,
+   "fin": 33.076,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "en",
+   "ini": 33.076,
+   "fin": 33.236,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 33.236,
+   "fin": 33.356,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "lago",
+   "ini": 33.356,
+   "fin": 33.556,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Gatún",
+   "ini": 33.556,
+   "fin": 34.196,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "a",
+   "ini": 34.196,
+   "fin": 34.956,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "unos",
+   "ini": 34.956,
+   "fin": 35.136,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "veintiséis",
+   "ini": 35.136,
+   "fin": 35.836,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "metros",
+   "ini": 35.836,
+   "fin": 36.296,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "sobre",
+   "ini": 36.296,
+   "fin": 36.616,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 36.616,
+   "fin": 36.796,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "nivel",
+   "ini": 36.796,
+   "fin": 36.996,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "del",
+   "ini": 36.996,
+   "fin": 37.276,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "mar",
+   "ini": 37.276,
+   "fin": 37.456,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Pero",
+   "ini": 38.078,
+   "fin": 38.478,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "cómo",
+   "ini": 38.478,
+   "fin": 39.138,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "sube",
+   "ini": 39.138,
+   "fin": 39.478,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "un",
+   "ini": 39.478,
+   "fin": 39.738,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "barco",
+   "ini": 39.738,
+   "fin": 40.118,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "veintiséis",
+   "ini": 40.118,
+   "fin": 40.838,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "metros",
+   "ini": 40.838,
+   "fin": 41.298,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Entra",
+   "ini": 41.861,
+   "fin": 42.501,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "a",
+   "ini": 42.501,
+   "fin": 42.681,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "una",
+   "ini": 42.681,
+   "fin": 42.861,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "cámara",
+   "ini": 42.861,
+   "fin": 43.281,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Cierran",
+   "ini": 43.825,
+   "fin": 44.225,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "las",
+   "ini": 44.225,
+   "fin": 44.445,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "compuertas",
+   "ini": 44.445,
+   "fin": 45.185,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "y",
+   "ini": 45.185,
+   "fin": 45.825,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "la",
+   "ini": 45.825,
+   "fin": 45.985,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "cámara",
+   "ini": 45.985,
+   "fin": 46.265,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "se",
+   "ini": 46.265,
+   "fin": 46.505,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "llena",
+   "ini": 46.505,
+   "fin": 46.745,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "de",
+   "ini": 46.745,
+   "fin": 47.085,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "agua",
+   "ini": 47.085,
+   "fin": 47.325,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "hasta",
+   "ini": 47.325,
+   "fin": 48.185,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "igualar",
+   "ini": 48.185,
+   "fin": 48.765,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 48.765,
+   "fin": 48.985,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "nivel",
+   "ini": 48.985,
+   "fin": 49.205,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "de",
+   "ini": 49.205,
+   "fin": 49.385,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "la",
+   "ini": 49.385,
+   "fin": 49.545,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "siguiente",
+   "ini": 49.545,
+   "fin": 49.985,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Pasa",
+   "ini": 50.477,
+   "fin": 50.837,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "a",
+   "ini": 50.837,
+   "fin": 50.997,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "la",
+   "ini": 50.997,
+   "fin": 51.117,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "siguiente",
+   "ini": 51.117,
+   "fin": 51.557,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "cámara",
+   "ini": 51.557,
+   "fin": 52.017,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "y",
+   "ini": 52.017,
+   "fin": 52.757,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "vuelve",
+   "ini": 52.757,
+   "fin": 53.237,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "a",
+   "ini": 53.237,
+   "fin": 53.357,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "subir",
+   "ini": 53.357,
+   "fin": 53.617,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Y",
+   "ini": 54.128,
+   "fin": 54.448,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "a",
+   "ini": 54.448,
+   "fin": 54.588,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "la",
+   "ini": 54.588,
+   "fin": 54.748,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "última",
+   "ini": 54.748,
+   "fin": 55.188,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Tres",
+   "ini": 55.77,
+   "fin": 56.19,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "escalones",
+   "ini": 56.19,
+   "fin": 56.89,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "y",
+   "ini": 56.89,
+   "fin": 57.53,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "ya",
+   "ini": 57.53,
+   "fin": 57.89,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "está",
+   "ini": 57.89,
+   "fin": 58.07,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "en",
+   "ini": 58.07,
+   "fin": 58.27,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 58.27,
+   "fin": 58.41,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "lago",
+   "ini": 58.41,
+   "fin": 58.71,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "A",
+   "ini": 59.144,
+   "fin": 59.424,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "cada",
+   "ini": 59.424,
+   "fin": 59.644,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "cámara",
+   "ini": 59.644,
+   "fin": 60.024,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "se",
+   "ini": 60.024,
+   "fin": 60.224,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "le",
+   "ini": 60.224,
+   "fin": 60.404,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "llama",
+   "ini": 60.404,
+   "fin": 60.564,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "esclusa",
+   "ini": 60.564,
+   "fin": 61.176,
+   "termino": true,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "y",
+   "ini": 61.476,
+   "fin": 61.776,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "funcionan",
+   "ini": 61.776,
+   "fin": 62.456,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "sin",
+   "ini": 62.456,
+   "fin": 62.756,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "bombas",
+   "ini": 62.756,
+   "fin": 63.496,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 63.796,
+   "fin": 63.956,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "agua",
+   "ini": 63.956,
+   "fin": 64.156,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "entra",
+   "ini": 64.156,
+   "fin": 64.556,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "desde",
+   "ini": 64.556,
+   "fin": 64.836,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 64.836,
+   "fin": 65.056,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "lago",
+   "ini": 65.056,
+   "fin": 65.276,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "por",
+   "ini": 65.276,
+   "fin": 65.596,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "gravedad",
+   "ini": 65.596,
+   "fin": 65.956,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Es",
+   "ini": 66.387,
+   "fin": 66.647,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "la",
+   "ini": 66.647,
+   "fin": 66.867,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "misma",
+   "ini": 66.867,
+   "fin": 67.167,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "idea",
+   "ini": 67.167,
+   "fin": 67.527,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "de",
+   "ini": 67.527,
+   "fin": 67.727,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "una",
+   "ini": 67.727,
+   "fin": 67.907,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "torre",
+   "ini": 67.907,
+   "fin": 68.287,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "de",
+   "ini": 68.287,
+   "fin": 68.567,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "agua",
+   "ini": 68.567,
+   "fin": 68.787,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 69.227,
+   "fin": 69.387,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "agua",
+   "ini": 69.387,
+   "fin": 69.687,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "guardada",
+   "ini": 69.687,
+   "fin": 70.247,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "en",
+   "ini": 70.247,
+   "fin": 70.387,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "lo",
+   "ini": 70.387,
+   "fin": 70.547,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "alto",
+   "ini": 70.547,
+   "fin": 70.767,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "baja",
+   "ini": 70.767,
+   "fin": 71.207,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "sola",
+   "ini": 71.207,
+   "fin": 71.567,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "hasta",
+   "ini": 71.567,
+   "fin": 71.887,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "las",
+   "ini": 71.887,
+   "fin": 72.187,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "casas",
+   "ini": 72.187,
+   "fin": 72.607,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Ocho",
+   "ini": 73.038,
+   "fin": 73.458,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "a",
+   "ini": 73.458,
+   "fin": 73.578,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "diez",
+   "ini": 73.578,
+   "fin": 73.798,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "horas",
+   "ini": 73.798,
+   "fin": 74.098,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "después",
+   "ini": 74.098,
+   "fin": 74.718,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 75.018,
+   "fin": 75.139,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "barco",
+   "ini": 75.098,
+   "fin": 75.498,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "sale",
+   "ini": 75.498,
+   "fin": 75.798,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "al",
+   "ini": 75.798,
+   "fin": 76.018,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "otro",
+   "ini": 76.018,
+   "fin": 76.238,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "océano",
+   "ini": 76.238,
+   "fin": 76.738,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Cada",
+   "ini": 77.163,
+   "fin": 77.542,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "cruce",
+   "ini": 77.542,
+   "fin": 78.003,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "usa",
+   "ini": 78.003,
+   "fin": 78.303,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "casi",
+   "ini": 78.303,
+   "fin": 78.783,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "doscientos",
+   "ini": 78.783,
+   "fin": 79.542,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "millones",
+   "ini": 79.542,
+   "fin": 80.223,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "de",
+   "ini": 80.223,
+   "fin": 80.503,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "litros",
+   "ini": 80.503,
+   "fin": 80.822,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "de",
+   "ini": 80.822,
+   "fin": 81.023,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "agua",
+   "ini": 81.023,
+   "fin": 81.182,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "dulce",
+   "ini": 81.182,
+   "fin": 81.622,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Esto",
+   "ini": 82.051,
+   "fin": 82.451,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "fue",
+   "ini": 82.451,
+   "fin": 82.831,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Datazo",
+   "ini": 82.831,
+   "fin": 83.691,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Qué",
+   "ini": 84.206,
+   "fin": 84.446,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "construimos",
+   "ini": 84.446,
+   "fin": 85.346,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "mañana",
+   "ini": 85.346,
+   "fin": 85.886,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  }
+ ],
+ "voz": "kokoro:em_alex",
+ "ajustes": {
+  "voz": "em_alex",
+  "lang": "es-419",
+  "wpm": 170,
+  "pausa_oracion": 0.4,
+  "pausa_coma": 0.3,
+  "extra_pero": 0.2,
+  "inicio": 0.35,
+  "final": 0.5,
+  "velocidad_inicial": 0.82,
+  "velocidad_kokoro": 0.82,
+  "wpm_logrado": 170.6
+ }
+}

@@ -1,0 +1,128 @@
+{
+ "frases": [
+  {
+   "texto": "¿Cómo se construye el Canal de Panamá, que sube barcos por encima de una montaña?",
+   "transcripcion": "cómo se construye el canal de Panamá que sube barcos por encima de una montaña.",
+   "palabras_coinciden": "15/15"
+  },
+  {
+   "texto": "{excavar}La idea más simple: abrir una zanja de mar a mar, {barco}y que el barco pase.",
+   "transcripcion": "La idea más simple, abrir una sanja de mar a mar y que el barco pase.",
+   "palabras_coinciden": "16/16"
+  },
+  {
+   "texto": "{derrumbe}Pero hay un problema real: en el Corte Culebra, los deslizamientos de tierra eran constantes.",
+   "transcripcion": "Pero hay un problema real. En el corte culebra, los deslizamientos de tierra eran constantes.",
+   "palabras_coinciden": "15/15"
+  },
+  {
+   "texto": "{inunda}Y el río Chagres, que se desbordaba con las lluvias, inundaría la zanja.",
+   "transcripcion": "y el río Chagres, que se desbordaba con las lluvias, inundaría la sanja.",
+   "palabras_coinciden": "13/13"
+  },
+  {
+   "texto": "{plan}Así que cambiaron el plan: en vez de bajar la montaña, subir el agua.",
+   "transcripcion": "Así que cambiaron el plan, en vez de bajar la montaña, subir el agua.",
+   "palabras_coinciden": "14/14"
+  },
+  {
+   "texto": "{presa}Represaron el río Chagres con una presa, {lago}y el valle se convirtió en el lago Gatún, {m26}a unos veintiséis metros sobre el nivel del mar.",
+   "transcripcion": "Represaron el río Chagres con una presa y el valle se convirtió en el lago Gatún a unos 26 metros sobre el nivel del mar.",
+   "palabras_coinciden": "25/25"
+  },
+  {
+   "texto": "{esclusas}Pero, ¿cómo sube un barco veintiséis metros?",
+   "transcripcion": "pero como sube un barco 26 metros.",
+   "palabras_coinciden": "7/7"
+  },
+  {
+   "texto": "{entra}Entra a una cámara.",
+   "transcripcion": "Entra a una cámara.",
+   "palabras_coinciden": "4/4"
+  },
+  {
+   "texto": "{cierra}Cierran las compuertas, {llena}y la cámara se llena de agua, hasta igualar el nivel de la siguiente.",
+   "transcripcion": "Cierran las compuertas y la cámara se llena de agua hasta igualar el nivel de la siguiente.",
+   "palabras_coinciden": "17/17"
+  },
+  {
+   "texto": "{sube2}Pasa a la siguiente cámara, y vuelve a subir.",
+   "transcripcion": "pasa a la siguiente cámara y vuelve a subir.",
+   "palabras_coinciden": "9/9"
+  },
+  {
+   "texto": "{sube3}Y a la última.",
+   "transcripcion": "Y a la última.",
+   "palabras_coinciden": "4/4"
+  },
+  {
+   "texto": "Tres escalones, y ya está en el lago.",
+   "transcripcion": "Tres escalones y ya está en el lago.",
+   "palabras_coinciden": "8/8"
+  },
+  {
+   "texto": "{termino}A cada cámara se le llama *esclusa*, y funcionan sin bombas: el agua entra desde el lago por gravedad.",
+   "transcripcion": "A cada cámara se le llama excluza y funcionan sin bombas. El agua entra desde el lago por gravedad.",
+   "palabras_coinciden": "18/19"
+  },
+  {
+   "texto": "{tanque}Es la misma idea de una torre de agua: el agua guardada en lo alto baja sola hasta las casas.",
+   "transcripcion": "Es la misma idea de una torre de agua. El agua guardada en lo alto baja sola hasta las casas.",
+   "palabras_coinciden": "20/20"
+  },
+  {
+   "texto": "{cruza}Ocho a diez horas después, {sale}el barco sale al otro océano.",
+   "transcripcion": "Ocho a diez horas después, el barco sale al otro océano.",
+   "palabras_coinciden": "11/11"
+  },
+  {
+   "texto": "Cada cruce usa casi doscientos millones de litros de agua dulce.",
+   "transcripcion": "Cada cruce usa casi 200 millones de litros de agua dulce.",
+   "palabras_coinciden": "11/11"
+  },
+  {
+   "texto": "{cierre}Esto fue Datazo.",
+   "transcripcion": "Esto fue Datazo.",
+   "palabras_coinciden": "3/3"
+  },
+  {
+   "texto": "¿Qué construimos mañana?",
+   "transcripcion": "que construimos mañana.",
+   "palabras_coinciden": "3/3"
+  }
+ ],
+ "pausas": {
+  "comas": 20,
+  "oraciones": 18,
+  "extra_pero": 2
+ },
+ "terminos_clave": {
+  "Panamá": "1/1 reconocidas",
+  "Canal": "1/1 reconocidas",
+  "Chagres": "2/2 reconocidas",
+  "Culebra": "1/1 reconocidas",
+  "Gatún": "1/1 reconocidas",
+  "esclusa": "0/1 reconocidas",
+  "compuertas": "1/1 reconocidas",
+  "veintiséis": "2/2 reconocidas",
+  "Datazo": "1/1 reconocidas",
+  "gravedad": "1/1 reconocidas"
+ },
+ "resumen": {
+  "duracion_s": 87.19,
+  "palabras": 214,
+  "ajustes": {
+   "voz": "em_alex",
+   "lang": "es-419",
+   "wpm": 170,
+   "pausa_oracion": 0.4,
+   "pausa_coma": 0.3,
+   "extra_pero": 0.2,
+   "inicio": 0.35,
+   "final": 0.5,
+   "velocidad_inicial": 0.82,
+   "velocidad_kokoro": 0.82,
+   "wpm_logrado": 170.6
+  }
+ }
+}
