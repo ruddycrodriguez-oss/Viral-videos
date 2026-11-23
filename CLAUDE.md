@@ -37,7 +37,7 @@ Canal de YouTube Shorts que ya existe. El trabajo en este repositorio es **produ
 - **Licencia comercial obligatoria** (el canal se monetizará). Hay que guardar copia de la tarjeta de licencia con fecha en `datazo/construye/licencias/` y anotar que son declaraciones del autor, no asesoría legal.
 - **Voz elegida (23-nov-2026): la muestra 2, Kokoro-82M `em_alex`, siempre la misma en todos los Shorts.** Fonética `es-419`: la **c y la z suenan como «s»**, igual que en la muestra 2. Licencia: pesos Apache-2.0 (declaración del autor; procedencia de cada voz no documentada y algo de entrenamiento con audio sintético de TTS cerrados; copia de la tarjeta en `datazo/construye/licencias/`). **No se clona la voz de ningún video ni persona.** Descartadas: Chatterbox (MIT, marca de agua Perth), Kokoro `ef_dora`, Piper `es_MX-claude`, `es_MX-ald`, `es_AR-daniela`, Coqui XTTS-v2, F5-TTS y Kani-TTS (por licencia, origen dudoso o no ser la elegida).
 - **Ajustes de la voz (los aplica `datazo/voz.py`; no cambiarlos sin avisar):**
-  - **Velocidad:** unas **170 palabras por minuto** de habla (la muestra iba a unas 193). Kokoro va **fijo a velocidad 0,82**, que da 170,6 palabras por minuto en el guion de referencia (Canal de Panamá) y el mismo ritmo en todos los videos. Se probó calibrar frase a frase en el formato B y **falló** (en guiones con frases cortas y muchas comas pedía velocidad 1,28 y la voz salía atropellada), por eso la calibración quedó como opción y `verificacion_voz.json` solo informa del ritmo. **Si el video pasa de 90 s, se recorta el guion; no se acelera la voz.**
+  - **Velocidad:** unas **170 palabras por minuto** de habla (la muestra iba a unas 193), contando las **palabras habladas** (los números se dicen con varias: «9,58» es «nueve cincuenta y ocho») sobre la frase recortada y sin sus pausas largas (≥ 0,4 s), que es la cuenta que se hizo con la muestra. `voz.py` calibra la velocidad de Kokoro por guion: **0,82 en el Canal de Panamá (170,6) y 0,93 en el VS de guepardo y Bolt (170,5)**. Un primer intento falló por contar «9,58» como una palabra: subía la velocidad a 1,28 y la voz salía atropellada. **Si el video pasa de su límite, se recorta el guion; no se acelera la voz.**
   - **Pausas:** **0,4 s después de cada oración** y **0,3 s después de cada coma** (también tras `;` y `:`); **+0,2 s** antes de cada «Pero» y de cada «Entonces».
   - **Entonación:** se genera **frase por frase**, respetando ¿? y ¡!, y se unen los audios con esas pausas para que no suene plana. Las pausas de coma se insertan en el audio de la frase ya generada, por la alineación de palabras, para no romper su entonación.
   - **Pronunciación:** tras generar, una transcripción automática comprueba que los **nombres propios y términos técnicos** se entiendan (`verificacion_voz.json`). Si alguno falla, se corrige su escritura solo para la voz (tabla `PRONUNCIACION` de `voz.py`); los subtítulos conservan la ortografía original.
@@ -77,13 +77,14 @@ Se toma de una cuenta de referencia **solo la fórmula**; temas, guiones, escena
 
 ### Formatos A y B (Pillow + ffmpeg)
 
-- Motor: `datazo/motor.py`. Modelo de vídeo: `datazo/render_vs_guepardo.py` y su `datos_vs_guepardo.json`. Comando: `python3 -I datazo/render_vs_guepardo.py datazo/salida/<nombre>.mp4`. Con `--prueba 3.0 12.5` guarda fotogramas PNG. **Estos vídeos aún salen sin voz (pendiente adaptarlos a la voz de IA obligatoria).**
+- Motor: `datazo/motor.py`. Modelo de vídeo: `datazo/render_vs_guepardo.py` y su `datos_vs_guepardo.json`. **Con voz de IA (obligatoria):** primero `MODELOS=<carpeta> python3 datazo/narrar.py datazo/narracion_vs_guepardo.json datazo/salida/voz_vs_guepardo` (genera `voz.wav`, `timeline.json` y `verificacion_voz.json`) y después `python3 -I datazo/render_vs_guepardo.py datazo/salida/<nombre>.mp4 --voz datazo/salida/voz_vs_guepardo`: los tiempos de escenas, la salida de la carrera y los subtítulos salen de la voz, y el MP4 lleva la voz normalizada a −16 LUFS, sin música. Con `--prueba 3.0 12.5` guarda fotogramas PNG. Marcas de la narración: `{evento}palabra`, `//` (corte de subtítulo), `*resaltado*`, `9,58|nueve_cincuenta_y_ocho` (lo que se ve | lo que se dice) y `[[silencio 5.95 evento]]` (la carrera animada, en tiempo real). Para un guion A o B nuevo: escribir su `narracion_*.json` con esas marcas y su render.
+- **Formato A:** todavía no tiene motor de animación propio (solo existen sus guiones); la voz, los tiempos y los subtítulos por frases (`voz.subtitulos_por_frases`) ya están listos para cuando se construya.
 - Cada video lleva MP4, `.srt` y guía de tiempos.
 
 ### Formato C (Three.js en Chromium sin pantalla + voz local)
 
 1. **Preparar el entorno** (no persiste entre sesiones): `cd datazo/construye && npm install`; `python3 -m venv v && v/bin/pip install kokoro-onnx soundfile faster-whisper` (y, para Chatterbox, `torch==2.6.0 torchaudio==2.6.0` desde el índice CPU de PyTorch y `chatterbox-tts`); modelos de Kokoro (`kokoro-v1.0.onnx` y `voices-v1.0.bin`) de las publicaciones del proyecto `kokoro-onnx` y carpeta `MODELOS`. Playwright y Chromium ya están instalados.
-2. **Voz y tiempos:** `MODELOS=<carpeta> v/bin/python generar_voz.py guion_canal_panama.json kokoro:ef_dora salida/<nombre>` genera `voz_cruda.wav` y `timeline.json` (palabras con su inicio y fin, eventos y duración). La alineación usa faster-whisper (MIT) solo para medir tiempos. Copiar `voz_cruda.wav` como `voz.wav`.
+2. **Voz y tiempos:** `MODELOS=<carpeta> v/bin/python generar_voz.py guion_canal_panama.json salida/<nombre>` (atajo de `datazo/narrar.py`; voz `em_alex`) genera `voz_cruda.wav` y `timeline.json` (palabras con su inicio y fin, eventos y duración). La alineación usa faster-whisper (MIT) solo para medir tiempos. Copiar `voz_cruda.wav` como `voz.wav`.
 3. **Render:** `node render.js salida/<nombre> salida/<nombre>.mp4 3` captura cada fotograma con WebGL por software (≈0,4 s por fotograma) y los une con la voz (volumen normalizado a −16 LUFS).
 4. **Revisar fotogramas** con `node fotograma.js <carpeta> t1 t2 …` antes del render final; la escena lee `timeline.json` por parámetro (`?tl=`).
 - Las marcas del guion `{evento}` disparan las animaciones en el instante exacto en que se dice la palabra siguiente; `*término*` marca el término técnico.
@@ -107,9 +108,10 @@ Se toma de una cuenta de referencia **solo la fórmula**; temas, guiones, escena
 
 ## Pendientes
 
-1. **Elegir la voz** (muestras 1, 2 o 3) y anotarla en la sección «Voz de IA».
-2. Producir el Short del Canal de Panamá con la voz elegida (el motor y el guion están listos).
+1. Subir a YouTube el Short del Canal de Panamá con `datazo/construye/salida/canal_de_panama_publicar.txt` (título, descripción con fuentes y 3 hashtags) y **«AI use» = Sí**; tras subirlo, anotar qué etiqueta aparece en YouTube.
+2. Escuchar el MP4 de Panamá y el VS de guepardo y Bolt: Claude no puede oír, solo comprobó la claridad con una transcripción automática (en el VS, «Usain» y «Sarah» salieron menos claros que el resto).
 3. Decidir el ajuste de audiencia del canal en YouTube Studio («revisar cada video» recomendado).
 4. Declarar los temas que el dueño no quiere tratar.
 5. Verificar, tema por tema, los datos de `temas.md` antes de escribir cada guion.
-6. Adaptar los formatos A y B a la voz de IA (hoy salen sin voz).
+6. Construir el motor de animación del formato A (la voz ya está lista).
+7. Posible limpieza del historial de la rama: un commit automático subió por error unos 718 fotogramas temporales (≈100 MB). Ya no están en el árbol, pero siguen en la historia; limpiarlo exige un push forzado y necesita permiso del dueño.

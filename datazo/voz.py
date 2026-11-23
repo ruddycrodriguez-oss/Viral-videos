@@ -13,7 +13,7 @@ Marcas del guion:  {evento}palabra   -> el evento ocurre cuando empieza esa pala
                    [[silencio 9.6]]  -> silencio de 9,6 s (por ejemplo, mientras corre una carrera animada)
 """
 import difflib, json, os, re, subprocess, unicodedata
-import numpy as np, soundfile as sf
+import numpy as np
 
 SR = 24000
 AJUSTES = {
@@ -59,6 +59,11 @@ def num2es(n):
 
 
 def _num(n): return num2es(n)
+
+
+def _sin_signos(w):
+    """Quita los signos de los extremos (¿ ¡ . , ; : ? ! …) pero no los de dentro: «9,58» se queda como «9,58»."""
+    return re.sub(r"^[¿¡(«\"]+|[.,;:?!…)»\"]+$", "", w)
 
 
 def _hablado(core, previo_num):
@@ -124,6 +129,7 @@ def _texto_voz(pal):
 
 def narrar(narracion, salida, modelos, ajustes=None, whisper="medium", verbose=True):
     """Genera `voz_cruda.wav`, `timeline.json` y `verificacion_voz.json` en `salida`. Devuelve el timeline."""
+    import soundfile as sf   # solo hace falta para generar la voz (el render de vídeo solo lee el timeline)
     A = dict(AJUSTES); A.update(ajustes or {})
     os.makedirs(salida, exist_ok=True)
     from kokoro_onnx import Kokoro
@@ -262,7 +268,7 @@ def narrar(narracion, salida, modelos, ajustes=None, whisper="medium", verbose=T
         eventos_pend = []
         for p, (s0, s1), ok_ in zip(pal, t, ok):
             ini = cursor + mapear(s0); fin = cursor + mapear(min(s1, len(a) / SR))
-            palabras_tl.append({"w": re.sub(r"[¿¡.,;:?!…]", "", p["w"]), "ini": round(ini, 3), "fin": round(max(fin, ini + 0.12), 3), "termino": p["termino"], "corte": p["corte"], "final_oracion": bool(re.search(r"[.?!…]$", p["w"]))})
+            palabras_tl.append({"w": _sin_signos(p["w"]), "wp": p["w"], "ini": round(ini, 3), "fin": round(max(fin, ini + 0.12), 3), "termino": p["termino"], "corte": p["corte"], "final_oracion": bool(re.search(r"[.?!]$", p["w"]))})
             for ev in p["eventos"]: eventos[ev] = round(ini, 3)
             informe["terminos"].setdefault(_norm(p["w"]), []).append(bool(ok_))
         fr_audio = np.concatenate(trozos); audio.append(fr_audio); cursor += len(fr_audio) / SR
@@ -312,6 +318,6 @@ def subtitulos_por_frases(tl, max_hueco=0.7):
         sig = bloques[i + 1][0]["ini"] if i + 1 < len(bloques) else None
         if sig is not None and sig - fin < max_hueco: fin = sig
         else: fin += 0.2
-        out.append({"ini": round(ini, 3), "fin": round(fin, 3), "texto": " ".join(w["w"] for w in b),
+        out.append({"ini": round(ini, 3), "fin": round(fin, 3), "texto": " ".join(w.get("wp", w["w"]) for w in b),
                     "resalta": [w["w"] for w in b if w["termino"]]})
     return out

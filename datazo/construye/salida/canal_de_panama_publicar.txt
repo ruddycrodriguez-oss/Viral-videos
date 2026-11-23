@@ -1,0 +1,36 @@
+DATAZO · ASÍ SE CONSTRUYE: EL CANAL DE PANAMÁ
+Archivo para copiar y pegar al subir el Short (funciona desde el iPad: mantén pulsado un bloque, «Seleccionar» y «Copiar»).
+
+=================== 1) TÍTULO (máximo 100 caracteres; este tiene 69) ===================
+¿Cómo se construye el Canal de Panamá? Así suben los barcos 26 metros
+
+=================== 2) DESCRIPCIÓN (copia todo lo que hay entre estas dos líneas) ===================
+¿Cómo se construye un canal que sube barcos por encima de una montaña? En 87 segundos: una zanja de mar a mar, un río que se desborda y un lago a unos 26 metros de altura.
+
+Lo que explica el video:
+• Un canal a nivel del mar tendría que enfrentar los deslizamientos del Corte Culebra y las crecidas del río Chagres.
+• Se cambió el plan: se represó el Chagres y el valle quedó bajo el lago Gatún, a unos 26 m (85 pies) sobre el nivel del mar.
+• Los barcos suben y bajan en escalones de agua, dentro de las esclusas. Se llenan por gravedad, sin bombas.
+• Comparación cotidiana: una torre de agua, que baja el agua guardada en lo alto hasta las casas.
+
+Fuentes:
+• Autoridad del Canal de Panamá, «Design of the Locks» (85 pies, sin bombas, conductos, cámaras de 110 × 1.000 pies): https://pancanal.com/en/design-of-the-locks/
+• Autoridad del Canal de Panamá, «Culebra Cut» (deslizamientos constantes; el valle del Chagres se convirtió en el lago Gatún): https://pancanal.com/en/culebra-cut/
+• Linda Hall Library, «The Land Divided, The World United» (la presa de Gatún y el Chagres; 52 millones de galones por tránsito): https://www.lindahall.org/experience/digital-exhibitions/the-land-divided-the-world-united/08-locks
+• Universidad de Florida, Panama Canal Museum (hoja de datos: 85 pies, 8 a 10 horas de tránsito, 52 millones de galones): https://www.uflib.ufl.edu/spec/pcm/InterestingFacts.pdf
+• National Geographic (duración del tránsito): https://www.nationalgeographic.com/history/article/140815-panama-canal-culebra-cut-lake-gatun-focus
+• History.com, Panama Canal: https://www.history.com/topics/landmarks/panama-canal
+• Física, el agua busca su nivel: Universidad Purdue https://www.physics.purdue.edu/demos/display_page.php?item=2B-03 y Universidad Rowan https://users.rowan.edu/~klassen/dpa/facultyStaff/Docs/physics_demos/fluids_html/pascals_vases.html
+• Torre de agua: USGS https://www.usgs.gov/media/images/water-tower-stores-water-towns-use e Indiana University, A Moment of Science https://www.ipm.org/show/amomentofscience/2019-09-13/physics-water-towers
+
+Notas: animación esquemática y sin escala (alturas exageradas). Cálculos propios: 85 pies = 26 m; 52 millones de galones ≈ 197 millones de litros. Narración con voz generada por IA.
+
+#CanalDePanama #Ingeniería #AsíSeConstruye
+=================== FIN DE LA DESCRIPCIÓN ===================
+
+=================== 3) AJUSTES AL SUBIR (no se copian) ===================
+• Archivo: datazo_asi_se_construye_canal_de_panama.mp4 (1080×1920, 87 s, con voz de IA, sin música: añade tu música al subirlo).
+• Atributos → «AI use» (Uso de IA): SÍ. Es la opción prudente por la voz sintética (no es una obligación demostrada; YouTube dice que divulgarlo no limita el alcance ni la monetización).
+• Audiencia: «No, no es contenido para niños». Criterio: tono de audiencia general, sin personajes ni lenguaje infantiles. Revisa cada Short.
+• Después de subirlo, mira qué etiqueta de IA aparece (en la descripción ampliada o superpuesta) y anótalo en CLAUDE.md.
+• Hashtags: son los 3 de la última línea de la descripción. YouTube muestra los 3 primeros sobre el título.

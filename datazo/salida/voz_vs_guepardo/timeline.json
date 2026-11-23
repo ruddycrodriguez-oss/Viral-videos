@@ -18,7 +18,8 @@
    "fin": 0.67,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "¿Puede"
   },
   {
    "w": "Usain",
@@ -26,7 +27,8 @@
    "fin": 1.11,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Usain"
   },
   {
    "w": "Bolt",
@@ -34,7 +36,8 @@
    "fin": 1.47,
    "termino": true,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Bolt"
   },
   {
    "w": "ganarle",
@@ -42,7 +45,8 @@
    "fin": 1.99,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "ganarle"
   },
   {
    "w": "a",
@@ -50,7 +54,8 @@
    "fin": 2.13,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "a"
   },
   {
    "w": "un",
@@ -58,7 +63,8 @@
    "fin": 2.25,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "un"
   },
   {
    "w": "guepardo",
@@ -66,7 +72,8 @@
    "fin": 2.69,
    "termino": true,
    "corte": true,
-   "final_oracion": true
+   "final_oracion": true,
+   "wp": "guepardo?"
   },
   {
    "w": "Usain",
@@ -74,7 +81,8 @@
    "fin": 3.648,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Usain"
   },
   {
    "w": "Bolt",
@@ -82,7 +90,8 @@
    "fin": 3.906,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Bolt:"
   },
   {
    "w": "récord",
@@ -90,7 +99,8 @@
    "fin": 4.626,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "récord"
   },
   {
    "w": "mundial",
@@ -98,7 +108,8 @@
    "fin": 5.046,
    "termino": false,
    "corte": true,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "mundial"
   },
   {
    "w": "en",
@@ -106,7 +117,8 @@
    "fin": 5.306,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "en"
   },
   {
    "w": "100",
@@ -114,7 +126,8 @@
    "fin": 5.506,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "100"
   },
   {
    "w": "metros",
@@ -122,15 +135,17 @@
    "fin": 6.126,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "metros:"
   },
   {
-   "w": "958",
+   "w": "9,58",
    "ini": 6.426,
    "fin": 7.646,
    "termino": true,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "9,58"
   },
   {
    "w": "segundos",
@@ -138,7 +153,8 @@
    "fin": 8.086,
    "termino": false,
    "corte": true,
-   "final_oracion": true
+   "final_oracion": true,
+   "wp": "segundos."
   },
   {
    "w": "Sarah",
@@ -146,7 +162,8 @@
    "fin": 8.944,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Sarah,"
   },
   {
    "w": "una",
@@ -154,7 +171,8 @@
    "fin": 9.595,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "una"
   },
   {
    "w": "guepardo",
@@ -162,7 +180,8 @@
    "fin": 9.985,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "guepardo:"
   },
   {
    "w": "récord",
@@ -170,7 +189,8 @@
    "fin": 10.825,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "récord"
   },
   {
    "w": "Guinness",
@@ -178,15 +198,17 @@
    "fin": 11.445,
    "termino": false,
    "corte": true,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Guinness,"
   },
   {
-   "w": "595",
+   "w": "5,95",
    "ini": 11.871,
    "fin": 12.425,
    "termino": true,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "5,95"
   },
   {
    "w": "segundos",
@@ -194,7 +216,8 @@
    "fin": 13.165,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "segundos,"
   },
   {
    "w": "en",
@@ -202,7 +225,8 @@
    "fin": 13.785,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "en"
   },
   {
    "w": "2012",
@@ -210,7 +234,8 @@
    "fin": 14.345,
    "termino": false,
    "corte": true,
-   "final_oracion": true
+   "final_oracion": true,
+   "wp": "2012."
   },
   {
    "w": "Tres",
@@ -218,7 +243,8 @@
    "fin": 15.323,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Tres,"
   },
   {
    "w": "dos",
@@ -226,15 +252,17 @@
    "fin": 15.923,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "dos,"
   },
   {
    "w": "uno",
    "ini": 16.223,
    "fin": 16.403,
    "termino": false,
-   "corte": true,
-   "final_oracion": true
+   "corte": false,
+   "final_oracion": false,
+   "wp": "uno…"
   },
   {
    "w": "Ya",
@@ -242,7 +270,8 @@
    "fin": 16.683,
    "termino": false,
    "corte": false,
-   "final_oracion": true
+   "final_oracion": true,
+   "wp": "¡Ya!"
   },
   {
    "w": "Cuando",
@@ -250,7 +279,8 @@
    "fin": 23.322,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Cuando"
   },
   {
    "w": "el",
@@ -258,7 +288,8 @@
    "fin": 23.482,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "el"
   },
   {
    "w": "guepardo",
@@ -266,7 +297,8 @@
    "fin": 23.882,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "guepardo"
   },
   {
    "w": "cruza",
@@ -274,7 +306,8 @@
    "fin": 24.302,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "cruza"
   },
   {
    "w": "la",
@@ -282,7 +315,8 @@
    "fin": 24.502,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "la"
   },
   {
    "w": "meta",
@@ -290,7 +324,8 @@
    "fin": 24.902,
    "termino": false,
    "corte": true,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "meta,"
   },
   {
    "w": "Bolt",
@@ -298,7 +333,8 @@
    "fin": 25.362,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Bolt"
   },
   {
    "w": "va",
@@ -306,7 +342,8 @@
    "fin": 25.522,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "va"
   },
   {
    "w": "por",
@@ -314,7 +351,8 @@
    "fin": 25.782,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "por"
   },
   {
    "w": "unos",
@@ -322,7 +360,8 @@
    "fin": 26.022,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "unos"
   },
   {
    "w": "55",
@@ -330,7 +369,8 @@
    "fin": 26.842,
    "termino": true,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "55"
   },
   {
    "w": "metros",
@@ -338,7 +378,8 @@
    "fin": 27.402,
    "termino": false,
    "corte": true,
-   "final_oracion": true
+   "final_oracion": true,
+   "wp": "metros."
   },
   {
    "w": "Ganó",
@@ -346,7 +387,8 @@
    "fin": 28.24,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Ganó"
   },
   {
    "w": "el",
@@ -354,7 +396,8 @@
    "fin": 28.38,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "el"
   },
   {
    "w": "guepardo",
@@ -362,7 +405,8 @@
    "fin": 28.78,
    "termino": true,
    "corte": true,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "guepardo"
   },
   {
    "w": "por",
@@ -370,15 +414,17 @@
    "fin": 29.1,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "por"
   },
   {
-   "w": "363",
+   "w": "3,63",
    "ini": 29.1,
    "fin": 30.5,
    "termino": true,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "3,63"
   },
   {
    "w": "segundos",
@@ -386,7 +432,8 @@
    "fin": 31.08,
    "termino": false,
    "corte": true,
-   "final_oracion": true
+   "final_oracion": true,
+   "wp": "segundos."
   },
   {
    "w": "En",
@@ -394,7 +441,8 @@
    "fin": 31.862,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "En"
   },
   {
    "w": "promedio",
@@ -402,7 +450,8 @@
    "fin": 32.302,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "promedio,"
   },
   {
    "w": "Sarah",
@@ -410,7 +459,8 @@
    "fin": 32.722,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Sarah"
   },
   {
    "w": "corrió",
@@ -418,7 +468,8 @@
    "fin": 33.022,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "corrió"
   },
   {
    "w": "a",
@@ -426,7 +477,8 @@
    "fin": 33.182,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "a"
   },
   {
    "w": "60",
@@ -434,7 +486,8 @@
    "fin": 33.642,
    "termino": true,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "60"
   },
   {
    "w": "km/h",
@@ -442,7 +495,8 @@
    "fin": 34.802,
    "termino": false,
    "corte": true,
-   "final_oracion": true
+   "final_oracion": true,
+   "wp": "km/h."
   },
   {
    "w": "Bolt",
@@ -450,7 +504,8 @@
    "fin": 35.522,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Bolt,"
   },
   {
    "w": "a",
@@ -458,7 +513,8 @@
    "fin": 36.142,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "a"
   },
   {
    "w": "unos",
@@ -466,7 +522,8 @@
    "fin": 36.382,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "unos"
   },
   {
    "w": "38",
@@ -474,7 +531,8 @@
    "fin": 37.362,
    "termino": true,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "38"
   },
   {
    "w": "km/h",
@@ -482,7 +540,8 @@
    "fin": 38.362,
    "termino": false,
    "corte": true,
-   "final_oracion": true
+   "final_oracion": true,
+   "wp": "km/h."
   },
   {
    "w": "Son",
@@ -490,7 +549,8 @@
    "fin": 39.092,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Son"
   },
   {
    "w": "récords",
@@ -498,7 +558,8 @@
    "fin": 39.552,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "récords"
   },
   {
    "w": "de",
@@ -506,7 +567,8 @@
    "fin": 39.772,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "de"
   },
   {
    "w": "carreras",
@@ -514,7 +576,8 @@
    "fin": 40.172,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "carreras"
   },
   {
    "w": "distintas",
@@ -522,7 +585,8 @@
    "fin": 41.032,
    "termino": false,
    "corte": true,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "distintas,"
   },
   {
    "w": "pero",
@@ -530,7 +594,8 @@
    "fin": 41.732,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "pero"
   },
   {
    "w": "la",
@@ -538,7 +603,8 @@
    "fin": 42.032,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "la"
   },
   {
    "w": "diferencia",
@@ -546,7 +612,8 @@
    "fin": 42.452,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "diferencia"
   },
   {
    "w": "es",
@@ -554,7 +621,8 @@
    "fin": 42.752,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "es"
   },
   {
    "w": "enorme",
@@ -562,7 +630,8 @@
    "fin": 43.092,
    "termino": false,
    "corte": true,
-   "final_oracion": true
+   "final_oracion": true,
+   "wp": "enorme."
   },
   {
    "w": "Quién",
@@ -570,7 +639,8 @@
    "fin": 43.978,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "¿Quién"
   },
   {
    "w": "quieres",
@@ -578,7 +648,8 @@
    "fin": 44.338,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "quieres"
   },
   {
    "w": "que",
@@ -586,7 +657,8 @@
    "fin": 44.658,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "que"
   },
   {
    "w": "enfrente",
@@ -594,7 +666,8 @@
    "fin": 44.997,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "enfrente"
   },
   {
    "w": "al",
@@ -602,7 +675,8 @@
    "fin": 45.198,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "al"
   },
   {
    "w": "guepardo",
@@ -610,7 +684,8 @@
    "fin": 45.677,
    "termino": false,
    "corte": true,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "guepardo"
   },
   {
    "w": "la",
@@ -618,7 +693,8 @@
    "fin": 45.978,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "la"
   },
   {
    "w": "próxima",
@@ -626,7 +702,8 @@
    "fin": 46.338,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "próxima"
   },
   {
    "w": "vez",
@@ -634,7 +711,8 @@
    "fin": 46.618,
    "termino": false,
    "corte": false,
-   "final_oracion": true
+   "final_oracion": true,
+   "wp": "vez?"
   },
   {
    "w": "Dímelo",
@@ -642,7 +720,8 @@
    "fin": 47.593,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "Dímelo"
   },
   {
    "w": "en",
@@ -650,7 +729,8 @@
    "fin": 47.805,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "en"
   },
   {
    "w": "los",
@@ -658,7 +738,8 @@
    "fin": 48.065,
    "termino": false,
    "corte": false,
-   "final_oracion": false
+   "final_oracion": false,
+   "wp": "los"
   },
   {
    "w": "comentarios",
@@ -666,7 +747,8 @@
    "fin": 48.565,
    "termino": false,
    "corte": false,
-   "final_oracion": true
+   "final_oracion": true,
+   "wp": "comentarios."
   }
  ],
  "voz": "kokoro:em_alex",
