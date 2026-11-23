@@ -2,7 +2,8 @@
 """Datazo VS: Guepardo vs Usain Bolt. Genera el MP4 vertical (1080x1920, 30 fps, sin audio),
 el archivo de subtítulos .srt y la guía de tiempos para grabar la voz.
 
-Uso: python3 -I render_vs_guepardo.py [salida.mp4] [--prueba SEGUNDO ...]
+Uso: python3 -I render_vs_guepardo.py [salida.mp4] [--voz CARPETA_DE_LA_VOZ] [--prueba SEGUNDO ...]
+  --voz CARPETA  usa la narración de IA (timeline.json y voz.wav, generados con datazo/narrar.py) para fijar tiempos y subtítulos.
   --prueba 3.0 12.5   guarda esos fotogramas como PNG en lugar de generar el vídeo.
 Todo el dibujo es propio (código); no hay imágenes ni personajes de terceros.
 """
@@ -23,6 +24,18 @@ W, H, FPS = m.W, m.H, m.FPS
 
 # ------------------------------------------------------------------ DATOS (verificados)
 CFG = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "datos_vs_guepardo.json"), encoding="utf-8"))
+VOZ_DIR = sys.argv[sys.argv.index("--voz") + 1] if "--voz" in sys.argv else None
+if VOZ_DIR:
+    # Con voz de IA: todos los tiempos salen de la narración alineada (eventos y subtítulos), no de valores fijos.
+    import voz as _voz
+    _tl = json.load(open(os.path.join(VOZ_DIR, "timeline.json"), encoding="utf-8"))
+    _ev = _tl["eventos"]
+    CFG["fin_presentacion_s"] = _ev["pres"]; CFG["tarjeta_guepardo_s"] = _ev["guep"]; CFG["cuenta_atras_s"] = _ev["cuenta"]
+    CFG["inicio_carrera_s"] = _ev["salida"]; CFG["barras_ini_s"] = _ev["barras"]; CFG["barras_fin_s"] = _ev["aviso"]
+    CFG["fin_resultados_s"] = _ev["aviso"]
+    CFG["subtitulos"] = _voz.subtitulos_por_frases(_tl)
+    CFG["tarjeta_final_s"] = round(_tl["palabras"][-1]["fin"] + 0.8, 2)
+    CFG["duracion_total_s"] = round(CFG["tarjeta_final_s"] + 2.2, 2)
 T_CHEETAH = CFG["guepardo_s"]          # segundos en 100 m
 T_BOLT = CFG["bolt_s"]
 BOLT_SPLITS = CFG.get("bolt_parciales")  # [[metros, segundos], ...] o null
@@ -380,11 +393,17 @@ def main():
             draw_frame(float(s)).save(p)
             print(p)
         return
-    out = args[0] if args else "datazo_vs_guepardo_bolt.mp4"
+    pos = [a for i, a in enumerate(args) if not a.startswith("--") and (i == 0 or args[i - 1] != "--voz")]
+    out = pos[0] if pos else "datazo_vs_guepardo_bolt.mp4"
     n = int(round(TOTAL * FPS))
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS),
-           "-i", "-", "-c:v", "libx264", "-preset", "slow", "-crf", "17", "-pix_fmt", "yuv420p", "-profile:v", "high",
-           "-level", "4.1", "-movflags", "+faststart", "-an", out]
+    base = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
+    if VOZ_DIR:   # voz de IA normalizada a -16 LUFS, con silencio de relleno hasta el final de la tarjeta; sin música
+        audio = ["-i", os.path.join(VOZ_DIR, "voz.wav"), "-filter_complex", "[1:a]loudnorm=I=-16:TP=-1.5:LRA=11,apad[a]", "-map", "0:v", "-map", "[a]",
+                 "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-t", str(TOTAL)]
+    else:
+        audio = ["-an"]
+    cmd = base + audio + ["-c:v", "libx264", "-preset", "slow", "-crf", "17", "-pix_fmt", "yuv420p", "-profile:v", "high",
+                          "-level", "4.1", "-movflags", "+faststart", out]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     with Pool(4) as pool:
         for k, buf in enumerate(pool.imap(_render, range(n), chunksize=6)):

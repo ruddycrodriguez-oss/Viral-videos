@@ -2,6 +2,14 @@
 
 Todos los datos se verificaron con **al menos 2 fuentes** el 22-nov-2026 (cada punto lo revisó otro verificador independiente). Donde no se llegó a 2 fuentes independientes, o la cifra es una estimación o un cálculo propio, **se dice** en «Matices». La política de contenido para niños está resumida en `CLAUDE.md`. Esto no es asesoría legal.
 
+## Voz de IA en todos los guiones (23-nov-2026)
+
+Todos los Shorts llevan narración con la voz elegida (Kokoro `em_alex`, español latinoamericano: c y z suenan como «s») a **unas 170 palabras por minuto**, con **0,4 s de pausa tras cada oración, 0,3 s tras cada coma y +0,2 s antes de cada «Pero» o «Entonces»**. Se genera frase por frase (respetando ¿? y ¡!) y se alinea palabra por palabra; los subtítulos y las animaciones salen de esos tiempos. Los números se leen en voz alta (por ejemplo, «243» se dice «doscientos cuarenta y tres»). Si un video pasa de su límite, **se recorta el guion; no se acelera la voz.** Detalles en `CLAUDE.md` y `voz.py`.
+
+Cómo se produce con voz: `MODELOS=<carpeta> python3 datazo/narrar.py <narracion.json> <salida> [términos]` y después el render con `--voz <salida>` (hecho para el B1: `narracion_vs_guepardo.json`). Para el resto de guiones, el texto de cada sección «Texto» es la narración; se le añaden las marcas `{evento}`, `//` (corte de subtítulo) y `*resaltado*` al producir cada video.
+
+**Duración estimada con voz** (calculada con el ritmo y las pausas de arriba; no es una medición): A1 ≈ 41 s, A2 ≈ 40 s, A3 ≈ 45 s, A4 ≈ 42 s, A5 ≈ 40 s, B2 ≈ 40 s, B3 ≈ 42 s, B4 ≈ 38 s, B5 ≈ 42 s. Todos quedan por debajo de los 60 s de los formatos A y B. El B1 se mide al producirlo (incluye la carrera en tiempo real).
+
 ## Los dos formatos
 
 ### Formato A: «DATAZO EN 40» (un dato)
@@ -38,7 +46,7 @@ La política de YouTube (revisada en `nicho.md`, de julio de 2026) castiga el co
 ### A1. Venus: un día más largo que su año
 
 - **Gancho del primer segundo:** «Venus tiene un día más largo que su año.»
-- **Duración de la locución:** 93 palabras, unos 34 s.
+- **Duración de la locución:** 98 palabras habladas; ≈ 41 s con la voz elegida (estimada: 170 palabras por minuto más pausas).
 - **Ángulo propio:** La distinción entre día sidéreo y día solar (el matiz que casi nadie cuenta).
 - **Audiencia («para niños»):** No para niños (tono de audiencia general: sin mascotas, sin rimas ni lenguaje infantil, sin personajes ajenos; no mencionar a menores en título, etiquetas ni descripción).
 
@@ -69,7 +77,7 @@ La política de YouTube (revisada en `nicho.md`, de julio de 2026) castiga el co
 ### A2. El pulpo y sus tres corazones
 
 - **Gancho del primer segundo:** «Un pulpo tiene tres corazones y sangre azul.»
-- **Duración de la locución:** 90 palabras, unos 33 s.
+- **Duración de la locución:** 90 palabras habladas; ≈ 40 s con la voz elegida (estimada: 170 palabras por minuto más pausas).
 - **Ángulo propio:** La disputa sobre por qué el pulpo prefiere arrastrarse, atribuida al Smithsonian.
 - **Audiencia («para niños»):** No para niños (tono de audiencia general: sin mascotas, sin rimas ni lenguaje infantil, sin personajes ajenos; no mencionar a menores en título, etiquetas ni descripción).
 
@@ -98,7 +106,7 @@ La política de YouTube (revisada en `nicho.md`, de julio de 2026) castiga el co
 ### A3. Cleopatra, la Luna y la Gran Pirámide
 
 - **Gancho del primer segundo:** «Cleopatra vivió más cerca del alunizaje que de la construcción de la Gran Pirámide.»
-- **Duración de la locución:** 100 palabras, unos 37 s.
+- **Duración de la locución:** 110 palabras habladas; ≈ 45 s con la voz elegida (estimada: 170 palabras por minuto más pausas).
 - **Ángulo propio:** Cálculo propio y punto de ruptura: la conclusión sobrevive aunque la pirámide cambie unas décadas.
 - **Audiencia («para niños»):** No para niños (tono de audiencia general: sin mascotas, sin rimas ni lenguaje infantil, sin personajes ajenos; no mencionar a menores en título, etiquetas ni descripción).
 
@@ -129,7 +137,7 @@ La política de YouTube (revisada en `nicho.md`, de julio de 2026) castiga el co
 ### A4. La luz que sale del Sol
 
 - **Gancho del primer segundo:** «La luz del Sol que ves hoy salió hace más de ocho minutos.»
-- **Duración de la locución:** 99 palabras, unos 37 s.
+- **Duración de la locución:** 101 palabras habladas; ≈ 42 s con la voz elegida (estimada: 170 palabras por minuto más pausas).
 - **Ángulo propio:** El rango real por la órbita elíptica (8:11 a 8:27) frente al «8:20» que se repite.
 - **Audiencia («para niños»):** No para niños (tono de audiencia general: sin mascotas, sin rimas ni lenguaje infantil, sin personajes ajenos; no mencionar a menores en título, etiquetas ni descripción).
 
@@ -160,7 +168,7 @@ La política de YouTube (revisada en `nicho.md`, de julio de 2026) castiga el co
 ### A5. La primera final de un Mundial
 
 - **Gancho del primer segundo:** «La primera final de un Mundial fue una remontada.»
-- **Duración de la locución:** 93 palabras, unos 34 s.
+- **Duración de la locución:** 95 palabras habladas; ≈ 40 s con la voz elegida (estimada: 170 palabras por minuto más pausas).
 - **Ángulo propio:** Una anécdota famosa presentada como asunto en disputa, con las dos posturas.
 - **Audiencia («para niños»):** No para niños (tono de audiencia general: sin mascotas, sin rimas ni lenguaje infantil, sin personajes ajenos; no mencionar a menores en título, etiquetas ni descripción).
 
@@ -225,7 +233,7 @@ La política de YouTube (revisada en `nicho.md`, de julio de 2026) castiga el co
 ### B2. Ballena azul vs elefante africano
 
 - **Gancho del primer segundo:** «¿Cuántos elefantes pesa una ballena azul?»
-- **Duración de la locución:** 85 palabras, unos 31 s.
+- **Duración de la locución:** 96 palabras habladas; ≈ 40 s con la voz elegida (estimada: 170 palabras por minuto más pausas).
 - **Ángulo propio:** El adulto típico pesa menos que el récord: la equivalencia es un rango, no una cifra única.
 - **Audiencia («para niños»):** No para niños, **con vigilancia**: el formato «VS» con animales dibujados es el que más se acerca a lo infantil. Mantener el tono adulto, sin personajes caricaturescos con cara ni voces infantiles. Si un VS se vuelve demasiado infantil, rediseñarlo o marcarlo «para niños» sabiendo lo que se pierde (comentarios, notificaciones, anuncios personalizados).
 
@@ -256,7 +264,7 @@ La política de YouTube (revisada en `nicho.md`, de julio de 2026) castiga el co
 ### B3. Júpiter vs Tierra
 
 - **Gancho del primer segundo:** «¿Cuántas Tierras caben dentro de Júpiter?»
-- **Duración de la locución:** 96 palabras, unos 36 s.
+- **Duración de la locución:** 101 palabras habladas; ≈ 42 s con la voz elegida (estimada: 170 palabras por minuto más pausas).
 - **Ángulo propio:** Por qué 318 veces la masa no es 1.321 veces: la densidad.
 - **Audiencia («para niños»):** No para niños, **con vigilancia**: el formato «VS» con animales dibujados es el que más se acerca a lo infantil. Mantener el tono adulto, sin personajes caricaturescos con cara ni voces infantiles. Si un VS se vuelve demasiado infantil, rediseñarlo o marcarlo «para niños» sabiendo lo que se pierde (comentarios, notificaciones, anuncios personalizados).
 
@@ -287,7 +295,7 @@ La política de YouTube (revisada en `nicho.md`, de julio de 2026) castiga el co
 ### B4. Imperio romano vs Imperio mongol
 
 - **Gancho del primer segundo:** «¿Qué imperio fue más grande: el romano o el mongol?»
-- **Duración de la locución:** 88 palabras, unos 33 s.
+- **Duración de la locución:** 90 palabras habladas; ≈ 38 s con la voz elegida (estimada: 170 palabras por minuto más pausas).
 - **Ángulo propio:** Los 24 millones son una suma nominal de cuatro janatos.
 - **Audiencia («para niños»):** No para niños, **con vigilancia**: el formato «VS» con animales dibujados es el que más se acerca a lo infantil. Mantener el tono adulto, sin personajes caricaturescos con cara ni voces infantiles. Si un VS se vuelve demasiado infantil, rediseñarlo o marcarlo «para niños» sabiendo lo que se pierde (comentarios, notificaciones, anuncios personalizados).
 
@@ -318,7 +326,7 @@ La política de YouTube (revisada en `nicho.md`, de julio de 2026) castiga el co
 ### B5. Cancha de fútbol vs Estación Espacial Internacional
 
 - **Gancho del primer segundo:** «¿Cabe la Estación Espacial Internacional en una cancha de fútbol?»
-- **Duración de la locución:** 94 palabras, unos 35 s.
+- **Duración de la locución:** 100 palabras habladas; ≈ 42 s con la voz elegida (estimada: 170 palabras por minuto más pausas).
 - **Ángulo propio:** La NASA compara con fútbol americano; con la cancha de fútbol la diferencia es mínima.
 - **Audiencia («para niños»):** No para niños, **con vigilancia**: el formato «VS» con animales dibujados es el que más se acerca a lo infantil. Mantener el tono adulto, sin personajes caricaturescos con cara ni voces infantiles. Si un VS se vuelve demasiado infantil, rediseñarlo o marcarlo «para niños» sabiendo lo que se pierde (comentarios, notificaciones, anuncios personalizados).
 
