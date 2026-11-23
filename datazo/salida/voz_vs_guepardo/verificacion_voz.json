@@ -1,0 +1,85 @@
+{
+ "frases": [
+  {
+   "texto": "¿Puede Usain *Bolt* ganarle a un *guepardo*? //",
+   "transcripcion": "Puede Usain Bolt ganarle a un guepardo.",
+   "palabras_coinciden": "7/7"
+  },
+  {
+   "texto": "{pres}Usain Bolt: récord mundial // en 100 metros: *9,58|nueve_cincuenta_y_ocho* segundos. //",
+   "transcripcion": "Usa en Volt Record mundial en 100 metros, 9 '50 y 8 segundos.",
+   "palabras_coinciden": "7/9"
+  },
+  {
+   "texto": "{guep}Sarah, una guepardo: récord Guinness, // *5,95|cinco_noventa_y_cinco* segundos, en 2012. //",
+   "transcripcion": "Sara Unagepardo Record Guinness 595 segundos en 2012",
+   "palabras_coinciden": "6/9"
+  },
+  {
+   "texto": "{cuenta}Tres, dos, uno… // ¡Ya!",
+   "transcripcion": "3, 2, 1, ya.",
+   "palabras_coinciden": "4/4"
+  },
+  {
+   "texto": "{cruce}Cuando el guepardo cruza la meta, // Bolt va por unos *55* metros. //",
+   "transcripcion": "Cuando el guepardo cruza la meta, Volt va por unos 55 metros.",
+   "palabras_coinciden": "12/12"
+  },
+  {
+   "texto": "{gano}Ganó el *guepardo* // por *3,63* segundos. //",
+   "transcripcion": "Ganó el guepardo por 3 ,63 segundos.",
+   "palabras_coinciden": "5/6"
+  },
+  {
+   "texto": "{barras}En promedio, Sarah corrió a *60* km/h. // Bolt, a unos *38* km/h. //",
+   "transcripcion": "En promedio, Sara corrió a 60 kilómetros por hora, Bolt a unos 30 y 8 kilómetros por hora.",
+   "palabras_coinciden": "12/12"
+  },
+  {
+   "texto": "{aviso}Son récords de carreras distintas, // pero la diferencia es enorme. //",
+   "transcripcion": "Son récords de carreras distintas, pero la diferencia es enorme.",
+   "palabras_coinciden": "10/10"
+  },
+  {
+   "texto": "{cierre}¿Quién quieres que enfrente al guepardo // la próxima vez?",
+   "transcripcion": "¿Quién quieres que enfrente al guepardo la próxima vez?",
+   "palabras_coinciden": "9/9"
+  },
+  {
+   "texto": "Dímelo en los comentarios.",
+   "transcripcion": "Déymelo en los comentarios.",
+   "palabras_coinciden": "3/4"
+  }
+ ],
+ "pausas": {
+  "comas": 12,
+  "oraciones": 10,
+  "extra_pero": 1
+ },
+ "terminos_clave": {
+  "Bolt": "4/4 reconocidas",
+  "guepardo": "4/5 reconocidas",
+  "Guinness": "1/1 reconocidas",
+  "Sarah": "2/2 reconocidas",
+  "Usain": "1/2 reconocidas"
+ },
+ "resumen": {
+  "duracion_s": 49.82,
+  "palabras": 82,
+  "ajustes": {
+   "voz": "em_alex",
+   "lang": "es-419",
+   "wpm": 170,
+   "pausa_oracion": 0.4,
+   "pausa_coma": 0.3,
+   "extra_pero": 0.2,
+   "inicio": 0.35,
+   "final": 0.5,
+   "velocidad_fija": null,
+   "velocidad_inicial": 0.85,
+   "velocidad_kokoro": 0.928,
+   "wpm_logrado": 170.5,
+   "wpm_articulacion": 175.8
+  }
+ }
+}

@@ -1,0 +1,688 @@
+{
+ "duracion": 49.82,
+ "eventos": {
+  "pres": 3.126,
+  "guep": 8.624,
+  "cuenta": 14.943,
+  "salida": 17.132,
+  "cruce": 23.082,
+  "gano": 27.92,
+  "barras": 31.582,
+  "aviso": 38.792,
+  "cierre": 43.598
+ },
+ "palabras": [
+  {
+   "w": "Puede",
+   "ini": 0.35,
+   "fin": 0.67,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Usain",
+   "ini": 0.67,
+   "fin": 1.11,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Bolt",
+   "ini": 1.11,
+   "fin": 1.47,
+   "termino": true,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "ganarle",
+   "ini": 1.47,
+   "fin": 1.99,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "a",
+   "ini": 1.99,
+   "fin": 2.13,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "un",
+   "ini": 2.13,
+   "fin": 2.25,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "guepardo",
+   "ini": 2.25,
+   "fin": 2.69,
+   "termino": true,
+   "corte": true,
+   "final_oracion": true
+  },
+  {
+   "w": "Usain",
+   "ini": 3.126,
+   "fin": 3.648,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Bolt",
+   "ini": 3.706,
+   "fin": 3.906,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "récord",
+   "ini": 3.906,
+   "fin": 4.626,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "mundial",
+   "ini": 4.626,
+   "fin": 5.046,
+   "termino": false,
+   "corte": true,
+   "final_oracion": false
+  },
+  {
+   "w": "en",
+   "ini": 5.046,
+   "fin": 5.306,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "100",
+   "ini": 5.306,
+   "fin": 5.506,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "metros",
+   "ini": 5.506,
+   "fin": 6.126,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "958",
+   "ini": 6.426,
+   "fin": 7.646,
+   "termino": true,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "segundos",
+   "ini": 7.646,
+   "fin": 8.086,
+   "termino": false,
+   "corte": true,
+   "final_oracion": true
+  },
+  {
+   "w": "Sarah",
+   "ini": 8.624,
+   "fin": 8.944,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "una",
+   "ini": 8.944,
+   "fin": 9.595,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "guepardo",
+   "ini": 9.634,
+   "fin": 9.985,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "récord",
+   "ini": 10.285,
+   "fin": 10.825,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Guinness",
+   "ini": 10.825,
+   "fin": 11.445,
+   "termino": false,
+   "corte": true,
+   "final_oracion": false
+  },
+  {
+   "w": "595",
+   "ini": 11.871,
+   "fin": 12.425,
+   "termino": true,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "segundos",
+   "ini": 12.425,
+   "fin": 13.165,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "en",
+   "ini": 13.165,
+   "fin": 13.785,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "2012",
+   "ini": 13.785,
+   "fin": 14.345,
+   "termino": false,
+   "corte": true,
+   "final_oracion": true
+  },
+  {
+   "w": "Tres",
+   "ini": 14.943,
+   "fin": 15.323,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "dos",
+   "ini": 15.623,
+   "fin": 15.923,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "uno",
+   "ini": 16.223,
+   "fin": 16.403,
+   "termino": false,
+   "corte": true,
+   "final_oracion": true
+  },
+  {
+   "w": "Ya",
+   "ini": 16.563,
+   "fin": 16.683,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Cuando",
+   "ini": 23.082,
+   "fin": 23.322,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 23.322,
+   "fin": 23.482,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "guepardo",
+   "ini": 23.482,
+   "fin": 23.882,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "cruza",
+   "ini": 23.882,
+   "fin": 24.302,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "la",
+   "ini": 24.302,
+   "fin": 24.502,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "meta",
+   "ini": 24.502,
+   "fin": 24.902,
+   "termino": false,
+   "corte": true,
+   "final_oracion": false
+  },
+  {
+   "w": "Bolt",
+   "ini": 25.242,
+   "fin": 25.362,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "va",
+   "ini": 25.322,
+   "fin": 25.522,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "por",
+   "ini": 25.522,
+   "fin": 25.782,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "unos",
+   "ini": 25.782,
+   "fin": 26.022,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "55",
+   "ini": 26.022,
+   "fin": 26.842,
+   "termino": true,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "metros",
+   "ini": 26.842,
+   "fin": 27.402,
+   "termino": false,
+   "corte": true,
+   "final_oracion": true
+  },
+  {
+   "w": "Ganó",
+   "ini": 27.92,
+   "fin": 28.24,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "el",
+   "ini": 28.24,
+   "fin": 28.38,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "guepardo",
+   "ini": 28.38,
+   "fin": 28.78,
+   "termino": true,
+   "corte": true,
+   "final_oracion": false
+  },
+  {
+   "w": "por",
+   "ini": 28.78,
+   "fin": 29.1,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "363",
+   "ini": 29.1,
+   "fin": 30.5,
+   "termino": true,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "segundos",
+   "ini": 30.5,
+   "fin": 31.08,
+   "termino": false,
+   "corte": true,
+   "final_oracion": true
+  },
+  {
+   "w": "En",
+   "ini": 31.582,
+   "fin": 31.862,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "promedio",
+   "ini": 31.862,
+   "fin": 32.302,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "Sarah",
+   "ini": 32.602,
+   "fin": 32.722,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "corrió",
+   "ini": 32.662,
+   "fin": 33.022,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "a",
+   "ini": 33.022,
+   "fin": 33.182,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "60",
+   "ini": 33.182,
+   "fin": 33.642,
+   "termino": true,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "km/h",
+   "ini": 33.642,
+   "fin": 34.802,
+   "termino": false,
+   "corte": true,
+   "final_oracion": true
+  },
+  {
+   "w": "Bolt",
+   "ini": 35.282,
+   "fin": 35.522,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "a",
+   "ini": 35.522,
+   "fin": 36.142,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "unos",
+   "ini": 36.142,
+   "fin": 36.382,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "38",
+   "ini": 36.382,
+   "fin": 37.362,
+   "termino": true,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "km/h",
+   "ini": 37.362,
+   "fin": 38.362,
+   "termino": false,
+   "corte": true,
+   "final_oracion": true
+  },
+  {
+   "w": "Son",
+   "ini": 38.792,
+   "fin": 39.092,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "récords",
+   "ini": 39.092,
+   "fin": 39.552,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "de",
+   "ini": 39.552,
+   "fin": 39.772,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "carreras",
+   "ini": 39.772,
+   "fin": 40.172,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "distintas",
+   "ini": 40.172,
+   "fin": 41.032,
+   "termino": false,
+   "corte": true,
+   "final_oracion": false
+  },
+  {
+   "w": "pero",
+   "ini": 41.032,
+   "fin": 41.732,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "la",
+   "ini": 41.732,
+   "fin": 42.032,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "diferencia",
+   "ini": 42.032,
+   "fin": 42.452,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "es",
+   "ini": 42.452,
+   "fin": 42.752,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "enorme",
+   "ini": 42.752,
+   "fin": 43.092,
+   "termino": false,
+   "corte": true,
+   "final_oracion": true
+  },
+  {
+   "w": "Quién",
+   "ini": 43.598,
+   "fin": 43.978,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "quieres",
+   "ini": 43.978,
+   "fin": 44.338,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "que",
+   "ini": 44.338,
+   "fin": 44.658,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "enfrente",
+   "ini": 44.658,
+   "fin": 44.997,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "al",
+   "ini": 44.997,
+   "fin": 45.198,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "guepardo",
+   "ini": 45.198,
+   "fin": 45.677,
+   "termino": false,
+   "corte": true,
+   "final_oracion": false
+  },
+  {
+   "w": "la",
+   "ini": 45.677,
+   "fin": 45.978,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "próxima",
+   "ini": 45.978,
+   "fin": 46.338,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "vez",
+   "ini": 46.338,
+   "fin": 46.618,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  },
+  {
+   "w": "Dímelo",
+   "ini": 47.125,
+   "fin": 47.593,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "en",
+   "ini": 47.645,
+   "fin": 47.805,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "los",
+   "ini": 47.805,
+   "fin": 48.065,
+   "termino": false,
+   "corte": false,
+   "final_oracion": false
+  },
+  {
+   "w": "comentarios",
+   "ini": 48.065,
+   "fin": 48.565,
+   "termino": false,
+   "corte": false,
+   "final_oracion": true
+  }
+ ],
+ "voz": "kokoro:em_alex",
+ "ajustes": {
+  "voz": "em_alex",
+  "lang": "es-419",
+  "wpm": 170,
+  "pausa_oracion": 0.4,
+  "pausa_coma": 0.3,
+  "extra_pero": 0.2,
+  "inicio": 0.35,
+  "final": 0.5,
+  "velocidad_fija": null,
+  "velocidad_inicial": 0.85,
+  "velocidad_kokoro": 0.928,
+  "wpm_logrado": 170.5,
+  "wpm_articulacion": 175.8
+ }
+}
