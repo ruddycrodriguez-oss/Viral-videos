@@ -127,18 +127,42 @@ def _texto_voz(pal):
     return t
 
 
-def narrar(narracion, salida, modelos, ajustes=None, whisper="medium", verbose=True):
-    """Genera `voz_cruda.wav`, `timeline.json` y `verificacion_voz.json` en `salida`. Devuelve el timeline."""
+def _recortar(a, margen=0.03):
+    nz = np.where(np.abs(a) > 0.01)[0]
+    return a[max(0, nz[0] - int(margen * SR)): nz[-1] + int(margen * SR)] if len(nz) else a
+
+
+def _remuestrear(a, sr):
+    if sr == SR: return a.astype(np.float32)
+    from scipy.signal import resample_poly
+    from math import gcd
+    g = gcd(int(sr), SR)
+    return resample_poly(a, SR // g, int(sr) // g).astype(np.float32)
+
+
+def _estirar(a, factor):
+    """Cambia el ritmo sin cambiar el tono (factor > 1 = más rápido). Se usa solo para ajustes pequeños (±12 %)."""
+    if abs(factor - 1.0) < 0.005: return a
+    import librosa
+    return librosa.effects.time_stretch(a, rate=factor).astype(np.float32)
+
+
+def narrar(narracion, salida, modelos=None, ajustes=None, whisper="medium", verbose=True, crudos=None):
+    """Genera `voz_cruda.wav`, `timeline.json` y `verificacion_voz.json` en `salida`. Devuelve el timeline.
+    Con `crudos` ({posición de la frase: (audio, sr)}) usa audios ya generados por otro modelo (la etapa A de la voz) y solo ajusta el
+    ritmo con un cambio de tempo; sin `crudos`, usa la ruta antigua de Kokoro (voz descartada el 24-nov-2026, se conserva por historia)."""
     import soundfile as sf   # solo hace falta para generar la voz (el render de vídeo solo lee el timeline)
     A = dict(AJUSTES); A.update(ajustes or {})
     os.makedirs(salida, exist_ok=True)
-    from kokoro_onnx import Kokoro
-    k = Kokoro(os.path.join(modelos, "kokoro-v1.0.onnx"), os.path.join(modelos, "voices-v1.0.bin"))
     elementos = _frases(narracion)
     frases = [(i, _analizar(txt)) for i, (tipo, txt) in enumerate(elementos) if tipo == "frase"]
 
     def sintetizar(pal, vel):
-        a, sr = k.create(_texto_voz(pal), voice=A["voz"], speed=vel, lang=A["lang"])
+        from kokoro_onnx import Kokoro
+        global _kokoro
+        if "_kokoro" not in globals() or _kokoro is None:
+            _kokoro = Kokoro(os.path.join(modelos, "kokoro-v1.0.onnx"), os.path.join(modelos, "voices-v1.0.bin"))
+        a, sr = _kokoro.create(_texto_voz(pal), voice=A["voz"], speed=vel, lang=A["lang"])
         a = a.astype(np.float32)
         if sr != SR: a = np.interp(np.linspace(0, len(a) - 1, int(len(a) * SR / sr)), np.arange(len(a)), a).astype(np.float32)
         nz = np.where(np.abs(a) > 0.01)[0]
@@ -162,7 +186,17 @@ def narrar(narracion, salida, modelos, ajustes=None, whisper="medium", verbose=T
     # --- 1) calibrar la velocidad: palabras por minuto de habla = objetivo (la voz nunca se acelera para ganar tiempo)
     palabras_tot = sum(len(q["hab"]) for _, p in frases for q in p)   # palabras habladas: «9,58» se dice «nueve coma cincuenta y ocho»
     vel = A["velocidad_fija"] or A["velocidad_inicial"]
-    for ronda in range(1 if A["velocidad_fija"] else 5):
+    if crudos is not None:
+        # audios de otro modelo: se recortan, se pasan a 24 kHz y se ajusta el tempo hasta las palabras por minuto pedidas
+        crudos = {pos: _recortar(_remuestrear(np.asarray(a, np.float32), sr)) for pos, (a, sr) in crudos.items()}
+        wpm0 = palabras_tot / sum(habla_activa(c) for c in crudos.values()) * 60
+        tempo = min(1.12, max(0.88, A["wpm"] / wpm0))
+        crudos = {pos: _recortar(_estirar(c, tempo)) for pos, c in crudos.items()}
+        wpm = palabras_tot / sum(habla_activa(c) for c in crudos.values()) * 60
+        A["wpm_antes_del_tempo"] = round(wpm0, 1); A["tempo"] = round(tempo, 3)
+        if verbose: print(f"ritmo del modelo {wpm0:.1f} palabras/min; tempo {tempo:.3f} -> {wpm:.1f}", flush=True)
+    else:
+      for ronda in range(1 if A["velocidad_fija"] else 5):
         crudos = {i: sintetizar(p, vel) for i, p in frases}
         wpm = palabras_tot / sum(habla_activa(c) for c in crudos.values()) * 60
         if verbose: print(f"calibración {ronda}: velocidad {vel:.3f} -> {wpm:.1f} palabras/min de habla", flush=True)
@@ -283,7 +317,7 @@ def narrar(narracion, salida, modelos, ajustes=None, whisper="medium", verbose=T
     x = np.concatenate(audio)
     sf.write(os.path.join(salida, "voz_cruda.wav"), x, SR)
     dur_total = round(len(x) / SR + 0.2, 2)
-    tl = {"duracion": dur_total, "eventos": eventos, "palabras": palabras_tl, "voz": "kokoro:" + A["voz"], "ajustes": A}
+    tl = {"duracion": dur_total, "eventos": eventos, "palabras": palabras_tl, "voz": A.get("etiqueta_voz") or ("kokoro:" + A["voz"]), "ajustes": A}
     json.dump(tl, open(os.path.join(salida, "timeline.json"), "w"), ensure_ascii=False, indent=1)
 
     # --- 4) verificación de pronunciación: nombres propios y términos técnicos

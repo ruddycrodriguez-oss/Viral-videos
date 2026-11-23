@@ -1,0 +1,13 @@
+{
+ "titulo": "Así se construye: un rascacielos",
+ "nota": "Narración con marcas: {evento} dispara una animación; *término* resalta el término técnico (amarillo y mayúsculas); [[silencio N]] es un silencio de N segundos.",
+ "escenas": [
+  {"n": 1, "visual": "Ciudad low-poly; un rascacielos altísimo se balancea con el viento; zoom rápido a la punta", "texto": "¿Cómo se construye un edificio de cien pisos sin que se caiga? Lo más loco está colgado cerca de la punta."},
+  {"n": 2, "visual": "Torre de ladrillos que crece; las paredes de la base se ensanchan y crujen", "cifra": "1,8 METROS", "texto": "Si apilas ladrillos, levantas una torre. Pero cada piso aplasta a los de abajo y las paredes de la base engordan. En Chicago, un edificio de dieciséis pisos necesitó paredes de casi dos metros."},
+  {"n": 3, "visual": "Las paredes desaparecen y queda un esqueleto de acero; el vidrio cuelga de él", "termino": "ESTRUCTURA DE ACERO", "texto": "Entonces, cambias las paredes por un esqueleto de acero que lleva el peso hasta el suelo. Ahora el vidrio solo cuelga, como una cortina. Esa es la *estructura de acero*."},
+  {"n": 4, "visual": "Corte del suelo: el edificio se hunde y la tierra se agrieta; luego bajan columnas de concreto hasta terreno firme", "termino": "CIMENTACIÓN PROFUNDA", "texto": "Pero el edificio pesa tanto que empieza a hundirse. Entonces, perforas la tierra y bajas columnas de concreto hasta el terreno firme. Esa es la *cimentación profunda*."},
+  {"n": 5, "visual": "La punta se balancea; una bola de acero gigante cuelga en los pisos altos y se mueve al lado contrario", "cifra": "660 TONELADAS", "termino": "AMORTIGUADOR DE MASA", "texto": "Pero arriba el viento empuja la punta y el edificio se balancea. Entonces, cuelgas una bola de acero gigante: si el edificio se va a un lado, la bola se va al otro y lo frena. La de Taipéi 101 pesa 660 toneladas. Es el *amortiguador de masa*."},
+  {"n": 6, "visual": "Ascensor que sube a toda velocidad; una persona se toca los oídos", "cifra": "+60 KM/H", "texto": "Y como nadie sube cien pisos a pie, los ascensores más rápidos pasan de sesenta kilómetros por hora. Por eso se te tapan los oídos: allá arriba el aire tiene menos presión."},
+  {"n": 7, "visual": "Plano final del rascacielos completo al atardecer", "texto": "Ahora ya lo sabes. Esto fue un Datazo."}
+ ]
+}
