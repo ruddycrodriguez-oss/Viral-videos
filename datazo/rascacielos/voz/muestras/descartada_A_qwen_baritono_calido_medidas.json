@@ -1,0 +1,48 @@
+{
+ "transcripcion": "¿Cómo se construye un edificio de cien pisos sin que se caiga? Lo más loco está colgado cerca de la punta. Si apilas ladrillos, levantas una torre. Pero cada piso aplasta a los de abajo y las paredes de la base engordan.",
+ "wer": 0.0,
+ "errores_palabras": 0,
+ "palabras": 42,
+ "fonemas_reconocidos": "k o m u s e k o n s t r u dʒ e u n e ð i f i s j o ð e s j e m p i s o s i n k e s e k aɪ ɣ a l o m a s l o k o s t a k o l ɣ a ð o s s e r k a ð e l a p u n t a s i a p i l a s l a ð ɾ i dʒ o s l e β a n t a s u n a t o ɾ r e p e ɾ o k a ð a p i s o a p l a s t a l o s ð a β a x oɪ i l a s p a ɾ e ð e s ð e l a β a s e n ɡ o ɾ ð a n",
+ "fonemas_esperados": "kˈomo se konstɾˈuʝe ˈun ˌeðifˈisjo ðe sjˈem pˈisos sin ke se kˈaɪɣa? lo mˈas lˈoko estˈa kolɣˈaðo sˈeɾka ðe la pˈunta. si apˈilas laðɾˈijjos, leβˈantas ˈuna tˈore. pˌeɾo kˈaða pˈiso aplˈasta a los ðe aβˈaxo i las paɾˈeðes ðe la βˈase eŋɡˈoɾðan.",
+ "theta_reconocidos": 0,
+ "s_reconocidas": 21,
+ "s_esperadas": 21,
+ "letras_c_o_z": 3,
+ "tono": {
+  "rango_st": 17.9,
+  "rango_2_98_st": 20.2,
+  "desv_st": 5.42,
+  "mediana_hz": 133.0,
+  "voz_pct": 63.3,
+  "mediana_hz_crepe": 138.0
+ },
+ "ritmo": {
+  "wpm_habla": 174.8,
+  "wpm_con_pausas": 154.2,
+  "segundos_totales": 16.3
+ },
+ "loudness": {
+  "lufs": -14.2,
+  "pico_dbfs": -1.0
+ },
+ "ajustes": {
+  "voz": "em_alex",
+  "lang": "es-419",
+  "wpm": 167.0,
+  "pausa_oracion": 0.4,
+  "pausa_coma": 0.3,
+  "extra_pero": 0.2,
+  "inicio": 0.15,
+  "final": 0.3,
+  "velocidad_fija": null,
+  "velocidad_inicial": 0.85,
+  "etiqueta_voz": "qwen",
+  "wpm_antes_del_tempo": 210.4,
+  "tempo": 0.794,
+  "velocidad_kokoro": 0.85,
+  "wpm_logrado": 167.3,
+  "wpm_articulacion": 172.8
+ },
+ "duracion_s": 17.31
+}
