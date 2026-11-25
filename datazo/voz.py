@@ -150,8 +150,17 @@ def _remuestrear(a, sr):
 
 
 def _estirar(a, factor):
-    """Cambia el ritmo sin cambiar el tono (factor > 1 = más rápido). Se usa solo para ajustes pequeños (±12 %)."""
+    """Cambia el ritmo sin cambiar el tono (factor > 1 = más rápido). Usa Rubber Band (filtro `rubberband` de ffmpeg), mucho más limpio
+    que el vocoder de fase de librosa con cambios grandes (hasta ~20 %); si ffmpeg no lo trae, cae en librosa."""
     if abs(factor - 1.0) < 0.005: return a
+    import subprocess, tempfile, soundfile as sf
+    with tempfile.TemporaryDirectory() as d:
+        ent, sal = os.path.join(d, "e.wav"), os.path.join(d, "s.wav")
+        sf.write(ent, a, SR, subtype="FLOAT")
+        r = subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", ent, "-af", f"rubberband=tempo={factor:.5f}:transients=crisp:detector=compound:phase=laminar",
+                            "-ar", str(SR), sal], capture_output=True)
+        if r.returncode == 0 and os.path.exists(sal):
+            x, _ = sf.read(sal, dtype="float32"); return x if x.ndim == 1 else x.mean(axis=1)
     import librosa
     return librosa.effects.time_stretch(a, rate=factor).astype(np.float32)
 
@@ -199,7 +208,7 @@ def narrar(narracion, salida, modelos=None, ajustes=None, whisper="medium", verb
         # audios de otro modelo: se recortan, se pasan a 24 kHz y se ajusta el tempo hasta las palabras por minuto pedidas
         crudos = {pos: _recortar(_remuestrear(np.asarray(a, np.float32), sr)) for pos, (a, sr) in crudos.items()}
         wpm0 = palabras_tot / sum(habla_activa(c) for c in crudos.values()) * 60
-        tempo = min(1.12, max(0.88, A["wpm"] / wpm0))
+        tempo = min(1.12, max(0.78, A["wpm"] / wpm0))
         crudos = {pos: _recortar(_estirar(c, tempo)) for pos, c in crudos.items()}
         wpm = palabras_tot / sum(habla_activa(c) for c in crudos.values()) * 60
         A["wpm_antes_del_tempo"] = round(wpm0, 1); A["tempo"] = round(tempo, 3)
