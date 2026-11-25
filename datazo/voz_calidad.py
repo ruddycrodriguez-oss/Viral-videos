@@ -104,8 +104,23 @@ def tono(x16, sr=16000):
     v = f0[~np.isnan(f0)]
     if len(v) < 20: return {"rango_st": 0.0, "desv_st": 0.0, "mediana_hz": 0.0, "voz_pct": 0.0}
     st = 12 * np.log2(v / np.median(v))
-    return {"rango_st": round(float(np.percentile(st, 95) - np.percentile(st, 5)), 1), "rango_2_98_st": round(float(np.percentile(st, 98) - np.percentile(st, 2)), 1),
-            "desv_st": round(float(np.std(st)), 2), "mediana_hz": round(float(np.median(v)), 1), "voz_pct": round(100 * len(v) / len(f0), 1)}
+    r = {"rango_st": round(float(np.percentile(st, 95) - np.percentile(st, 5)), 1), "rango_2_98_st": round(float(np.percentile(st, 98) - np.percentile(st, 2)), 1),
+         "desv_st": round(float(np.std(st)), 2), "mediana_hz": round(float(np.median(v)), 1), "voz_pct": round(100 * len(v) / len(f0), 1)}
+    c = mediana_crepe(x16)
+    if c: r["mediana_hz_crepe"] = c   # pYIN suele dar medianas altas con voces sintéticas; CREPE (red neuronal) es la referencia para «¿tono de hombre?»
+    return r
+
+
+def mediana_crepe(x16):
+    """Mediana de F0 (Hz) con CREPE (torchcrepe, MIT), solo en tramos con periodicidad > 0,5. None si torchcrepe no está instalado."""
+    try:
+        import torch, torchcrepe
+    except ImportError:
+        return None
+    f, p = torchcrepe.predict(torch.from_numpy(np.asarray(x16, dtype=np.float32)).unsqueeze(0), 16000, hop_length=160, fmin=60, fmax=500,
+                              model="full", batch_size=512, device="cpu", return_periodicity=True)
+    v = f[0].numpy()[p[0].numpy() > 0.5]
+    return round(float(np.median(v)), 1) if len(v) > 20 else None
 
 
 def ritmo(timeline, n_palabras):

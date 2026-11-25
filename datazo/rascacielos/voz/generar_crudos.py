@@ -12,6 +12,8 @@ import voz
 ap = argparse.ArgumentParser()
 ap.add_argument("modelo"); ap.add_argument("narracion"); ap.add_argument("salida")
 ap.add_argument("--frases", default=""); ap.add_argument("--tomas", type=int, default=1); ap.add_argument("--estilo", default=""); ap.add_argument("--sin-seseo", action="store_true", help="no reescribir c/z como s")
+ap.add_argument("--ancla", default="", help="toma ya generada por el propio modelo (audio sintético) cuyo timbre se mantiene en todas las frases")
+ap.add_argument("--ancla-texto", default="")
 ap.add_argument("--semilla0", type=int, default=0, help="desplaza las semillas (tomas nuevas)")
 a = ap.parse_args()
 os.makedirs(os.path.join(a.salida, "crudos"), exist_ok=True)
@@ -28,18 +30,31 @@ quedan = [int(x) for x in a.frases.split(",")] if a.frases else list(range(len(f
 
 import torch
 torch.set_num_threads(os.cpu_count() or 4)
+ancla_texto = a.ancla_texto
+if a.ancla and not ancla_texto:   # el texto dicho en la toma ancla está en el frases.json de su carpeta
+    fj = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(a.ancla))), "frases.json")
+    for t in json.load(open(fj, encoding="utf-8"))["tomas"]:
+        if os.path.basename(t["archivo"]) == os.path.basename(a.ancla): ancla_texto = t["texto"]
 if a.modelo == "qwen":
     from qwen_tts import Qwen3TTSModel
-    modelo = Qwen3TTSModel.from_pretrained("Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign", device_map="cpu", dtype=torch.float32)
-    def sintetizar(t, extra=""):
-        w, sr = modelo.generate_voice_design(text=t, instruct=(estilo + (" " + extra if extra else "")), language="Spanish")
-        return np.asarray(w[0], dtype=np.float32), sr
+    if a.ancla:   # Base: reutiliza el timbre de la toma ancla (la voz diseñada por el propio modelo; nadie real) para que todas las frases suenen igual
+        modelo = Qwen3TTSModel.from_pretrained("Qwen/Qwen3-TTS-12Hz-1.7B-Base", device_map="cpu", dtype=torch.float32)
+        prompt = modelo.create_voice_clone_prompt(ref_audio=a.ancla, ref_text=ancla_texto)
+        def sintetizar(t, extra=""):
+            w, sr = modelo.generate_voice_clone(text=t, language="Spanish", voice_clone_prompt=prompt)
+            return np.asarray(w[0], dtype=np.float32), sr
+    else:
+        modelo = Qwen3TTSModel.from_pretrained("Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign", device_map="cpu", dtype=torch.float32)
+        def sintetizar(t, extra=""):
+            w, sr = modelo.generate_voice_design(text=t, instruct=(estilo + (" " + extra if extra else "")), language="Spanish")
+            return np.asarray(w[0], dtype=np.float32), sr
 elif a.modelo == "voxcpm":
     from voxcpm import VoxCPM
     modelo = VoxCPM.from_pretrained("openbmb/VoxCPM2", load_denoiser=False)
     desc = "(" + estilo + ")"
     def sintetizar(t, extra=""):
-        w = modelo.generate(text=desc + t, cfg_value=2.0, inference_timesteps=10)
+        kw = {"reference_wav_path": a.ancla} if a.ancla else {}
+        w = modelo.generate(text=desc + t, cfg_value=2.0, inference_timesteps=10, **kw)
         return np.asarray(w, dtype=np.float32), modelo.tts_model.sample_rate
 else:
     raise SystemExit("modelo desconocido")
@@ -57,4 +72,4 @@ for k in quedan:
         sf.write(ruta, audio, sr)
         info.append({"frase": k, "toma": toma, "texto": t, "archivo": ruta, "sr": sr, "duracion": round(len(audio) / sr, 2), "segundos_calculo": round(time.time() - t0, 1)})
         print(f"frase {k} toma {toma}: {len(audio)/sr:.1f} s de audio en {time.time()-t0:.0f} s de cálculo | {t[:50]}", flush=True)
-json.dump({"modelo": a.modelo, "estilo": estilo, "tomas": info}, open(os.path.join(a.salida, "frases.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump({"modelo": a.modelo, "estilo": estilo, "ancla": a.ancla, "ancla_texto": ancla_texto, "tomas": info}, open(os.path.join(a.salida, "frases.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
